@@ -44,3 +44,14 @@ I asked my family and friends, were asked for their feedback in relation to the 
 **User.** _‘Extremely important, knowing the grades and how they are assessed is also important so I know the condition of the item I will receive.’_  
 **User.** _‘Knowing that the disc is clean and in good order is the most important thing so I know there will be no issues with playing the movie.’_  
 
+Focusing on the user interface, ease of use and payments people were asked:  
+
+### Additional questions asked  
+**Question.** Is navigation of a site and ease of use important to you?  
+**User.** _‘Easy to use and being able to get to what I want are the most important things to me.’_  
+**User.** _‘Navigation is important, too many options and filters confuses me, I love sites that put things into easy to understand language.’_  
+
+**Question.** Is knowing that your checkout process is secure and protected important to you?  
+**User.** _‘Always, if a site uses any strange payment system or does not tell me what they are using, I do not use that site.’_  
+**User.** _‘I always stick to known payment systems, as I can always get in touch with them or contact my bank about any issues with them.’_  
+
