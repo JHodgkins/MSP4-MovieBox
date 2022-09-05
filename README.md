@@ -7,6 +7,7 @@ MovieBox will clearly list and display titles using captive box art imagery and 
 ## Table of contents  
 1. [Overview](#overview)  
 2. [Design brief](#design-brief)  
+3. [Research](#research)  
 
 ## Overview  
 The MovieBox application is a database driven ecommerce web application which stores stock of physical media and helpfully categorises available media into an easy-to-understand front-end experience which can then be used by a wide range of audiences and potential customers.  
@@ -20,3 +21,5 @@ The application will provide a safe and secure online shopping experience with a
 The application will use external resources to inform the end user about interesting information relating to their possible media order.  
 The application will allow for easier processing of future orders by allowing a user to securely save previously entered order details required for future checkout interactions.  
 
+## Research  
+Please view the [research](docs/research/RESEARCH.md) document for details of user research carried out through the planning phase for MovieBox.  
