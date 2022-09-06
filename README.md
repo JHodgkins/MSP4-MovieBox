@@ -31,13 +31,17 @@ Please view the [research](docs/research/RESEARCH.md) document for details of us
 
 ## Goals and Target audience  
 ### Project goals  
-- The project will provide an online web e-commerce store where anyone interested in purchasing physical media will be able to do so using an easy-to-understand interface.
-- The e-commerce web store will provide users with information about a product before purchasing.
-- The project will enable users to purchase items through a integrated payment system and receive confirmation of their purchase.
+- The project will provide an online web e-commerce store where anyone interested in purchasing physical media will be able to do so using an easy-to-understand interface.  
+- The e-commerce web store will provide users with information about a product before purchasing.  
+- The project will enable users to purchase items through a integrated payment system and receive confirmation of their purchase.  
 - The e-commerce web application will be viewable and usable using any browser on any device.  
 
 ### User goals  
-
+- Find information about what MovieBox is all about.  
+- Find information about products available on MovieBox.  
+- Easily register and login to enable streamlined future purchases.  
+- Find information about what they have within their checkout basket.  
+- View their completed orders and delivery information.  
 
 ### Site owner goals  
 
