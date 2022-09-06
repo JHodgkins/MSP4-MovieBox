@@ -49,5 +49,8 @@ Please view the [research](docs/research/RESEARCH.md) document for details of us
 - Build trust with its users so recommendations help grow the e-commerce stores visits as a useful supplier of DVD and Blue-Ray media.  
 
 ### Target audience  
-
+- The e-commerce store will be able to be usable by all ages.
+- Those looking for an e-commerce store offering a selection of new and used DVD and Blue-Ray movies.  
+- Movie enthusiasts who want to discover information about a movie whilst also being able to purchase from a reputable online store.  
+- Charities or small establishments wising to make contact and sell through the store.  
 
