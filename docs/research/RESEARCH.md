@@ -55,3 +55,17 @@ Focusing on the user interface, ease of use and payments people were asked:
 **User.** _‘Always, if a site uses any strange payment system or does not tell me what they are using, I do not use that site.’_  
 **User.** _‘I always stick to known payment systems, as I can always get in touch with them or contact my bank about any issues with them.’_  
 
+## Summary
+The research proved interesting and raised some points surrounding buying physical media, streaming and buying used media.  
+Finding the media efficiently was a key factor and having enough information to make a purchase were also important factors.  
+Condition is also an area that arose, unless new, any media needs to be in perfect working order to play, the packaging may in some cases not matter which is sometimes the criteria for other stores selling media.  
+
+It also became clear also that larger stores can be overwhelming to some, and a simple easy to navigate interface to find a product is just as important to some as filters and features is to some.  
+Looking at the proposed application, research showed that other offerings can indeed offer more features, but the projects strengths are that it can offer a positive and pleasing offering which meets the business and target audience goals and aligns with feedback.  
+
+## Conclusion
+The project meets its goals and can help by offering a suitable resource for buying media.  
+The e-commerce web application will provide a simple to use accessible store that will be accessible to a wide range of audiences whilst provide a secure and reassuring experience for anyone buying through an online store.  
+The store will sit alongside other offerings with a niche which offers specific offerings which are used and new DVD and Blue-Ray movie titles.  
+
+[Back to Repository](https://github.com/JHodgkins/MSP4-MovieBox)  
