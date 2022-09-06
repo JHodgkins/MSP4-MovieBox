@@ -8,6 +8,11 @@ MovieBox will clearly list and display titles using captive box art imagery and 
 1. [Overview](#overview)  
 2. [Design brief](#design-brief)  
 3. [Research](#research)  
+4. [Goals and Target audience](#goals-and-target-audience)  
+    4.1 [Project goals](#project-goals)  
+    4.2 [User goals](#user-goals)  
+    4.3 [Site owners goals](#site-owners-goals)  
+    4.4 [Target audience](#target-audience)  
 
 ## Overview  
 The MovieBox application is a database driven ecommerce web application which stores stock of physical media and helpfully categorises available media into an easy-to-understand front-end experience which can then be used by a wide range of audiences and potential customers.  
@@ -23,3 +28,20 @@ The application will allow for easier processing of future orders by allowing a 
 
 ## Research  
 Please view the [research](docs/research/RESEARCH.md) document for details of user research carried out through the planning phase for MovieBox.  
+
+## Goals and Target audience  
+### Project goals  
+- The project will provide an online web e-commerce store where anyone interested in purchasing physical media will be able to do so using an easy-to-understand interface.
+- The e-commerce web store will provide users with information about a product before purchasing.
+- The project will enable users to purchase items through a integrated payment system and receive confirmation of their purchase.
+- The e-commerce web application will be viewable and usable using any browser on any device.  
+
+### User goals  
+
+
+### Site owner goals  
+
+
+### Target audience  
+
+
