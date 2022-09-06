@@ -44,7 +44,9 @@ Please view the [research](docs/research/RESEARCH.md) document for details of us
 - View their completed orders and delivery information.  
 
 ### Site owner goals  
-
+- The MovieBox site owner would like to promote the easy to understand and use approach of the e-commerce web application.  
+- It is also important that users can see their current and previous purchases.  
+- Build trust with its users so recommendations help grow the e-commerce stores visits as a useful supplier of DVD and Blue-Ray media.  
 
 ### Target audience  
 
