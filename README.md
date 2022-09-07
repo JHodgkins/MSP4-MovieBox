@@ -99,3 +99,4 @@ The e-commerce web application uses mainly solid colours which contrast each oth
 As a person with a visual impairment, the e-commerce web application has been designed with screen magnification and screen readers in mind.  
 
 ### Structure of pages  
+The website application uses a mobile first approach with the page having a maximum width of 1320px at retina resolutions or a 1140px for most standard displays which centre aligns at higher resolutions. These constraints were used to maintain the user’s focus, attention and aid with sight lines.  
