@@ -21,6 +21,10 @@ MovieBox will clearly list and display titles using captive box art imagery and 
 6. [Design](#design)  
     6.1 [Structure of pages](#structure-of-pages)  
     - [Header section](#header-section)  
+    - [Main content area](#main-content-area)  
+    - [Shopping basket area](#shopping-basket-area)  
+    - [Secondary main area](#secondary-main-area)  
+    - [Footer section](#footer-section)   
 
 
 ## Overview  
@@ -105,3 +109,15 @@ The website application uses a mobile first approach with the page having a maxi
 The application follows a universal approach which comprises of a left aligned logo for Mobile through to Desktop.  
 To the right is the applications main navigation, which is responsive, and full text links remain right aligned until tablet size and below where it will collapse to a right aligned Hamburger menu (toggle button).  
 On devices tablet and below the user will be able to expand/collapse this menu using the menu toggle button to access all available menu items dependant on their logged in status.  
+
+#### Main content area  
+
+
+#### Shopping basket area  
+
+
+#### Secondary main area  
+
+
+#### Footer section  
+
