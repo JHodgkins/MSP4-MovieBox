@@ -13,6 +13,12 @@ MovieBox will clearly list and display titles using captive box art imagery and 
     4.2 [User goals](#user-goals)  
     4.3 [Site owners goals](#site-owners-goals)  
     4.4 [Target audience](#target-audience)  
+5. [User experiance (UX)](#user-experiance-ux)  
+    [User stories](#user-stories)  
+    5.1 [First time user](#first-time-user)  
+    5.2 [Returning user](#returning-user)  
+    5.3 [Site owner](#site-owner)  
+
 
 ## Overview  
 The MovieBox application is a database driven ecommerce web application which stores stock of physical media and helpfully categorises available media into an easy-to-understand front-end experience which can then be used by a wide range of audiences and potential customers.  
@@ -53,4 +59,10 @@ Please view the [research](docs/research/RESEARCH.md) document for details of us
 - Those looking for an e-commerce store offering a selection of new and used DVD and Blue-Ray movies.  
 - Movie enthusiasts who want to discover information about a movie whilst also being able to purchase from a reputable online store.  
 - Charities or small establishments wising to make contact and sell through the store.  
+
+## User Experience (UX)  
+During project planning, it was set out that the user interface should be easily understood to provide an overall good user experience and provide a positive feeling when navigating and interacting with the e-commerce web application.  
+Because the application is aimed at varied ages, logical placement of buttons, links and form fields will all be clearly tagged to ensure no barriers are present or experienced whilst a user is using the e-commerce web application.  
+Keyboard and screen reader navigation has also been considered and all elements will be reachable using a keyboard alone to ensure the e-commerce store is as accessible as possible to all users of the web application.  
+
 
