@@ -13,7 +13,7 @@ MovieBox will clearly list and display titles using captive box art imagery and 
     4.2 [User goals](#user-goals)  
     4.3 [Site owners goals](#site-owners-goals)  
     4.4 [Target audience](#target-audience)  
-5. [User experiance (UX)](#user-experiance-ux)  
+5. [User Experience (UX)](#user-experience-ux)  
     [User stories](#user-stories)  
     5.1 [First time user](#first-time-user)  
     5.2 [Returning user](#returning-user)  
