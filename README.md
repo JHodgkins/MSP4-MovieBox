@@ -65,4 +65,12 @@ During project planning, it was set out that the user interface should be easily
 Because the application is aimed at varied ages, logical placement of buttons, links and form fields will all be clearly tagged to ensure no barriers are present or experienced whilst a user is using the e-commerce web application.  
 Keyboard and screen reader navigation has also been considered and all elements will be reachable using a keyboard alone to ensure the e-commerce store is as accessible as possible to all users of the web application.  
 
+### User stories  
+#### First time user  
+
+
+#### Returning user  
+
+
+#### Site owner  
 
