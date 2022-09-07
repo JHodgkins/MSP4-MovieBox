@@ -67,6 +67,13 @@ Keyboard and screen reader navigation has also been considered and all elements 
 
 ### User stories  
 #### First time user  
+- As a first-time user, I want to understand what the applications purpose is so that I can decide if it meets my needs.  
+- As a first-time user, I want to be able to easily navigate to the various categories of products.  
+- As a first-time user, I want to be able to add a movie to my shopping basket.  
+- As a first-time user, I want to be able to easily view the items in my shopping basket.  
+- As a first-time user, I want to find out more information about a movie product.  
+- As a first-time user, I want to find out how much a product costs.  
+- As a first-time user, I want to know how to proceed to the checkout section so I can purchase an item.  
 
 
 #### Returning user  
