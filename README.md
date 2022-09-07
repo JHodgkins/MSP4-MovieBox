@@ -75,9 +75,13 @@ Keyboard and screen reader navigation has also been considered and all elements 
 - As a first-time user, I want to find out how much a product costs.  
 - As a first-time user, I want to know how to proceed to the checkout section so I can purchase an item.  
 
-
 #### Returning user  
-
+- As a returning user, I want to be able to easily navigate to the account login page.  
+- As a returning user, I want to be able to see a previous order I have made.  
+- As a returning user, I want to be able to see how many movies are in my shopping basket.  
+- As a returning user, I want to be able to view items based on a filter I select.  
+- As a returning user, I want to be able to change the type of a media item.  
+- As a returning user, I want to be able to update my account delivery details.  
 
 #### Site owner  
 
