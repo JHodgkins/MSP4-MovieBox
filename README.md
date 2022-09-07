@@ -18,6 +18,9 @@ MovieBox will clearly list and display titles using captive box art imagery and 
     5.1 [First time user](#first-time-user)  
     5.2 [Returning user](#returning-user)  
     5.3 [Site owner](#site-owner)  
+6. [Design](#design)  
+    6.1 [Structure of pages](#structure-of-pages)  
+
 
 
 ## Overview  
@@ -89,3 +92,10 @@ Keyboard and screen reader navigation has also been considered and all elements 
 - As the site owner, I want visitors to be able to easily add their movie choices to their shopping basket for purchase.  
 - As the site owner, I want the site visitors to be able to see what they have previously bought.  
 - As the site owner, I want to encourage users to visit clearance and sale areas.  
+
+## Design  
+MovieBox was designed to be clean, clear and easily understood by all audiences using the e-commerce web application, header and footer sections persist throughout the web application to ensure navigation is kept consistent, easy to navigate and provides a pleasant user experience (UX) throughout.  
+The e-commerce web application uses mainly solid colours which contrast each other well, for example a darker grey against orange gives the feeling of hard edges to reflect DVD, Blue-Ray boxes and the boxy appearance of a store front.  
+As a person with a visual impairment, the e-commerce web application has been designed with screen magnification and screen readers in mind.  
+
+### Structure of pages  
