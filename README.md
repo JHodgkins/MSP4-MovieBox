@@ -84,4 +84,8 @@ Keyboard and screen reader navigation has also been considered and all elements 
 - As a returning user, I want to be able to update my account delivery details.  
 
 #### Site owner  
-
+- As the site owner, I want visitors to be able to find the correct information about a product and make an informed choice to purchase.  
+- As the site owner, I want visitors to be able to find the correct information about a product and make an informed choice to purchase.  
+- As the site owner, I want visitors to be able to easily add their movie choices to their shopping basket for purchase.  
+- As the site owner, I want the site visitors to be able to see what they have previously bought.  
+- As the site owner, I want to encourage users to visit clearance and sale areas.  
