@@ -22,6 +22,100 @@
     {% endblock core_css %}
 
     {% block extra_css %}
+    <style>
+    html,
+body {
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+
+body {
+  /* padding-top: 56px; */
+}
+html, body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 100%;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+main {
+    flex: 1 0 auto;
+}
+
+@media (max-width: 991.98px) {
+  .offcanvas-collapse {
+    position: fixed;
+    top: 56px; /* Height of navbar */
+    bottom: 0;
+    left: 100%;
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    overflow-y: auto;
+    visibility: hidden;
+    background-color: #343a40;
+    transition: visibility .3s ease-in-out, -webkit-transform .3s ease-in-out;
+    transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+    transition: transform .3s ease-in-out, visibility .3s ease-in-out, -webkit-transform .3s ease-in-out;
+  }
+  .offcanvas-collapse.open {
+    visibility: visible;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    margin-top: 50px;
+    z-index: 999;
+  }
+  .offcanvas-collapse.close {
+    
+    margin-top: 50px;
+    
+  }
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  color: rgba(255, 255, 255, .75);
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav-underline .nav-link {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: .875rem;
+  color: #6c757d;
+}
+
+.nav-underline .nav-link:hover {
+  color: #007bff;
+}
+
+.nav-underline .active {
+  font-weight: 500;
+  color: #343a40;
+}
+
+.bg-purple { background-color: #6f42c1; }
+
+.lh-100 { line-height: 1; }
+.lh-125 { line-height: 1.25; }
+.lh-150 { line-height: 1.5; }
+
+</style>
     {% endblock extra_css %}
 
         {% block core_js %}
@@ -38,9 +132,117 @@
     <title>MovieBox {% block extra_title %}{% endblock extra_title %}</title>
   </head>
   <body>
-    <header class="container-fluid fixed-top">
+    <header>
+    <div class="account-bar" style="background-color: lightgrey;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 my-1">
+                    <ul class="list-inline text-right">
+                        {% if request.user.is_authenticated %}
+                            <li class="list-inline-item"><i class="fas fa-user-circle"></i> | 
+                            <a class="" href="#">Profile</a>
+                            </li>
+                            {% if request.user.is_superuser %}
+                
+                                <li class="list-inline-item">
+                                <a class="" href="#">admin area</a>
+                                </li>
+                
+                            {% endif %}
+                            <li class="list-inline-item">
+                            <a class="{% url 'account_logout' %}" href="#">Logout</a>
+                            </li>
+                        {% else %}
+                            <li class="list-inline-item">
+                                <a class="" href="{% url 'account_login' %}">Login</a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="" href="{% url 'account_signup' %}">Signup</a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end account bar -->
 
+    <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand mr-auto mr-lg-0" href="{% url 'homepage' %}">MovieBox</a>
+            <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+    
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'homepage' %}">Home <span class="sr-only">(current)</span></a>
+                    </li>
+        
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">All Movies</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">DVDs</a>
+                        <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Type 1</a>
+                        <a class="dropdown-item" href="#">Type 2</a>
+                        <a class="dropdown-item" href="#">Type 3</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">Blue-rays</a>
+                        <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Type 1</a>
+                        <a class="dropdown-item" href="#">Type 2</a>
+                        <a class="dropdown-item" href="#">Type 3</a>
+                        </div>
+                    </li>
+                    
+                        <span> | </span>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-shopping-basket"></i>
+                        {% if grand_total %}
+                            <span>  Total £{{ grand_total|floatformat:2 }}</span>
+                        {% else %}
+                            <span>  £0.00</span>
+                        {% endif %}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> <!-- rnd main navbar -->
+
+    <div class="search-bar" style="background-color: lightgrey;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 my-2">
+                    <form method="GET" action="">
+                        <div class="input-group w-100">
+                            <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
+                            <div class="input-group-append">
+                                <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                                    <span class="icon">
+                                        <i class="fas fa-search"></i>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end search bar -->
     </header>
+
+    <section class="site-header">
+    {% block page_header %}
+    {% endblock page_header %}
+    </section>
 
     {% if messages %}
         <div class="message-container">
@@ -48,13 +250,51 @@
         </div>
     {% endif %}
 
-    {% block page_header %}
-    {% endblock page_header %}
-
+    <main class="">
     {% block content %}
     {% endblock content %}
+    </main>
+
+    <footer class="d-flex flex-wrap justify-content-center align-items-center py-3 border-top site-footer">
+        <div class="col-md-4 d-flex align-items-center copyright-text">
+            <span class="mb-3 mb-md-0 copyright">&copy;<span id="copyright"></span> MovieBox | Developer: J Hodgkins | Educational project</span>
+        </div>
+
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex social-icons">
+        <li class="ms-3">
+            <a target="_blank" href="https://www.facebook.com/" rel="noopener">
+            <i class="fab fa-facebook" aria-hidden="true"></i>
+                <span class="sr-only">Find us on Facebook (opens in a new window)
+                </span>
+            </a>
+        </li>
+        <li class="ms-3">
+            <a target="_blank" href="https://twitter.com/" rel="noopener">
+            <i class="fab fa-twitter" aria-hidden="true"></i>
+                <span class="sr-only">Find us on Twitter (opens in a new window)
+                </span>
+            </a>
+        </li>
+        <li class="ms-3">
+            <a target="_blank" href="https://www.instagram.com/" rel="noopener">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+                <span class="sr-only">Find us on Instagram (opens in a new window)</span>
+            </a>
+        </li>
+        </ul>
+    </footer>
 
     {% block footerjs %}
+    <!-- Toggler function for mobile navigation -->
+    <script>
+        $(function () {
+    'use strict'
+
+    $('[data-toggle="offcanvas"]').on('click', function () {
+        $('.offcanvas-collapse').toggleClass('open')
+    })
+    })
+    </script>
     {% endblock footerjs %}
   </body>
 </html>
