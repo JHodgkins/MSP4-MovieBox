@@ -1,0 +1,175 @@
+/* Import Google fonts Big - Headings, Poppins - Body text */
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap');
+
+/* Stylesheet Index
+1. resets
+2. Colour variables
+3. Commonly used styles
+4. Structure styles
+5. header
+    -- account bar
+    -- nav bar
+
+media queries
+*/
+
+/* 1. resets */
+
+:root, html, * {
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Colour variables */
+
+:root { 
+    --white: #ffffff;
+    --black: #000000;
+    --grey: #565555; /* Davys Grey */
+    --orange: #FFB341; /* Yellow Orange */
+    --red: #ED254E; /* Red Crayola */
+    --silver: #C4CAD0; /* Silver Sand */
+    --cream: #FCF7FF; /* Magnolia */
+    }
+
+/* 3. commonly used styles */
+.lh-100 { line-height: 1; }
+.lh-125 { line-height: 1.25; }
+.lh-150 { line-height: 1.5; }
+
+/* 4. Structure styles */
+
+html,
+body {
+  overflow-x: hidden; /* sorce: bootstrap - Prevent scroll on narrow devices */
+}
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 100%;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Big Shoulders Display', sans-serif;
+}
+
+hr {
+    border: 3px solid var(--orange);
+    color: var(--orange);
+    opacity: 1;
+}
+
+.hr-50 {
+    width: 25%;
+    margin: 2rem auto;
+    color: var(--orange);
+    border-left: 3px solid var(--orange);
+    opacity: 1;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-color: var(--orange);
+}
+
+
+
+
+/* header */
+
+/* account bar */
+.account-bar ul {
+    margin-bottom: 0;
+}
+
+.account-bar ul li a {
+    color: var(--black);
+    text-decoration: none;
+}
+
+.account-bar ul li a:hover, .account-bar ul li a:focus {
+    color: var(--grey);
+    text-decoration: underline;
+}
+
+/* navbar */
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  color: rgba(255, 255, 255, .75);
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav-underline .nav-link {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: .875rem;
+  color: #6c757d;
+}
+
+.nav-underline .nav-link:hover {
+  color: #007bff;
+}
+
+.nav-underline .active {
+  font-weight: 500;
+  color: #343a40;
+}
+
+
+/* media queries */
+
+@media (max-width: 991.98px) {
+    .offcanvas-collapse {
+      position: fixed;
+      top: 56px; /* Height of navbar */
+      bottom: 0;
+      left: 100%;
+      width: 100%;
+      padding-right: 1rem;
+      padding-left: 1rem;
+      overflow-y: auto;
+      visibility: hidden;
+      background-color: #343a40;
+      transition: visibility .3s ease-in-out, -webkit-transform .3s ease-in-out;
+      transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+      transition: transform .3s ease-in-out, visibility .3s ease-in-out, -webkit-transform .3s ease-in-out;
+    }
+    .offcanvas-collapse.open {
+      visibility: visible;
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+      margin-top: 50px;
+      z-index: 999;
+    }
+    .offcanvas-collapse.close {
+      
+      margin-top: 50px;
+      
+    }
+  }
+  
