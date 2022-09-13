@@ -1,5 +1,5 @@
 /* Import Google fonts Big - Headings, Poppins - Body text */
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins&display=swap');
 
 /* Stylesheet Index
 1. resets
@@ -9,6 +9,7 @@
 5. header
     -- account bar
     -- nav bar
+    -- hero
 
 media queries
 */
@@ -53,13 +54,17 @@ html, body {
 }
 
 h1,h2,h3,h4,h5,h6 {
-    font-family: 'Big Shoulders Display', sans-serif;
+  font-family: 'Bebas Neue', cursive, sans-serif;
 }
 
 hr {
     border: 3px solid var(--orange);
     color: var(--orange);
     opacity: 1;
+}
+
+.site-logo {
+    width: 75%;
 }
 
 .hr-50 {
@@ -81,12 +86,14 @@ footer {
     background-color: var(--orange);
 }
 
-
-
-
 /* header */
 
 /* account bar */
+
+.account-bar {
+  background-color: var(--silver);
+}
+
 .account-bar ul {
     margin-bottom: 0;
 }
@@ -140,6 +147,16 @@ footer {
   color: #343a40;
 }
 
+/* hero */
+.hero-tagline {
+  margin-top: 4rem;
+  font-size: 5rem;
+}
+
+.hero-image img {
+  max-width: 100%;
+  text-align: center;
+}
 
 /* media queries */
 
