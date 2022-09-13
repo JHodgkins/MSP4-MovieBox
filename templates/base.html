@@ -57,7 +57,7 @@
                 
                             {% endif %}
                             <li class="list-inline-item">
-                            <a class="{% url 'account_logout' %}" href="#">Logout</a>
+                            <a class="" href="{% url 'account_logout' %}">Logout</a>
                             </li>
                         {% else %}
                             <li class="list-inline-item">
@@ -75,7 +75,7 @@
 
     <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand mr-auto mr-lg-0" href="{% url 'homepage' %}">MovieBox</a>
+            <a class="navbar-brand mr-auto mr-lg-0" href="{% url 'homepage' %}"><img src="media/logo_white.png" alt="MovieBox logo" class="site-logo"></a>
             <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -130,7 +130,7 @@
                 <div class="col-12 my-2">
                     <form method="GET" action="">
                         <div class="input-group w-100">
-                            <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
+                            <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search MovieBox Site..">
                             <div class="input-group-append">
                                 <button class="form-control btn btn-black border border-black rounded-0" type="submit">
                                     <span class="icon">
