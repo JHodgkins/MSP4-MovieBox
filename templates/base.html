@@ -83,28 +83,31 @@
             <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
     
                 <ul class="navbar-nav ml-auto">
-
                     <li class="nav-item active">
                         <a class="nav-link" href="{% url 'homepage' %}">Home <span class="sr-only">(current)</span></a>
                     </li>
-        
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url 'products' %}?category=new_arrivals">New arrivals <span class="sr-only">(current)</span></a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'products' %}">All Movies</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">DVDs</a>
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">Generes</a>
                         <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Type 1</a>
-                        <a class="dropdown-item" href="#">Type 2</a>
-                        <a class="dropdown-item" href="#">Type 3</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?category=action">Action</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?category=horror">Horror</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?category=comedy">Comedy</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?category=sci_fi">Sci-Fi</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?category=true_life">Tre life</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?category=thriller">Thriller</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">Blue-rays</a>
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">Hot deals</a>
                         <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Type 1</a>
-                        <a class="dropdown-item" href="#">Type 2</a>
-                        <a class="dropdown-item" href="#">Type 3</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?category=limited_time">Limited time offers</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?category=clearance">Clearance</a>
                         </div>
                     </li>
                     
