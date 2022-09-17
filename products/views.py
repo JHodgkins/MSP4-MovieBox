@@ -24,7 +24,6 @@ def all_products(request):
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
 
-
         if 'search' in request.GET:
             search = request.GET['search']
             if not search:
