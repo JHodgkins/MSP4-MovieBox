@@ -128,9 +128,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 my-2">
-                    <form method="GET" action="">
+                    <form method="GET" action="{% url 'products' %}">
                         <div class="input-group w-100">
-                            <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search MovieBox Site..">
+                            <input class="form-control border border-black rounded-0" type="text" name="search" placeholder="Search MovieBox for. movies, actors or directors..">
                             <div class="input-group-append">
                                 <button class="form-control btn btn-black border border-black rounded-0" type="submit">
                                     <span class="icon">
@@ -153,7 +153,15 @@
 
     {% if messages %}
         <div class="message-container">
-        
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                    {% for message in messages %}
+                        <div class="alert alert-warning">{{ message }}</div>
+                    {% endfor %}
+                    </div>
+                </div>
+            </div>
         </div>
     {% endif %}
 
