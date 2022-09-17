@@ -11,7 +11,8 @@
     -- nav bar
     -- hero
 6. product listing
-7. product details 
+7. product details
+    -- icons
 
 media queries
 */
@@ -30,6 +31,7 @@ media queries
     --black: #000000;
     --grey: #565555; /* Davys Grey */
     --orange: #FFB341; /* Yellow Orange */
+    --blue: #5EB1FF; /* Blue */
     --red: #ED254E; /* Red Crayola */
     --silver: #C4CAD0; /* Silver Sand */
     --cream: #FCF7FF; /* Magnolia */
@@ -190,8 +192,34 @@ footer {
   background-color: var(--grey);
 }
 
+/* 7. Product details */
 
+/* icons */
 
+.imdb-rating i, .product-category i {
+  color: var(--black);
+  font-size: 2rem;
+  padding-top: 1rem;
+  padding-right: 1rem;
+}
+
+/* descriptions */
+
+.product-title {
+  font-size: 3rem;
+}
+
+/* cover art */
+
+.cover-art {
+  border: 2px solid var(--blue);
+  box-shadow: 0 5px 20px rgba(0,0,0,.25);
+  transition: transform 300ms, box-shadow 300ms;
+}
+.cover-art:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15 80px  rgba(0,0,0,.25);
+}
 
 
 /* media queries */
