@@ -10,6 +10,8 @@
     -- account bar
     -- nav bar
     -- hero
+6. product listing
+7. product details 
 
 media queries
 */
@@ -157,6 +159,40 @@ footer {
   max-width: 100%;
   text-align: center;
 }
+
+/* 6. Product listing */
+
+/* cards */
+.card-buttons {
+  padding: 0;
+  color: #000000;
+  text-decoration: none;
+}
+
+.details-link {
+  color: var(--black);
+  background-color: var(--silver);
+  text-align:center;
+  padding:1em 0em;
+}
+.details-link:hover {
+  color: var(--black);
+  background-color: var(--cream);
+}
+.basket-link {
+  color: var(--black);
+  background-color: var(--orange);
+  text-align:center;
+  padding:1em 0em;
+}
+.basket-link:hover {
+  color: var(--white);
+  background-color: var(--grey);
+}
+
+
+
+
 
 /* media queries */
 
