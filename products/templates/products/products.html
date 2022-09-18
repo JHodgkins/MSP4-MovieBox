@@ -6,11 +6,34 @@
     <div class="home-page-image">
         <div class="container home-page-banner-inner py-5">
             <div class="row justify-content-center">
-                <div class="col-lg-12">
+                <div class="col-lg-8">
                     <div class="my-5 products-page-main-heading">
                         <h1 class="display-5 fw-bolder text-white mb-2 ">New products added every day!</h1>
+                        
                     </div>
                 </div>
+                <div class="col-4 col-md-4 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+                        <div class="sort-select-wrapper w-50">
+                            <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                                <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                                <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                                <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                                <option value="imdb_rating_asc" {% if current_sorting == 'imdb_rating_asc' %}selected{% endif %}>Rating (low to high)</option>
+                                <option value="imdb_rating_desc" {% if current_sorting == 'imdb_rating_desc' %}selected{% endif %}>Rating (high to low)</option>
+                                <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                                <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+                                <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
+                                <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
+                            </select>
+                        </div>
+                    </div>
+
+
+                    
+
+
+
+
             </div>
         </div>
     </div>
@@ -21,7 +44,22 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2 class="">All prooducts</h2>
+                
+                    <div class="col-12 col-md-6 order-md-first">
+                        <h2 class="mt-3 text-md-left">
+                            {% if search_term or active_categories or current_sorting != 'None_None' %}
+                                <span class="small"><a href="{% url 'products' %}">Products Home</a> | </span>
+                            {% endif %}
+                            {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                        </h2>
+                    </div>
+
+
+                {% for c in active_categories %}
+                            <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
+                            <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_name }}</span>
+                            </a>
+                        {% endfor %}
             </div>
         </div>
         <div class="row">
