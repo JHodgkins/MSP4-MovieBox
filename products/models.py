@@ -34,7 +34,7 @@ class Product(models.Model):
     certificate = models.CharField(max_length=5, null=True, blank=True)
     no_discs = models.CharField(max_length=50, null=True, blank=True)
     duration = models.CharField(max_length=50, null=True, blank=True)
-    imdb_rating = models.DecimalField(
+    imdbrating = models.DecimalField(
         max_digits=6, decimal_places=1, null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
