@@ -99,8 +99,9 @@
                         <a class="dropdown-item" href="{% url 'products' %}?category=horror">Horror</a>
                         <a class="dropdown-item" href="{% url 'products' %}?category=comedy">Comedy</a>
                         <a class="dropdown-item" href="{% url 'products' %}?category=sci_fi">Sci-Fi</a>
-                        <a class="dropdown-item" href="{% url 'products' %}?category=true_life">Tre life</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?category=true_life">True life</a>
                         <a class="dropdown-item" href="{% url 'products' %}?category=thriller">Thriller</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?category=action,comedy,sci_fi,true_life,thriller,horror">All Generes</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -116,7 +117,7 @@
                         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">Filter</a>
                         <div class="dropdown-menu">
                         <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">Price</a>
-                        <a class="dropdown-item" href="{% url 'products' %}?sort=imdb_rating&direction=desc">imdb rating</a>
+                        <a class="dropdown-item" href="{% url 'products' %}?sort=imdbrating&direction=desc">imdb rating</a>
                         <a class="dropdown-item" href="{% url 'products' %}?sort=category&direction=asc">Category nam</a>
                         </div>
                     </li>
