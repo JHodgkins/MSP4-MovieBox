@@ -1,0 +1,48 @@
+<div class="product-page-image">
+        <div class="container products-page-banner-inner pb-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="my-5 products-page-main-heading">
+                        <h1 class="display-5 fw-bolder text-white mb-2 ">
+                            {% if search_term or active_categories or current_sorting != 'None_None' %}
+                                    <span class="text-white"><a class="text-white" href="{% url 'products' %}">All movies</a> | </span>
+                            {% endif%}
+                            {% if search_term %}
+                                    {{ products|length }} Products found for <strong>"{{ search_term }}"</strong>
+                            {% else %}
+                                Showing: {{ products|length }} Products
+                            {% endif %}
+                        </h1>
+                    </div>
+                    {% if active_categories %}
+                        <div class="category-genres">
+                            <h3 class="text-white">Categories</h3>
+                        </div>
+                        {% for c in active_categories %}
+                            <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
+                            <span class="p-2 mt-2 badge badge-white border border-light">{{ c.friendly_name }}</span>
+                                </a>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+                <div class="col-lg-4 my-auto   justify-content-center ">
+                    <div class="my-5 products-page-sort-heading text-white">
+                        <h2>Filter your results</h2>
+                    </div>
+                    <div class="sort-select-wrapper w-100">
+                        <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                            <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                            <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                            <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                            <option value="imdbrating_asc" {% if current_sorting == 'imdbrating_asc' %}selected{% endif %}>imdb Rating (low to high)</option>
+                            <option value="imdbrating_desc" {% if current_sorting == 'imdbrating_desc' %}selected{% endif %}>imdb Rating (high to low)</option>
+                            <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                            <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+                            <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
+                            <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
