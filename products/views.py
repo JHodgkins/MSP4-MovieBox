@@ -5,10 +5,12 @@ import redirect and reverse to hanfle redirections of pages and rverse to
 handle unidirectional urls.
 import Products so the products can be viewed on the froneend.
 Import Q to handle wueries to locate search terms within page model areas.
+import Lower to enable strings to be set to lowercase.
 """
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
+from django.db.models.functions import Lower
 from .models import Product, Category
 
 
@@ -20,7 +22,7 @@ def all_products(request):
     search = None
     sort = None
     direction = None
-    
+
     if request.GET:
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
