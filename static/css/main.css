@@ -164,7 +164,21 @@ footer {
 
 /* 6. Product listing */
 
+/* hero sort area */
+
+.category-badge span {
+  color: var(--white);
+}
+.category-badge span:hover {
+  color: var(--orange);
+}
+
 /* cards */
+
+.product-card {
+  max-height: 365px;
+}
+
 .card-buttons {
   padding: 0;
   color: #000000;
