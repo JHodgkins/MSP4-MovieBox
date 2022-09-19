@@ -125,7 +125,7 @@
                         <span> | </span>
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-shopping-basket"></i>
+                        <a class="nav-link" href="{% url 'view_basket' %}"><i class="fas fa-shopping-basket"></i>
                         {% if grand_total %}
                             <span>  Total £{{ grand_total|floatformat:2 }}</span>
                         {% else %}
