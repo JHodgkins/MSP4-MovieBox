@@ -246,6 +246,14 @@ footer {
   padding-top: 2rem;
 }
 
+.basket-page-total-heading {
+  text-align: left;
+}
+
+.basket-product-art img{
+  max-width: 100%;
+}
+
 /* media queries */
 
 @media (max-width: 991.98px) {
@@ -277,4 +285,14 @@ footer {
       
     }
   }
-  
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 766px) {
+  .basket-product-art img{
+    max-width: 35%;
+  }
+
+  .basket-page-total-heading {
+    text-align: right !important;
+  }
+}
