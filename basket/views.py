@@ -1,4 +1,4 @@
-""" 
+"""
 import redirect so a url can be saved and a user can be redirected to this url.
 import render for rendering templates to frontend
 """
@@ -24,6 +24,5 @@ def add_to_the_basket(request, item_id):
         basket[item_id] = quantity
 
     request.session['basket'] = basket
-    
+
     return redirect(redirect_url)
-    
