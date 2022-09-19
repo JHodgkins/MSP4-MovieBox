@@ -6,9 +6,20 @@
     <div class="basket-page-image">
         <div class="container basket-page-banner-inner py-5">
             <div class="row justify-content-center">
-                <div class="col-lg-12">
+                <div class="col-lg-6">
                     <div class="my-5 basket-page-main-heading">
                         <h1 class="display-5 fw-bolder text-white mb-2 ">Your Shopping basket</h1>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="my-5 basket-page-main-heading">
+                        <h2 class="display-5 fw-bolder text-white mb-2 text-right">
+                        {% if grand_total %}
+                            Total: &nbsp;£{{ grand_total }}
+                        {% else %} 
+                            No items in basket
+                        {% endif %}
+                        </h2>
                     </div>
                 </div>
             </div>
@@ -27,7 +38,9 @@
         <div class="row">
             <div class="col-sm-12 col-md-6 mb-5">
                 {% if basket_items %}
-                    <div class="table-responsive rounded"></div>
+                    <div class="table-responsive rounded">
+                        {{ basket_items }}
+                    </div>
                 {% else %}
                     <p class="lead mb-5">Your basket is empty.</p>
                     <a href="{% url 'products' %}" class="btn btn-outline-dark  btn-lg">
