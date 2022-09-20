@@ -211,6 +211,17 @@ footer {
   background-color: var(--grey);
 }
 
+.details-input {
+  max-width:40%;
+}
+
+.basket-input {
+  padding: 1rem;
+  max-width: 60%;
+  border: none;
+  font-size: 1rem;
+}
+
 /* 7. Product details */
 
 /* icons */
