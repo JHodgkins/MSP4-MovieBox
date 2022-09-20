@@ -52,12 +52,24 @@
                     </div>
                     <div class="border-1 card-buttons">
                         <div class="row" style="margin:0!important;" >
-                            <a class="col-6 details-link" href="{% url 'product_details' product.id %}">
-                                More info
-                            </a>
-                            <a class="col-6 basket-link" href="#">
-                                Add to basket
-                            </a>
+                        <div class="col-12">
+                            <form class="" action="{% url 'add_to_the_basket' product.id %}" method="POST">
+                                {% csrf_token %}
+                                <select hidden name="quantity" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                    <option value="1" selected>1 copy</option>
+                                    <option value="2">2 copies</option>
+                                    <option value="3">3 copies</option>
+                                    <option value="4">4 copies</option>
+                                    <option value="5">5 copies</option>
+                                </select>
+                                </div>
+                                <a class="col-6 details-link" style="max-width:40%;" href="{% url 'product_details' product.id %}">
+                                    More info
+                                </a>
+                                
+                                <input type="submit" class="col-12 basket-link  text-uppercase" style="padding: 1rem;max-width: 55%;border: none;font-size: 1rem;" value="Add to Basket">
+                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                            </form>
                         </div>
                     </div>
                 </div>
