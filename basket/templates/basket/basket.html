@@ -15,7 +15,7 @@
                     <div class="my-5 basket-page-total-heading">
                         <h2 class="display-5 fw-bolder text-white mb-2">
                         {% if grand_total %}
-                            Total: &nbsp;£{{ grand_total }}
+                            Total: &nbsp;£{{ grand_total|floatformat:2 }}
                         {% else %} 
                             No items in basket
                         {% endif %}
@@ -38,7 +38,7 @@
         <div class="row">
             <div class="col-sm-12 col-md-12 mb-5">
                 {% if basket_items %}
-                    <div class="table-responsive rounded">
+                    <div class="table rounded">
                         <table class="table table-sm ">
                             <thead class="text-black font-weight-bold">
                                 <tr>
@@ -62,7 +62,19 @@
                                         <p class="my-0">£ {{ item.product.price }}</p>
                                     </td>
                                     <td class="py-3 w-25">
-                                        <p class="my-0">{{ item.quantity }}</p>
+                                        <form class="form update-form" method="post" action="{% url 'update_basket' item.item_id %}">
+                                        {% csrf_token %}
+                                    <select name="quantity" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
+                                        <option value="{{ item.quantity }}">{{ item.quantity }}</option>
+                                        <option value="1">1 copy</option>
+                                        <option value="2">2 copies</option>
+                                        <option value="3">3 copies</option>
+                                        <option value="4">4 copies</option>
+                                        <option value="5">5 copies</option>
+                                    </select>
+                                        </form>
+                                        <a class="update-link text-info"><small>Update</small></a>
+                                        <a class="remove-item text-danger" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><small>Remove</small></a>
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0">£ {{ item.product.price }}</p>
@@ -99,6 +111,44 @@
                             </tr>
                         </table>
                     </div>
+
+
+                    <ul class="list-group mb-3">
+        <li class="list-group-item d-flex justify-content-between lh-condensed">
+        <img class=" rounded" src="{{ item.product.image.url }}">
+          <div>
+            <h6 class="my-0">Product name</h6>
+            <small class="text-muted">Brief description</small>
+          </div>
+          <span class="text-muted">$12</span>
+        </li>
+        
+        <li class="list-group-item d-flex justify-content-between lh-condensed">
+          <div>
+            <h6 class="my-0">Second product</h6>
+            <small class="text-muted">Brief description</small>
+          </div>
+          <span class="text-muted">$8</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between lh-condensed">
+          <div>
+            <h6 class="my-0">Third item</h6>
+            <small class="text-muted">Brief description</small>
+          </div>
+          <span class="text-muted">$5</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between bg-light">
+          <div class="text-success">
+            <h6 class="my-0">Promo code</h6>
+            <small>EXAMPLECODE</small>
+          </div>
+          <span class="text-success">-$5</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between">
+          <span>Total (USD)</span>
+          <strong>$20</strong>
+        </li>
+      </ul>
                 {% else %}
                     <p class="lead mb-5">Your basket is empty.</p>
                     <a href="{% url 'products' %}" class="btn btn-outline-dark  btn-lg">
@@ -116,3 +166,25 @@
         </div>
     </div>
 {% endblock content %}
+{% block footerjs %}
+{{ block.super }}
+<script type="text/javascript">
+    // Update quantity on click
+    $('.update-link').click(function(e) {
+        var form = $(this).prev('.update-form');
+        form.submit();
+    })
+
+    // Remove item and reload on click
+    $('.remove-item').click(function(e) {
+        var csrfToken = "{{ csrf_token }}";
+        var itemId = $(this).attr('id').split('remove_')[1];
+        var url = `/bag/remove/${itemId}/`;
+
+        $.post(url, data)
+         .done(function() {
+             location.reload();
+         });
+    })
+</script>
+{% endblock footerjs %}
