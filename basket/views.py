@@ -2,7 +2,7 @@
 import redirect so a url can be saved and a user can be redirected to this url.
 import render for rendering templates to frontend
 """
-from django.shortcuts import redirect, render
+from django.shortcuts import redirect, reverse, render
 
 
 # Renders basket template.
@@ -26,3 +26,18 @@ def add_to_the_basket(request, item_id):
     request.session['basket'] = basket
 
     return redirect(redirect_url)
+
+
+def update_basket(request, item_id):
+    """ Updates the quantity of an item in the basket """
+
+    quantity = int(request.POST.get('quantity'))
+    basket = request.session.get('basket', {})
+
+    if quantity > 0:
+        basket[item_id] = quantity
+    else:
+        basket.pop[item_id]
+
+    request.session['basket'] = basket
+    return redirect(reverse('view_basket'))
