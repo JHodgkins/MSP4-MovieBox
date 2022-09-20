@@ -63,11 +63,11 @@
                                     <option value="5">5 copies</option>
                                 </select>
                                 </div>
-                                <a class="col-6 details-link" style="max-width:40%;" href="{% url 'product_details' product.id %}">
+                                <a class="col-6 details-link details-input" href="{% url 'product_details' product.id %}">
                                     More info
                                 </a>
                                 
-                                <input type="submit" class="col-12 basket-link  text-uppercase" style="padding: 1rem;max-width: 55%;border: none;font-size: 1rem;" value="Add to Basket">
+                                <input type="submit" class="col-12 basket-link  basket-input text-uppercase"  value="Add to Basket">
                                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             </form>
                         </div>
