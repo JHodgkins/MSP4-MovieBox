@@ -173,7 +173,17 @@
                 <div class="row">
                     <div class="col-12">
                     {% for message in messages %}
-                        <div class="alert alert-warning">{{ message }}</div>
+                        {% with message.level as level %}
+                            {% if level == 25 %}
+                                {% include 'includes/toasts/success.html' %}
+                            {% elif level == 30 %}
+                                {% include 'includes/toasts/warning.html' %}
+                            {% elif level == 40 %}
+                                {% include 'includes/toasts/error.html' %}
+                            {% else %}
+                                {% include 'includes/toasts/info.html' %}
+                            {% endif %}
+                        {% endwith %}      
                     {% endfor %}
                     </div>
                 </div>
@@ -225,6 +235,9 @@
         $('.offcanvas-collapse').toggleClass('open')
     })
     })
+    </script>
+    <script>
+        $('.toast').toast('show');
     </script>
     {% endblock footerjs %}
   </body>
