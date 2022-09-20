@@ -1,8 +1,10 @@
 """
 import redirect so a url can be saved and a user can be redirected to this url.
-import render for rendering templates to frontend
+Import reverse to handle when rturning to a url..
+import render for rendering templates to frontend.
+import HttpResponse to handle errors returned through JavaScript.
 """
-from django.shortcuts import redirect, reverse, render
+from django.shortcuts import redirect, reverse, render, HttpResponse
 
 
 # Renders basket template.
@@ -37,7 +39,21 @@ def update_basket(request, item_id):
     if quantity > 0:
         basket[item_id] = quantity
     else:
-        basket.pop[item_id]
+        basket.pop(item_id)
 
     request.session['basket'] = basket
     return redirect(reverse('view_basket'))
+
+
+def remove_from_the_basket(request, item_id):
+    """ Removes an item in the basket """
+    try:
+        if 'remove' in request.POST:
+        
+            basket = request.session.get('basket', {})
+            basket.pop(item_id)
+
+            request.session['basket'] = basket
+            return HttpResponse(status=200)
+    except Exception as e:
+        return HttpResponse(status=500)
