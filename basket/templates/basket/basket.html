@@ -75,7 +75,7 @@
                                     </select>
                                         </form>
                                         <a class="update-link text-info">Update</a>
-                                        <a class="remove-link text-danger" id="remove_{{ item.item_id }}" data-remove="{{ item.item }}">Remove</a>
+                                        <a class="remove-item remove-link text-danger" id="remove_{{ item.item_id }}" data-remove="{{ item.item }}"><small>Remove</small></a>
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0">£ {{ item.product.price| calc_subtotal:item.quantity }}</p>

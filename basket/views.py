@@ -5,8 +5,7 @@ import render for rendering templates to frontend.
 import HttpResponse to handle errors returned through JavaScript.
 import get object or 404 to handle errors if no oject is returned from dataase.
 """
-from django.shortcuts import (
-    redirect, reverse, render, HttpResponse, get_object_or_404)
+from django.shortcuts import redirect, reverse, render, HttpResponse, get_object_or_404
 from django.contrib import messages
 from products.models import Product
 
