@@ -265,6 +265,12 @@ footer {
   max-width: 100%;
 }
 
+.update-link, .remove-link {
+  cursor: pointer;
+  margin-right: 1rem;
+  font-size: 1rem;
+}
+
 /* media queries */
 
 @media (max-width: 991.98px) {
