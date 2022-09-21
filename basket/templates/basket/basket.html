@@ -65,7 +65,7 @@
                                     <td class="py-3 w-25">
                                         <form class="form update-form" method="post" action="{% url 'update_basket' item.item_id %}">
                                         {% csrf_token %}
-                                    <select name="quantity" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
+                                    <select class="p-2" name="quantity" data-item_id="{{ item.item_id }}" id="id_qty_{{ item.item_id }}">
                                         <option value="{{ item.quantity }}">{{ item.quantity }}</option>
                                         <option value="1">1 copy</option>
                                         <option value="2">2 copies</option>
@@ -74,8 +74,8 @@
                                         <option value="5">5 copies</option>
                                     </select>
                                         </form>
-                                        <a class="update-link text-info"><small>Update</small></a>
-                                        <a class="remove-item text-danger" id="remove_{{ item.item_id }}" data-remove="{{ item.item }}"><small>Remove</small></a>
+                                        <a class="update-link text-info">Update</a>
+                                        <a class="remove-link text-danger" id="remove_{{ item.item_id }}" data-remove="{{ item.item }}">Remove</a>
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0">£ {{ item.product.price| calc_subtotal:item.quantity }}</p>
@@ -95,18 +95,18 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td colspan="5" class="text-right">
-                                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                                <td colspan="5" class="text-left">
+                                    <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg details-link p-3">
                                         <span class="icon">
                                             <i class="fas fa-chevron-left"></i>
                                         </span>
                                         <span class="">Keep Browsing</span>
                                     </a>
-                                    <a href="" class="btn btn-black rounded-0 btn-lg">
+                                    <a href="" class="btn btn-black rounded-0 btn-lg basket-link p-3">
                                         <span class="text-uppercase">Complete purchase</span>
-                                        <span class="icon">
+                                        
                                             <i class="fas fa-lock"></i>
-                                        </span>
+                                        
                                     </a>
                                 </td>
                             </tr>
