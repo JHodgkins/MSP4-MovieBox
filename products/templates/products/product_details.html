@@ -34,7 +34,16 @@
                     {% if product.category %}
                         <p class="product-category small mt-1 mb-0">
                             <a class="" href="{% url 'products' %}?category={{ product.category.name }}">
-                                <i class="fas fa-video mr-1"></i>{{ product.category.friendly_name }}
+                            {% if product.category.name == "limited_time" %}
+                                <i class="fas fa-clock"></i>
+                            {% elif product.category.name == "clearance" %}
+                                <i class="fas fa-tags mr-1"></i>
+                            {% elif product.category.name == "new_arrivals" %}
+                                <i class="fas fa-bullhorn"></i>
+                            {% else %}
+                                <i class="fas fa-video mr-1"></i>
+                            {% endif %}
+                                {{ product.category.friendly_name }}
                             </a>
                         </p>
                     {% endif %}
@@ -116,7 +125,7 @@
                         <div class="form-row">
                             <div class="col-12">
                                 <p class="mt-3"><strong>Quantity:</strong></p>
-                                <select name="quantity" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                <select class="p-3" name="quantity" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
                                     <option value="1" selected>1 copy</option>
                                     <option value="2">2 copies</option>
                                     <option value="3">3 copies</option>
@@ -127,13 +136,13 @@
                             </div>
 
                             <div class="col-12 mb-5">
-                                <a href="{% url 'products' %}" class="btn details-link mt-2">
+                                <a href="{% url 'products' %}" class="btn details-link mt-2 p-3">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
                                     <span class="text-uppercase">Keep Browsing</span>
                                 </a>
-                                <input type="submit" class="btn basket-link  text-uppercase mt-2" value="Add to Basket">
+                                <input type="submit" class="btn basket-link  text-uppercase mt-2 p-3" value="Add to Basket">
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>

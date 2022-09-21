@@ -37,12 +37,21 @@
                                 {% if product.category %}
                                 <p class="small mt-1 mb-0">
                                     <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-                                        <i class="fas fa-video mr-1"></i>{{ product.category.friendly_name }}
+                                    {% if product.category.name == "limited_time" %}
+                                        <i class="fas fa-clock"></i>
+                                    {% elif product.category.name == "clearance" %}
+                                        <i class="fas fa-tags mr-1"></i>
+                                    {% elif product.category.name == "new_arrivals" %}
+                                        <i class="fas fa-bullhorn"></i>
+                                    {% else %}
+                                        <i class="fas fa-video mr-1"></i>
+                                    {% endif %}
+                                        {{ product.category.friendly_name }}
                                     </a>
                                 </p>
                                 {% endif %}
                                 {% if product.imdbrating %}
-                                    <small class="text-muted"><i class="fas fa-star mr-1"></i>
+                                    <small class="">
                                     imdb rating: {{ product.imdbrating }} / 10</small>
                                 {% else %}
                                     <small class="text-muted">Not yet rated</small>
