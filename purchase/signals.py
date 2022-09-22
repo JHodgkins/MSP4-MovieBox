@@ -19,6 +19,6 @@ def update_order_total_on_save(sender, instance, created, **kwargs):
 @receiver(post_delete, sender=LineItemOrder)
 def update_order_total_on_delete(sender, instance, **kwargs):
     """
-    Updates the ;ine item when an item is deleted using the admin dashoard.
+    Updates the line item when an item is deleted using the admin dashoard.
     """
     instance.order.update_total()
