@@ -271,6 +271,14 @@ footer {
   font-size: 1rem;
 }
 
+/* Purchase page */
+
+.basket-count-purchase {
+  top: 30px;
+  display: inline-block;
+  position: absolute;
+}
+
 /* media queries */
 
 @media (max-width: 991.98px) {
