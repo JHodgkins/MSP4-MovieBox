@@ -5,19 +5,19 @@ Import model LineItemOrder so fields can be interacted with.
 """
 from django.db.models.signals import post_save, post_delete
 from django.dispatch import receiver
-from .models import LineItemOrder
+from .models import OrderLineItem
 
 
-@receiver(post_save, sender=LineItemOrder)
-def update_order_total_on_save(sender, instance, created, **kwargs):
+@receiver(post_save, sender=OrderLineItem)
+def update_on_save(sender, instance, created, **kwargs):
     """
     Update the line item order total when saved.
     """
     instance.order.update_total()
 
 
-@receiver(post_delete, sender=LineItemOrder)
-def update_order_total_on_delete(sender, instance, **kwargs):
+@receiver(post_delete, sender=OrderLineItem)
+def update_on_delete(sender, instance, **kwargs):
     """
     Updates the line item when an item is deleted using the admin dashoard.
     """

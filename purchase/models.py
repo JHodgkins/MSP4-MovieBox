@@ -40,7 +40,7 @@ class Order(models.Model):
         Update grand total each time a line item order is added,
         accounting for delivery threasholds.
         """
-        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
+        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
         if self.order_total < settings.FREE_DELIVERY_THRESHOLD:
             self.delivery_cost = self.order_total * settings.STANDARD_DELIVERY_PERCENTAGE / 100
         else:
@@ -62,7 +62,7 @@ class Order(models.Model):
         return self.order_number
 
 
-class LineItemOrder(models.Model):
+class OrderLineItem(models.Model):
     """
     line order item, used y the aadmin to read, create, edit and
     delete individual customer orders

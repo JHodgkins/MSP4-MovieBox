@@ -6,7 +6,7 @@ from django import forms
 from .models import Order
 
 
-class CustomerOrderForm(forms.ModelForm):
+class OrderForm(forms.ModelForm):
     """ Construct fields required on the customer form """
     class Meta:
         """
@@ -31,12 +31,18 @@ class CustomerOrderForm(forms.ModelForm):
             'phone_number': 'Phone or Mobile Number',
             'street_address1': 'Street Address Line 1',
             'street_address2': 'Street Address Line 2',
-            'town_or_city': 'City, Town or Village',
+            'town_or_city': 'City Town or Village',
             'postcode': 'Postal Code',
             'county': 'County',
             'country': 'Country',
         }
         for field in self.fields:
-            placeholder = placeholders[field]
+            self.fields['full_name'].widget.attrs['autofocus'] = False
+        for field in self.fields:
+            if self.fields[field].required:
+                placeholder = f'{placeholders[field]} *'
+            else:
+                placeholder = placeholders[field]
             self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'stripe-style-input'
+            self.fields[field].label
