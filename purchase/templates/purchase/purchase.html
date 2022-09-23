@@ -144,3 +144,10 @@
         </div>
     </div>
 {% endblock content %}
+<!-- Load Stripe keys -->
+{% block footerjs %}
+    {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'purchase/js/stripe_elements.js' %}"></script>
+{% endblock footerjs %}
