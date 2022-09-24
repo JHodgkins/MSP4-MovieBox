@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<section class="bg-dark basket-page">
+    <div class="basket-page-image">
+        <div class="container basket-page-banner-inner py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="my-5 basket-page-main-heading">
+                        <h1 class="display-5 fw-bolder text-white mb-2 ">Thank you for your order!<br>Order no: {{ order.order_number }}</h1>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="my-5 basket-page-total-heading">
+                        <h2 class="display-5 fw-bolder text-white mb-2">
+                        Order total: 
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!-- end purchase page banner area -->
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-12 col-md-12 mb-5">
+                <div class="col-12 basket-heading">
+                    <h2 class="">Your order is on it's way</h2>
+                    <p>
+                        Here is a summary of your recent purchase below.
+                        An email containing your purchase has been sent to your email address {{ order.email }}.
+                    </p>
+                    <p>
+                        Many thanks, MovieBox Team
+                    </p>
+                </div>
+                
+            </div>
+
+            <div class="col-sm-12 col-md-12 mb-5">
+                <div class="col-12 basket-heading">
+                    <h2 class="">Purchased items <span class="badge badge-primary ml-1 mr-2 mb-1 basket-count-purchase">{{ product_count }}</span></h2>
+                </div>
+                {% for item in basket_items %}
+                    <div class="row">
+                        <div class="col-2 mb-1">
+                            <a href="{% url 'product_details' item.product.id %}">
+                                {% if item.product.image %}
+                                    <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
+                                {% else %}
+                                    <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                {% endif %}
+                            </a>
+                        </div>
+                        <div class="col-7">
+                            <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                            <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
+                        </div>
+                        <div class="col-3 text-right">
+                            <p class="my-0">£</p>
+                        </div>
+                    </div>
+                {% endfor %}
+                <hr class="my-3">
+                <div class="row text-black">
+                    <div class="col-4 mt-3">
+                        <p class="my-0">Order Total:</p>
+                        <p class="my-0">Delivery:</p>
+                        <p class="my-0">Grand Total:</p>
+                    </div>
+                    <div class="col-6 mt-3">
+                        <p class="my-0">£{{ total | floatformat:2 }}</p>
+                        <p class="my-0">£{{ delivery | floatformat:2 }}</p>
+                        <p class="my-0"><strong>£{{ grand_total | floatformat:2 }}</strong></p>
+                    </div>
+                </div>    
+            </div> 
+
+            
+
+                         
+        </div>
+    </div>
+{% endblock content %}

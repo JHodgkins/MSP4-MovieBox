@@ -46,7 +46,7 @@ def purchase(request):
                 try:
                     product = Product.objects.get(id=item_id)
                     if isinstance(item_data, int):
-                        order_line_item = OrderLineItem(
+                        order_line_item = OrderLineItem (
                             order=order,
                             product=product,
                             quantity=item_data,
@@ -59,8 +59,12 @@ def purchase(request):
                     )
                     order.delete()
                     return redirect(reverse('view_basket'))
+
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('purchase_complete', args=[order.order_number]))
+        else:
+            messages.error(request, 'There was an error with your form. \
+                Please double check your information.')
     else:
         basket = request.session.get('basket', {})
         if not basket:
@@ -77,12 +81,13 @@ def purchase(request):
         )
 
         order_form = OrderForm()
-        template = 'purchase/purchase.html'
-        context = {
-            'order_form': order_form,
-            'stripe_public_key': stripe_public_key,
-            'client_secret': intent.client_secret,
-        }
+        
+    template = 'purchase/purchase.html'
+    context = {
+        'order_form': order_form,
+        'stripe_public_key': stripe_public_key,
+        'client_secret': intent.client_secret,
+    }
 
     return render(request, template, context)
 

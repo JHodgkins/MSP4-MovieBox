@@ -36,8 +36,8 @@ class OrderForm(forms.ModelForm):
             'county': 'County',
             'country': 'Country',
         }
-        for field in self.fields:
-            self.fields['full_name'].widget.attrs['autofocus'] = False
+        
+        self.fields['full_name'].widget.attrs['autofocus'] = False
         for field in self.fields:
             if self.fields[field].required:
                 placeholder = f'{placeholders[field]} *'
@@ -45,4 +45,4 @@ class OrderForm(forms.ModelForm):
                 placeholder = placeholders[field]
             self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'stripe-style-input'
-            self.fields[field].label
+            self.fields[field].label = False

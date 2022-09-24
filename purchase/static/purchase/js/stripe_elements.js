@@ -43,52 +43,32 @@ card.addEventListener('change', function (event) {
     }
 });
 
-// Handle form submit
+// Form submission
 let form = document.getElementById('payment-form');
 
 form.addEventListener('submit', function(ev) {
     ev.preventDefault();
     card.update({ 'disabled': true});
     $('#submit-button').attr('disabled', true);
-    
-
-    let saveInfo = Boolean($('#id-save-info').attr('checked'));
-    // From using {% csrf_token %} in the form
-    let csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
-    let postData = {
-        'csrfmiddlewaretoken': csrfToken,
-        'client_secret': clientSecret,
-        'save_info': saveInfo,
-    };
-    let url = '/purchase/cache_purchase_data/';
-
-    $.post(url, postData).done(function () {
-        stripe.confirmCardPayment(clientSecret, {
-            payment_method: {
-                card: card,
-                
+    stripe.confirmCardPayment(clientSecret, {
+        payment_method: {
+            card: card,
+        }
+    }).then(function(result) {
+        if (result.error) {
+            var errorDiv = document.getElementById('card-errors');
+            var html = `
+                <span class="icon" role="alert">
+                <i class="fas fa-times"></i>
+                </span>
+                <span>${result.error.message}</span>`;
+            $(errorDiv).html(html);
+            card.update({ 'disabled': false});
+            $('#submit-button').attr('disabled', false);
+        } else {
+            if (result.paymentIntent.status === 'succeeded') {
+                form.submit();
             }
-            
-        }).then(function(result) {
-            if (result.error) {
-                let errorDiv = document.getElementById('card-errors');
-                let html = `
-                    <span class="icon" role="alert">
-                    <i class="fas fa-times"></i>
-                    </span>
-                    <span>${result.error.message}</span>`;
-                $(errorDiv).html(html);
-                card.update({ 'disabled': false});
-                $('#submit-button').attr('disabled', false);
-                
-            } else {
-                if (result.paymentIntent.status === 'succeeded') {
-                    form.submit();
-                }
-            }
-        });
-    }).fail(function () {
-        // just reload the page, the error will be in django messages
-        location.reload();
-    })
+        }
+    });
 });

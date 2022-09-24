@@ -3,7 +3,7 @@ from django.apps import AppConfig
 
 
 class PurchaseConfig(AppConfig):
-    """ App configuration, ma,es the app """
+    """ App configuration, makes the app """
     default_auto_field = 'django.db.models.BigAutoField'
     name = 'purchase'
 
