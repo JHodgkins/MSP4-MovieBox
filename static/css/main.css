@@ -285,8 +285,7 @@ footer {
 
 
 /* Stripe payment gateway */
-.StripeElement,
-.stripe-style-input {
+.StripeElement {
   box-sizing: border-box;
   height: 40px;
   padding: 10px 12px;
@@ -328,21 +327,22 @@ select, select option {
 }
 
 select:invalid, select option[value=""] {
-  color: #aab7c4 !important;
+  /* color: #aab7c4 !important; */
+  color: #ED254E;
 }
 
-#loading-overlay {
+#payment-process-overlay {
 	display: none;
 	position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(23, 162, 184, .85);
+    background: var(--orange);
     z-index: 9999;
 }
 
-.loading-spinner {
+.processing {
 	display: flex;
     align-items: center;
     justify-content: center;
