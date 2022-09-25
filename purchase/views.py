@@ -1,5 +1,6 @@
 """
 Import render, redirect and reverse too handle url requests.
+Import require post to handle post requests sent through the fromt end.
 Import messages to handle displaying success and error messages.
 Import settings for env variables.
 Import Customer order form skeleton to apply to pass through to the template.
@@ -7,8 +8,10 @@ Import order and orderline models to pass order through to the admin section.
 Import product model to have access to product details.
 Import basket contents to process through Stripe payment gateway.
 Import Stripe to process intents.
+Importjson to handle json data dumps.
 """
-from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
+from django.views.decorators.http import require_POST
 from django.contrib import messages
 from django.conf import settings
 from .forms import OrderForm
@@ -16,6 +19,26 @@ from .models import Order, OrderLineItem
 from products.models import Product
 from basket.contexts import basket_contents
 import stripe
+import json
+
+@require_POST
+def cache_purchase_data(request):
+    """
+    Cache the response of the checkbox of user data
+    """
+    try:
+        pid = request.POST.get('client_secret').split('_secret')[0]
+        stripe.api_key = settings.STRIPE_SECRET_KEY
+        stripe.PaymentIntent.modify(pid, metadata={
+            'basket': json.dumps(request.session.get('basket', {})),
+            'save_info': request.POST.get('save_info'),
+            'username': request.user,
+        })
+        return HttpResponse(status=200)
+    except Exception as e:
+        messages.error(request, 'Sorry, your payment cannot be \
+            processed Stripe has stopped responding. Please try again in a few minutes.')
+        return HttpResponse(content=e, status=400)
 
 
 def purchase(request):
