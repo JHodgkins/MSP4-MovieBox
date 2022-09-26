@@ -4,10 +4,32 @@
 {% load account socialaccount %}
 
 {% block head_title %}{% trans "Sign In" %}{% endblock %}
+{% block page_header %}
+<section class="bg-dark auth-page">
+    <div class="auth-page-image">
+        <div class="container auth-page-banner-inner py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="my-5 profile-page-main-heading">
+                        <h1 class="display-5 fw-bolder text-white mb-2 ">{% trans "Sign In" %} to your profile</h1>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="my-5 profile-page-heading">
+                        <h2 class="display-5 fw-bolder text-white mb-2">
+                        Not registered?<br><a class="text-white" href="{{ signup_url }}">sign up</a>
 
-{% block content %}
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> <!-- end auth pages header section -->
+{% endblock page_header %}
+{% block inner %}
 
-<h1>{% trans "Sign In" %}</h1>
+<h2 class="my-3">{% trans "Sign In" %}</h2>
 
 {% get_providers as socialaccount_providers %}
 
@@ -35,12 +57,12 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 
 <form class="login" method="POST" action="{% url 'account_login' %}">
   {% csrf_token %}
-  {{ form.as_p }}
+  {{ form|crispy }}
   {% if redirect_field_value %}
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
+  <button class="btn primaryAction basket-link p-2" type="submit">{% trans "Sign In" %}</button>
   <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
-  <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
 </form>
 
 {% endblock %}

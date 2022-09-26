@@ -4,7 +4,22 @@
 
 {% block head_title %}{% trans "Account" %}{% endblock %}
 
-{% block content %}
+{% block page_header %}
+<section class="bg-dark auth-page">
+    <div class="auth-page-image">
+        <div class="container auth-page-banner-inner py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="my-5 profile-page-main-heading">
+                        <h1 class="display-5 fw-bolder text-white mb-2 ">Account email addresses</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> <!-- end auth pages header section -->
+{% endblock page_header %}
+{% block inner %}
     <h1>{% trans "E-mail Addresses" %}</h1>
 {% if user.emailaddress_set.all %}
 <p>{% trans 'The following e-mail addresses are associated with your account:' %}</p>
@@ -32,8 +47,8 @@
 
 <div class="buttonHolder">
       <button class="secondaryAction" type="submit" name="action_primary" >{% trans 'Make Primary' %}</button>
-      <button class="secondaryAction" type="submit" name="action_send" >{% trans 'Re-send Verification' %}</button>
-      <button class="primaryAction" type="submit" name="action_remove" >{% trans 'Remove' %}</button>
+      <button class="secondaryAction btn details-link p-3" type="submit" name="action_send" >{% trans 'Re-send Verification' %}</button>
+      <button class="primaryAction btn basket-link p-3" type="submit" name="action_remove" >{% trans 'Remove' %}</button>
 </div>
 
 </fieldset>

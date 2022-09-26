@@ -4,7 +4,22 @@
 
 {% block head_title %}{% trans "Sign Up Closed" %}{% endblock %}
 
-{% block content %}
+{% block page_header %}
+<section class="bg-dark auth-page">
+    <div class="auth-page-image">
+        <div class="container auth-page-banner-inner py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="my-5 profile-page-main-heading">
+                        <h1 class="display-5 fw-bolder text-white mb-2 ">We will be back to normal soon</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> <!-- end auth pages header section -->
+{% endblock page_header %}
+{% block inner %}
 <h1>{% trans "Sign Up Closed" %}</h1>
 
 <p>{% trans "We are sorry, but the sign up is currently closed." %}</p>

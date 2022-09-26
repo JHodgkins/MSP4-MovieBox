@@ -6,7 +6,22 @@
 {% block head_title %}{% trans "Confirm E-mail Address" %}{% endblock %}
 
 
-{% block content %}
+{% block page_header %}
+<section class="bg-dark auth-page">
+    <div class="auth-page-image">
+        <div class="container auth-page-banner-inner py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="my-5 profile-page-main-heading">
+                        <h1 class="display-5 fw-bolder text-white mb-2 ">Confirm your email</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> <!-- end auth pages header section -->
+{% endblock page_header %}
+{% block inner %}
 <h1>{% trans "Confirm E-mail Address" %}</h1>
 
 {% if confirmation %}
@@ -17,7 +32,7 @@
 
 <form method="post" action="{% url 'account_confirm_email' confirmation.key %}">
 {% csrf_token %}
-    <button type="submit">{% trans 'Confirm' %}</button>
+    <button class="btn basket-link p-3" type="submit">{% trans 'Confirm' %}</button>
 </form>
 
 {% else %}
