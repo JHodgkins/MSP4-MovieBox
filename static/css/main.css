@@ -350,6 +350,16 @@ select:invalid, select option[value=""] {
     height: 100%;
 }
 
+/* Profile page */
+
+/* Hero section */
+.profile-heading {
+  padding-top: 2rem;
+}
+
+.profile-page-heading {
+  text-align: left;
+}
 
 /* media queries */
 
@@ -389,7 +399,7 @@ select:invalid, select option[value=""] {
     max-width: 35%;
   }
 
-  .basket-page-total-heading {
+  .basket-page-total-heading, .profile-page-heading  {
     text-align: right !important;
   }
 }
