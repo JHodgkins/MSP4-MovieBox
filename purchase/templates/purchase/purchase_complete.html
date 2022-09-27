@@ -8,14 +8,20 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="my-5 basket-page-main-heading">
-                        <h1 class="display-5 fw-bolder text-white mb-2 "><i class="fas fa-shopping-basket" aria-hidden="true"></i> Thank you for your order!</h1>
+                        <h1 class="display-5 fw-bolder text-white mb-2 "><i class="fas fa-shopping-basket" aria-hidden="true"></i> {% if from_profile %}Past order - Thank you for your order! {% else %}Thank you for your order! {% endif %}</h1>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="my-5 basket-page-total-heading">
+                        {% if from_profile %}
+                            <h2 class="display-5 fw-bolder text-white mb-2">
+                        <a class="text-white" href="{% url 'profile' %}">Back to previous orders</a>
+                        </h2>
+                        {% else %}
                         <h2 class="display-5 fw-bolder text-white mb-2">
                         Order total:<br>£ {{ order.grand_total }}
                         </h2>
+                        {% endif %}
                     </div>
                 </div>
             </div>
@@ -29,6 +35,10 @@
         <div class="row mb-5">
             <div class="col-sm-12 col-md-12 mb-5">
                 <div class="col-12 basket-heading">
+                {% if from_profile %}
+                    <h2 class="">Past order details</h2>
+                    <p>The below infomation is a snapshot of a previous order placed on MovieBox, this information is for refrene only.</p>
+                {% else %}
                     <h2 class="">Your order is on it's way <i class="fas fa-arrow-right"></i></h2>
                     <p>
                         Order number: {{ order.order_number }}<br>
@@ -38,6 +48,7 @@
                     <p>
                         Many thanks, MovieBox Team
                     </p>
+                {% endif %}
                 </div>
             </div>
 

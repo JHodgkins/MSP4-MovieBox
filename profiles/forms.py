@@ -32,7 +32,6 @@ class ProfileForm(forms.ModelForm):
             'default_country': 'Country',
         }
         
-        
         for field in self.fields:
             if self.fields[field].required:
                 placeholder = f'{placeholders[field]} *'

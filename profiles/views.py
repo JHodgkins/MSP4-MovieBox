@@ -8,6 +8,7 @@ Import profile form to access profile data.
 """
 from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
+from purchase.models import Order
 from .models import UserProfile
 from .forms import ProfileForm
 
@@ -30,6 +31,26 @@ def profile(request):
         'form': form,
         'orders': orders,
         'on_profile_page': True,
+    }
+
+    return render(request, template, context)
+
+def order_history(request, order_number):
+    """
+    Retrieve past purchases and return to template, used
+    within the profile section for a customer to view
+    previous purchases.
+    """
+    order = get_object_or_404(Order, order_number=order_number)
+
+    messages.info(request, (
+        f'You are viewing a previous confirmed order, {order_number}.'
+    ))
+
+    template = 'purchase/purchase_complete.html'
+    context = {
+        'order': order,
+        'from_profile': True,
     }
 
     return render(request, template, context)
