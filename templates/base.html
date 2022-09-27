@@ -48,7 +48,7 @@
                 <div class="col-12 my-1">
                     <ul class="list-inline text-right">
                         {% if request.user.is_authenticated %}
-                            <li class="list-inline-item"><i class="fas fa-user-circle"></i> {{ profile }} | 
+                            <li class="list-inline-item"><i class="fas fa-user-circle"></i> {{ user.username }} | 
                             <a class="" href="{% url 'profile' %}">Profile</a>
                             </li>
                             {% if request.user.is_superuser %}
