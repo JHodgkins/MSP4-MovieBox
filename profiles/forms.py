@@ -39,4 +39,4 @@ class ProfileForm(forms.ModelForm):
                 placeholder = placeholders[field]
             self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'input-profile'
-            self.fields[field].label = False
+            self.fields[field].label = f'{placeholders[field]} *'
