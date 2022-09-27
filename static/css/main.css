@@ -10,6 +10,7 @@
   -- account bar
   -- nav bar
   -- hero
+  -- quote
 6. product listing
   -- hero sort area
   -- cards
@@ -169,6 +170,26 @@ footer {
   max-width: 100%;
   text-align: center;
 }
+
+/* - Quote section */
+
+.quotes {
+  font-size: 3rem;
+  color: var(--orange);
+}
+blockquote {
+  margin: 0 auto;
+}
+
+.blockquote h2 {
+  font-size: 3rem;
+}
+
+.movie_number {
+  font-size: 3rem;
+  color: var(--red);
+}
+
 
 /* 6. Product listing */
 
