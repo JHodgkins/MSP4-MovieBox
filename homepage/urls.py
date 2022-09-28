@@ -8,4 +8,5 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='homepage'),
+    path('test/', views.all_products, name='products'),
 ]

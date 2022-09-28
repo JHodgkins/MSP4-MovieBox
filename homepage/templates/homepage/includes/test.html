@@ -1,0 +1,14 @@
+<div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="">MovieBox homepage</h2>
+                {% if products %}
+                {% for product in products %}
+                {{product}}
+                {% endfor%}
+                {% else %}
+                no product
+                {% endif %}
+            </div>
+        </div>
+    </div>
