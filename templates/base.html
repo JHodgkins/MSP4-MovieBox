@@ -143,17 +143,18 @@
                 </ul>
             </div>
         </div>
-    </nav> <!-- rnd main navbar -->
+    </nav> <!-- end main navbar -->
 
+    <!-- search bar -->
     <div class="search-bar" style="background-color: lightgrey;">
         <div class="container">
             <div class="row">
                 <div class="col-12 my-2">
                     <form method="GET" action="{% url 'products' %}">
                         <div class="input-group w-100">
-                            <input class="form-control border border-black rounded-0" type="text" name="search" placeholder="Search MovieBox for. movies, actors or directors..">
+                            <input class="form-control search-input" type="text" name="search" placeholder="Search MovieBox for. movies, actors or directors..">
                             <div class="input-group-append">
-                                <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                                <button class="form-control btn search-button" type="submit">
                                     <span class="icon">
                                         <i class="fas fa-search"></i>
                                     </span>
