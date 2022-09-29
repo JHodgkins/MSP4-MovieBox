@@ -29,11 +29,12 @@
 {% endblock %}
 
 {% block content %}
+<i class="fa-solid fa-1"></i>
 {% include 'homepage/includes/quote.html' %}
-    <div class="container">
+    <div class="container main-body">
             <div class="row">
                 <div class="col-md-12 mt-3">
-                    <h2 class="">MovieBox's Top Picks this month!</h2>
+                    <h2 class="">MovieBox's Top Picks for this month!</h2>
                 </div>
             </div>
         
@@ -76,12 +77,7 @@
                                     </a>
                                 </p>
                                 {% endif %}
-                                {% if product.imdbrating %}
-                                    <small class="">
-                                    imdb rating: {{ product.imdbrating }} / 10</small>
-                                {% else %}
-                                    <small class="text-muted">Not yet rated</small>
-                                {% endif %}
+                                
                             </div>
                         </div>
                     </div>
@@ -113,6 +109,14 @@
             </div>
             {% endif %}
             {% endfor %}
+
+            {% for item in products %}
+            {% if item.category.name == 'thriller' %}
+                {{ item.name }}
+                {{ item.category.friendly_name }}
+            {% endif %}
+            {% endfor %}
         </div>
     </div>
+{% include 'homepage/includes/introduction_section.html' %}
 {% endblock content %}
