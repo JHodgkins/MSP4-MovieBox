@@ -209,6 +209,7 @@ blockquote {
 /* Information area */
 
 .main-area i {
+  padding-bottom: 3rem;
   font-size: 2rem;
 }
 .information-area {
@@ -226,7 +227,7 @@ blockquote {
 }
 .delivery-image {
   text-align: center;
-  padding-top: 15%;
+  padding-top: 20%;
 }
 .delivery-image i {
   font-size: 12rem;
@@ -422,6 +423,25 @@ select:invalid, select option[value=""] {
 
 .profile-page-heading {
   text-align: left;
+}
+
+/* Page sections */
+
+/* promotion */
+.movie2archive-icon i {
+  font-size: 4rem;
+}
+.promotion-image {
+  text-align: center;
+  padding-top: 25%;
+}
+.promotion-image i {
+  font-size: 12rem;
+  text-align: center;
+}
+.promotion-link {
+  text-align: center;
+  padding-top: 0;
 }
 
 /* media queries */
