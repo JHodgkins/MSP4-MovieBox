@@ -4,15 +4,15 @@ from products.models import Product
 
 
 # Renders homepage template.
-def index(request):
-    """ A view to return the home page """
-    return render(request, 'homepage/index.html')
+#def index(request):
+ #   """ A view to return the home page """
+  #  return render(request, 'homepage/index.html')
 
 
 def all_products(request):
     """ Return all products including sorting and search results """
     products = Product.objects.all()
-    template = 'homepage/test.html'
+    template = 'homepage/index.html'
     context = {
         'products': products,
     }

@@ -38,8 +38,20 @@
                 
                 {% for product in products %}
                 {{product}}
+                {% if forloop.counter < 6 %}
+                {% if product.image %}
+                    <a href="{% url 'product_details' product.id %}">
+                        <img class="product-card card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                    </a>
+                    {% else %}
+                    <a href="{% url 'product_details' product.id %}">
+                        <img class="product-card card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                    </a>
+                    {% endif %}
+                    {% endif %}
+
                 {% endfor%}
-                {% include 'homepage/includes/test.html' %}
+                
             </div>
         </div>
     </div>

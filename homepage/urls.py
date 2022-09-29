@@ -7,6 +7,6 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.index, name='homepage'),
-    path('test/', views.all_products, name='products'),
+    path('', views.all_products, name='homepage'),
+    #path('', views.index, name='homepage'),
 ]
