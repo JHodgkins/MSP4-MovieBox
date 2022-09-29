@@ -1,0 +1,20 @@
+Congratulations {{ order.full_name }} on your purchase at MovieBox
+
+Your order number is: {{ order.order_number }}
+
+We are currently processing your order and it will be sent out to you in the next 24 hours.
+
+Here is a summary of your order:
+Delivery address:
+{{ order.street_address1 }}
+{{ order.town_or_city }}
+{{ order.county }}
+{{ order.postcode}}
+In case our delivery driver needs to contact you, we have your contact number: {{ order.phone_number }}
+
+---------------------
+Total order cost: {{ order.grand_total }}
+
+All the best
+The MovieBox Team
+Contact us: {{ contact_email }}

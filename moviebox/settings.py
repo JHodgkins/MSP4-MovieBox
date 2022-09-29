@@ -169,7 +169,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
+# Default email address for confirmation
+DEFAULT_FROM_EMAIL = 'moviebox@example.com'
 # Delivry variables
 FREE_DELIVERY_THRESHOLD = 35
 STANDARD_DELIVERY_PERCENTAGE = 10
