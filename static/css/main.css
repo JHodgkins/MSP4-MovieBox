@@ -173,6 +173,10 @@ footer {
 
 /* - Quote section */
 
+.bg-quotes-wrapper {
+  background-color: var(--cream);
+}
+
 .quotes {
   font-size: 3rem;
   color: var(--orange);
