@@ -14,6 +14,8 @@
 6. product listing
   -- hero sort area
   -- cards
+Homepage
+  -- information area
 7. product details
   -- icons
   -- descriptions
@@ -90,6 +92,13 @@ hr {
 
 main {
     flex: 1 0 auto;
+}
+
+.main-body {
+  padding-top: 2rem;
+}
+.main-body h2 {
+  padding-bottom: 1rem;
 }
 
 footer {
@@ -194,6 +203,35 @@ blockquote {
   color: var(--red);
 }
 
+
+/* Homepage */
+
+/* Information area */
+
+.main-area i {
+  font-size: 2rem;
+}
+.information-area {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.option-container {
+  padding: 2rem;
+}
+.list-group {
+  padding-top: 2rem;
+}
+.option-container p {
+  margin-left: 3rem;
+}
+.delivery-image {
+  text-align: center;
+  padding-top: 15%;
+}
+.delivery-image i {
+  font-size: 12rem;
+  text-align: center;
+}
 
 /* 6. Product listing */
 
