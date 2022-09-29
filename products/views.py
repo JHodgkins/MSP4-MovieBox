@@ -6,12 +6,14 @@ handle unidirectional urls.
 import Products so the products can be viewed on the froneend.
 Import Q to handle wueries to locate search terms within page model areas.
 import Lower to enable strings to be set to lowercase.
+Import ptoductform to have access to database items for adding new movie products.
 """
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Product, Category
+from .forms import ProductForm
 
 
 def all_products(request):
@@ -76,3 +78,15 @@ def product_details(request, product_id):
     }
 
     return render(request, 'products/product_details.html', context)
+
+# MovieBox admin area section
+
+
+def add_product(request):
+    """ Add a movie product to the database """
+    form = ProductForm()
+    template = 'products/add_product.html'
+    context = {
+        'form': form,
+    }
+    return render(request, template, context)
