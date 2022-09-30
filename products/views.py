@@ -84,7 +84,17 @@ def product_details(request, product_id):
 
 def add_product(request):
     """ Add a movie product to the database """
-    form = ProductForm()
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'New movie added to database, \
+                this product is now live on MovieBox for customers to view.')
+            return redirect(reverse('add_product'))
+        else:
+            messages.error(request, 'There was an error, please ensure all fields marked with an * have been filled out.')
+    else:
+        form = ProductForm()
     template = 'products/add_product.html'
     context = {
         'form': form,
