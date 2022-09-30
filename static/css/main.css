@@ -30,10 +30,7 @@ media queries
 
 /* 1. resets */
 
-:root, html, * {
-    margin: 0;
-    padding: 0;
-}
+
 
 /* 2. Colour variables */
 
