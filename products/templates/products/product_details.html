@@ -104,13 +104,9 @@
 
             <div class="col-sm-12 col-md-4 mb-5">
                 {% if product.image %}
-                <a href="{{ product.image.url }}" target="_blank">
                     <img class="cover-art card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                </a>
                 {% else %}
-                <a href="{% url 'product_detail' product.id %}">
-                    <img class="cover-art card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                </a>
+                    <img class="cover-art card-img-top img-fluid" src="{{ MEDIA_URL }}no_cover.jpg" alt="{{ product.name }}">
                 {% endif %}          
             </div>
 
