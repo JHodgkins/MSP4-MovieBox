@@ -39,8 +39,8 @@
             </div>
         
         <div class="row">
-            {% for product in products|slice:"14:19" %}
-            {% if forloop.counter < 7 %}
+            {% for product in products|slice:"14:20" %}
+            
             <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 mb-5">
 
                 <!-- start of top 4 product cards -->
@@ -51,7 +51,7 @@
                     </a>
                     {% else %}
                     <a href="{% url 'product_details' product.id %}">
-                        <img class="product-card card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                        <img class="product-card card-img-top img-fluid" src="{{ MEDIA_URL }}no_cover.jpg" alt="{{ product.name }}">
                     </a>
                     {% endif %}
                     <div class="card-body pb-0">
@@ -107,7 +107,7 @@
                 <!-- end product cards -->
                 
             </div>
-            {% endif %}
+            
             {% endfor %}
 
             {% for item in products %}
