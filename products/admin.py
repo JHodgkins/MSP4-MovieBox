@@ -28,3 +28,4 @@ class CategoryAdmin(admin.ModelAdmin):
 
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Product, ProductAdmin)
+admin.site.site_header = "MovieBox Online Store | Admin Panel"
