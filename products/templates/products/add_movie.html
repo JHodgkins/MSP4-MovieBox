@@ -54,7 +54,7 @@
             </div>      
             <div class="col-sm-12 col-md-6 mb-5">
                 <h2 class="">Movie details</h2>
-                <form class="mt-3" action="{% url 'add_product' %}" method="POST" id="product-add-form" enctype="multipart/form-data">
+                <form class="mt-3" action="{% url 'add_movie' %}" method="POST" id="product-add-form" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form|crispy }}
                     <button type="submit" class="btn basket-link p-3">Add Movie</button>

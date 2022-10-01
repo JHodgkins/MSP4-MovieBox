@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<section class="bg-dark admin-page">
+    <div class="admin-page-image">
+        <div class="container admin-page-banner-inner py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="my-5 profile-page-main-heading">
+                        <h1 class="display-5 fw-bolder text-white mb-2 ">Welcome {{ user.username }},<br>Edititing a movie product on MovieBox.</h1>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="my-5 profile-page-heading">
+                        <h2 class="display-5 fw-bolder text-white mb-2">
+                        Current Admin user: {{ user.username }}
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!-- end edit movie page banner area -->
+{% endblock %}
+
+{% block content %}
+    <div class="container main-body">
+        <div class="row">
+            <div class="col-sm-12 col-md-6 mb-5">
+                <h2 class="">Editing a movie product guidelines</span></h2>
+                <p>Editing a movie product on MovieBox, please follow these steps.</p>
+                <ul>
+                    <li>Genre<br>
+                    Select an appropiate Genre category for the Movie that you are adding.</li>
+                    <li>SKU<br>
+                    Supply a SKU (product identifier) using the below example:<br>mb0000000019 incrementing the digits by 1, if you are unsure, set a generic 200 or 300 value and do not duplicate, this can be amended later within the administrator backend dashboard.</li>
+                    <li>Movie title<br>
+                    Supply a valid full movie title, for example:<br>
+                    Star Ware - The Phanthom Menace</li>
+                    <li>Description:<br>
+                    Use <a href="https://imdb.com" rel="no-opener" target="_blank">imdb</a> to look up the title and use the Plot as the description for the movie.</li>
+                    <li>Price<br>
+                    Set the price that is appropiate for the titles age, price cannot exceed 6 digits including pence.</li>
+                    <li>Actors, directedby, running time and imdb  rating<br>
+                    This informaation can be gained through imdb when looking up the title.</li>
+                    <li>Certificate<br>
+                    The certificate can change across countries, check the physical media itself to establish if it is a PAL or NTSC version (UK/US) and apply the correct certification in the field.</li>
+                    <li>No of discs<br>
+                    Please check the media itself as some versions do contain additional bonus discs.</li>
+                    <li>Cover art<br>
+                    The cover of the movie should be a photograph of the physical media or using an api call to imdb or using their sites cover photo.</li>
+                </ul>  
+            </div>      
+            <div class="col-sm-12 col-md-6 mb-5">
+                <h2 class="">Movie details</h2>
+                <form class="mt-3" action="{% url 'edit_movie' product.id %}" method="POST" id="product-add-form" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <button type="submit" class="btn basket-link p-3">Commit your edits</button>
+                </form>
+            </div>      
+        </div>
+    </div>
+{% endblock content %}
