@@ -17,7 +17,9 @@ from .forms import ProductForm
 
 
 def all_products(request):
-    """ Return all products including sorting and search results """
+    """
+    Return all products including sorting and search results
+    """
     products = Product.objects.all()
 
     categories = None
@@ -76,11 +78,9 @@ def product_details(request, product_id):
     context = {
         'product': product,
     }
-
     return render(request, 'products/product_details.html', context)
 
 # MovieBox admin area section
-
 
 def add_movie(request):
     """
@@ -121,7 +121,8 @@ def edit_movie(request, product_id):
             messages.error(request, 'There was an issue with commiting these changes, ensre all required fields are filled out correctly.')
     else:
         form = ProductForm(instance=product)
-        messages.info(request, f'You are currently editing movie: {product.name}')
+        messages.info(request, f'You are currently editing movie: \
+             {product.name}')
 
     template = 'products/edit_movie.html'
     context = {
@@ -137,7 +138,7 @@ def delete_movie(request, product_id):
     """
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
-    messages.success(request, 'Movie {product.name} has been removed from the \
-        MovieBox storefront, if you need to re-add this product please use a \
-            diffrent SK number.')
+    messages.success(request, f'Movie {product.name} has been removed from \
+        the MovieBox store front, if you need to re-add this product \
+            please use a diffrent SKU number.')
     return redirect(reverse('products'))
