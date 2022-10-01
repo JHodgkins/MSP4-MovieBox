@@ -107,7 +107,17 @@
                     <img class="cover-art card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                 {% else %}
                     <img class="cover-art card-img-top img-fluid" src="{{ MEDIA_URL }}no_cover.jpg" alt="{{ product.name }}">
-                {% endif %}          
+                {% endif %}
+                <div class="col-12 mb-5 text-center mt-4">
+                    <a href="{% url 'edit_movie' product.id %}" class="btn details-link btn-info mt-2 p-3">
+                        
+                        <span class="text-uppercase">Edit Movie</span>
+                    </a>
+                    <a href="{% url 'products' %}" class="btn delete-link btn-danger mt-2 p-3">
+                        
+                        <span class="text-uppercase">Remove Movie</span>
+                    </a>
+                </div>         
             </div>
 
             <div class="col-md-12 mb-5">
