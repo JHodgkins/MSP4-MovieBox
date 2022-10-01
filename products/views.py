@@ -83,14 +83,17 @@ def product_details(request, product_id):
 
 
 def add_movie(request):
-    """ Add a movie product to the database """
+    """
+    Add a movie product to the database and then direct admin to newly \
+        added movie title.
+    """
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            product = form.save()
             messages.success(request, 'New movie added to database, \
                 this product is now live on MovieBox for customers to view.')
-            return redirect(reverse('add_product'))
+            return redirect(reverse('product_details', args[product.id]))
         else:
             messages.error(request, 'There was an error, please \
                 ensure all fields marked with an * have been filled out.')
@@ -125,5 +128,16 @@ def edit_movie(request, product_id):
         'form': form,
         'product': product,
     }
-
     return render(request, template, context)
+
+
+def delete_movie(request, product_id):
+    """
+    Delete a selected movie product from the frontend using its id
+    """
+    product = get_object_or_404(Product, pk=product_id)
+    product.delete()
+    messages.success(request, 'Movie {product.name} has been removed from the \
+        MovieBox storefront, if you need to re-add this product please use a \
+            diffrent SK number.')
+    return redirect(reverse('products'))
