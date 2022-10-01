@@ -321,13 +321,11 @@ blockquote {
 
 /* cover art */
 
-.cover-art {
+.cover-art, .card {
   border: 2px solid var(--blue);
   box-shadow: 0 5px 20px rgba(0,0,0,.25);
-  transition: transform 300ms, box-shadow 300ms;
 }
-.cover-art:hover {
-  transform: scale(1.1);
+.cover-art:hover, .card:hover {
   box-shadow: 0 15 80px  rgba(0,0,0,.25);
 }
 
@@ -524,10 +522,28 @@ select:invalid, select option[value=""] {
     max-width: 35%;
   }
 
+  /* cover art */
+  .cover-art, .card {
+  transition: transform 300ms, box-shadow 300ms;
+  }
+  .cover-art:hover, .card:hover {
+  transform: scale(1.1);
+  }
+
   .basket-page-total-heading, .profile-page-heading  {
     text-align: right !important;
   }
   .social-icons {
     justify-content: end;
   }
+}
+
+@media (prefers-reduced-motion) {
+  /* cover art */
+  .cover-art, .card {
+    transition: none;
+    }
+    .cover-art:hover, .card:hover {
+    transform: none;
+    }
 }
