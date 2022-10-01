@@ -82,7 +82,7 @@ def product_details(request, product_id):
 # MovieBox admin area section
 
 
-def add_product(request):
+def add_movie(request):
     """ Add a movie product to the database """
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
@@ -96,8 +96,34 @@ def add_product(request):
                 ensure all fields marked with an * have been filled out.')
     else:
         form = ProductForm()
-    template = 'products/add_product.html'
+    template = 'products/add_movie.html'
     context = {
         'form': form,
     }
+    return render(request, template, context)
+
+
+def edit_movie(request, product_id):
+    """
+    Amend details about a movie product product on MovieBox
+    """
+    product = get_object_or_404(Product, pk=product_id)
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            form.save()
+            messages.success(request, f'Movie: {product.name} was sucessfully amended, the changess will be live on MovieBox immediately.')
+            return redirect(reverse('product_details', args=[product.id]))
+        else:
+            messages.error(request, 'There was an issue with commiting these changes, ensre all required fields are filled out correctly.')
+    else:
+        form = ProductForm(instance=product)
+        messages.info(request, f'You are currently editing movie: {product.name}')
+
+    template = 'products/edit_movie.html'
+    context = {
+        'form': form,
+        'product': product,
+    }
+
     return render(request, template, context)
