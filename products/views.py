@@ -92,7 +92,8 @@ def add_product(request):
                 this product is now live on MovieBox for customers to view.')
             return redirect(reverse('add_product'))
         else:
-            messages.error(request, 'There was an error, please ensure all fields marked with an * have been filled out.')
+            messages.error(request, 'There was an error, please \
+                ensure all fields marked with an * have been filled out.')
     else:
         form = ProductForm()
     template = 'products/add_product.html'

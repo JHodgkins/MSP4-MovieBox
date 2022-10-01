@@ -21,9 +21,12 @@ def profile(request):
         form = ProfileForm(request.POST, instance=profile)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Profile information was successfully updated')
+            messages.success(request, 'Profile information \
+                was successfully updated')
         else:
-            messages.error(request, 'Unfortunately the update faile, Please ensure all required fields are filled out correctly.')
+            messages.error(request, 'Unfortunately the update \
+                faile, Please ensure all required fields are \
+                    filled out correctly.')
     else:
         form = ProfileForm(instance=profile)
     orders = profile.orders.all()
