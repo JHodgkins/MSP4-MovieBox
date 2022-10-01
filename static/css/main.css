@@ -461,10 +461,19 @@ select:invalid, select option[value=""] {
 
 .site-footer {
   margin-bottom: 0;
+  text-align: center;
 }
 
 .copyright-text {
   text-align: center;
+}
+
+.social-icons {
+  justify-content: center;
+}
+
+.social-icons a {
+  margin: 1rem 1rem;
 }
 
 .social-icons i {
@@ -517,5 +526,8 @@ select:invalid, select option[value=""] {
 
   .basket-page-total-heading, .profile-page-heading  {
     text-align: right !important;
+  }
+  .social-icons {
+    justify-content: end;
   }
 }
