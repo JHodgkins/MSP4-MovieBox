@@ -56,9 +56,9 @@
                 <div class="p-3 text-center edit-movie-cover">
                     <h3>Cover Art preview</h3>
                     {% if form.image.value == "" %}
-                        <img class="cover-art card-img-top img-fluid" src="{{ MEDIA_URL }}no_cover.jpg" alt="{{ product.name }}">
+                        <img class="cover-art card-img-top img-fluid mt-3" src="{{ MEDIA_URL }}no_cover.jpg" alt="{{ product.name }}">
                     {% else %}
-                        <img class="cover-art card-img-top img-fluid" src="{{ MEDIA_URL}}{{form.image.value }}" alt="{{ form.image.name }}">
+                        <img class="cover-art card-img-top img-fluid mt-3" src="{{ MEDIA_URL}}{{form.image.value }}" alt="{{ form.image.name }}">
                     {% endif %}
                 </div>
             </div>      
