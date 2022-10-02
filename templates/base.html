@@ -233,19 +233,7 @@
     </footer>
 
     {% block footerjs %}
-    <!-- Toggler function for mobile navigation -->
-    <script>
-        $(function () {
-    'use strict'
-
-    $('[data-toggle="offcanvas"]').on('click', function () {
-        $('.offcanvas-collapse').toggleClass('open')
-    })
-    })
-    </script>
-    <script>
-        $('.toast').toast('show');
-    </script>
+    <script src="{% static 'js/toggle_and_reveal.js' %}"></script>
     {% endblock footerjs %}
   </body>
 </html>
