@@ -7,14 +7,17 @@
         <div class="container admin-page-banner-inner py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-6">
-                    <div class="my-5 profile-page-main-heading">
+                    <div class="my-5 edit-page-main-heading">
                         <h1 class="display-5 fw-bolder text-white mb-2 ">Welcome {{ user.username }},<br>Currently edititing {{product.name}} movie product.</h1>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="my-5 profile-page-heading">
-                        <img style="max-width:60%;" src="{{ MEDIA_URL}}{{form.image.value }}" alt="{{ form.image.name }}">
-                        
+                    <div class="my-5 edit-movie-page-heading">
+                        {% if form.image.value == "" %}
+                            <img class="cover-art card-img-top img-fluid" src="{{ MEDIA_URL }}no_cover.jpg" alt="{{ product.name }}">
+                        {% else %}
+                            <img class="cover-art card-img-top img-fluid" src="{{ MEDIA_URL}}{{form.image.value }}" alt="{{ form.image.name }}">
+                        {% endif %}
                     </div>
                 </div>
             </div>
@@ -50,9 +53,13 @@
                     <li>Cover art<br>
                     The cover of the movie should be a photograph of the physical media or using an api call to imdb or using their sites cover photo.</li>
                 </ul>
-                <div class="p-3 text-center">
-                    <h3>Cover Art</h3>
-                    <img src="{{ MEDIA_URL}}{{form.image.value }}" alt="{{ form.image.name }}">
+                <div class="p-3 text-center edit-movie-cover">
+                    <h3>Cover Art preview</h3>
+                    {% if form.image.value == "" %}
+                        <img class="cover-art card-img-top img-fluid" src="{{ MEDIA_URL }}no_cover.jpg" alt="{{ product.name }}">
+                    {% else %}
+                        <img class="cover-art card-img-top img-fluid" src="{{ MEDIA_URL}}{{form.image.value }}" alt="{{ form.image.name }}">
+                    {% endif %}
                 </div>
             </div>      
             <div class="col-sm-12 col-md-6 mb-5">
@@ -61,8 +68,6 @@
                     {% csrf_token %}
                     {{ form|crispy }}
                     <button type="submit" class="btn basket-link p-3">Commit your edits</button>
-                    <p>{{ form.image_url.value }}</p>
-                    <p>{{ form.image.value }}</p>
                 </form>
             </div>      
         </div>
