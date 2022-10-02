@@ -81,5 +81,10 @@
             </div>      
         </div>
     </div>
-    {% include 'includes/page_sections/promotion_section.html' %}
+    
+    {% if request.user.is_superuser %}
+        {% include 'profiles/includes/administration_area.html' %}
+    {% else %}
+        {% include 'includes/page_sections/promotion_section.html' %}
+    {% endif %}
 {% endblock content %}
