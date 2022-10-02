@@ -57,7 +57,7 @@
                             {% if request.user.is_superuser %}
                 
                                 <li class="list-inline-item">
-                                <a class="" href="#">admin area</a>
+                                <a class="" href="{% url 'homepage' %}admin/">admin area</a>
                                 </li>
                 
                             {% endif %}
