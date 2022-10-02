@@ -319,6 +319,16 @@ blockquote {
   font-size: 3rem;
 }
 
+/* Certification logos */
+
+.certification {
+  margin-bottom: 1rem;
+}
+.certification img {
+  max-width: 40px;
+  margin-top: -12px;
+}
+
 /* cover art */
 
 .cover-art, .card {
