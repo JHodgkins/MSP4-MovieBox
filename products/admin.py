@@ -9,6 +9,7 @@ class ProductAdmin(admin.ModelAdmin):
         'sku',
         'name',
         'category',
+        'grade_info',
         'certificate',
         'no_discs',
         'price',
