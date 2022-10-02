@@ -127,11 +127,8 @@
                         <a class="dropdown-item" href="{% url 'products' %}?sort=category&direction=asc">Category nam</a>
                         </div>
                     </li>
-                    
-                        <span> | </span>
-                    
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'view_basket' %}">
+                        <a class="nav-link" href="{% url 'view_basket' %}"><span class="divider"></span>
                         {% if grand_total %}
                         <i class="fas fa-shopping-basket text-white"></i><span class="badge badge-primary ml-1 mr-2">{{ product_count }}</span>
                             <span class="font-weight-bold text-white"> |  Total £{{ grand_total|floatformat:2 }}</span>
