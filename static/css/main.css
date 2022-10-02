@@ -24,6 +24,9 @@ Homepage
 9. purchase page
   -- item counter
   -- Stripe payment gateway
+Edit movie page
+  -- cover art
+
 Footer
 media queries
 */
@@ -37,6 +40,7 @@ media queries
 :root { 
     --white: #ffffff;
     --black: #000000;
+    --darken-grey: #282e33;
     --grey: #565555; /* Davys Grey */
     --orange: #FFB341; /* Yellow Orange */
     --blue: #5EB1FF; /* Blue */
@@ -49,7 +53,11 @@ media queries
 .lh-100 { line-height: 1; }
 .lh-125 { line-height: 1.25; }
 .lh-150 { line-height: 1.5; }
-
+.bg-dark { background-color: var(--darken-grey)!important;}
+.divider:before {
+  content: "|";
+  color: white;
+}
 /* 4. Structure styles */
 
 html,
@@ -465,6 +473,21 @@ select:invalid, select option[value=""] {
   padding-top: 0;
 }
 
+/* Edit movie page */
+
+/* Cover art */
+
+.edit-movie-page-heading {
+  text-align: center;
+}
+.edit-movie-page-heading img {
+  max-width: 40%;
+}
+.edit-movie-cover img {
+  max-width: 60%;
+}
+
+
 /* Footer */
 
 .site-footer {
@@ -499,15 +522,16 @@ select:invalid, select option[value=""] {
 @media (max-width: 991.98px) {
     .offcanvas-collapse {
       position: fixed;
-      top: 56px; /* Height of navbar */
       bottom: 0;
       left: 100%;
+      top: 90px;
+      z-index: 4;
       width: 100%;
       padding-right: 1rem;
       padding-left: 1rem;
       overflow-y: auto;
       visibility: hidden;
-      background-color: #343a40;
+      background-color: var(--darken-grey);
       transition: visibility .3s ease-in-out, -webkit-transform .3s ease-in-out;
       transition: transform .3s ease-in-out, visibility .3s ease-in-out;
       transition: transform .3s ease-in-out, visibility .3s ease-in-out, -webkit-transform .3s ease-in-out;
@@ -516,8 +540,8 @@ select:invalid, select option[value=""] {
       visibility: visible;
       -webkit-transform: translateX(-100%);
       transform: translateX(-100%);
-      margin-top: 50px;
-      z-index: 999;
+      top: 90px;
+      z-index: 4;
     }
     .offcanvas-collapse.close {
       
