@@ -31,6 +31,7 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=6, decimal_places=2)
     actors = models.CharField(max_length=254, null=True, blank=True)
     grade_info = models.CharField(max_length=100, null=True, blank=True)
+    format = models.CharField(max_length=50, null=True, blank=True)
     directed_by = models.CharField(max_length=254, null=True, blank=True)
     certificate = models.CharField(max_length=5, null=True, blank=True)
     no_discs = models.CharField(max_length=50, null=True, blank=True)
