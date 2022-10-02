@@ -1,0 +1,1 @@
+web: gunicorn moviebox.wsgi:application
