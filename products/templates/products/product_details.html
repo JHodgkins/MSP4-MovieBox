@@ -24,8 +24,25 @@
             <div class="col-sm-12 col-md-8 mb-5">
                 <div class="product-details-container mb-5 mt-md-5">
                     <h2 class="product-title mb-0">{{ product.name }}</h2>
-                    <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
-                    <p class="lead mb-0 text-left font-weight-bold">{{ product.certificate }}</p>
+                    <p class="lead text-left font-weight-bold"><strong>Price</strong> £{{ product.price }}</p>
+                    {% if product.certificate %}
+                    <p class="lead certification text-left font-weight-bold"><strong>Certificate: </strong>
+                        {% if product.certificate == '18' %}
+                            <img src="{{MEDIA_URL}}/certification_logos/BBFC_18_2019.svg.png" alt="This movies certificate is {{ product.certificate }}">
+                        {% elif product.certificate == '15' %}
+                            <img src="{{MEDIA_URL}}/certification_logos/BBFC_15_2019.svg.png" alt="This movies certificate is {{ product.certificate }}">
+                        {% elif product.certificate == '12' %}
+                            <img src="{{MEDIA_URL}}/certification_logos/BBFC_12_2019.svg.png" alt="This movies certificate is {{ product.certificate }}">
+                        {% elif product.certificate == 'PG' %}
+                            <img src="{{MEDIA_URL}}/certification_logos/BBFC_PG_2019.svg.png" alt="This movies certificate is {{ product.certificate }}">
+                        {% elif product.certificate == 'U' %}
+                            <img src="{{MEDIA_URL}}/certification_logos/BBFC_U_2019.svg.png" alt="This movies certificate is {{ product.certificate }}">
+                        {% else %}
+                            <p class="lead mb-0 text-left font-weight-bold">No rating available at this time.</p>
+                        {% endif %}
+                        </p>
+                    {% endif%}
+                    <p class="lead mb-0 text-left font-weight-bold"><strong>Product Grade:</strong> {{ product.grade_info }}</p>
                     {% if product.category %}
                         <p class="product-category small mt-1 mb-0">
                             <a class="" href="{% url 'products' %}?category={{ product.category.name }}">
