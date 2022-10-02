@@ -102,7 +102,7 @@ def add_movie(request):
             product = form.save()
             messages.success(request, 'New movie added to database, \
                 this product is now live on MovieBox for customers to view.')
-            return redirect(reverse('product_details', args[product.id]))
+            return redirect(reverse('product_details', args=[product.id]))
         else:
             messages.error(request, 'There was an error, please \
                 ensure all fields marked with an * have been filled out.')
