@@ -3,12 +3,16 @@ import render to render page and get object or 404 to handle if no item
 found when requested.
 import redirect and reverse to hanfle redirections of pages and rverse to
 handle unidirectional urls.
-import Products so the products can be viewed on the froneend.
+Import login required to secure pages from unregisted and non admin users.
+Import messages to handle alerts and actions given to users.
 Import Q to handle wueries to locate search terms within page model areas.
 import Lower to enable strings to be set to lowercase.
-Import ptoductform to have access to database items for adding new movie products.
+import Products so the products can be viewed on the froneend.
+Import ptoductform to have access to database items for adding new movie
+products.
 """
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
@@ -82,11 +86,16 @@ def product_details(request, product_id):
 
 # MovieBox admin area section
 
+@login_required
 def add_movie(request):
     """
     Add a movie product to the database and then direct admin to newly \
         added movie title.
     """
+    # restrict view to non authorised users.
+    if not request.user.is_superuser:
+        messages.error(request, 'The page you requested is not available.')
+        return redirect(reverse('homepage'))
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
@@ -106,10 +115,15 @@ def add_movie(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_movie(request, product_id):
     """
     Amend details about a movie product product on MovieBox
     """
+    # restrict view to non authorised users.
+    if not request.user.is_superuser:
+        messages.error(request, 'The page you requested is not available.')
+        return redirect(reverse('homepage'))
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES, instance=product)
@@ -132,10 +146,15 @@ def edit_movie(request, product_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_movie(request, product_id):
     """
     Delete a selected movie product from the frontend using its id
     """
+    # restrict view to non authorised users.
+    if not request.user.is_superuser:
+        messages.error(request, 'The page you requested is not available.')
+        return redirect(reverse('homepage'))
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
     messages.success(request, f'Movie {product.name} has been removed from \

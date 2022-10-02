@@ -2,16 +2,20 @@
 Import render to pass template files to be rendered
 to the frontend.
 Immport get object or 404 to handle requests that return null.
+Import login required to secure pages from unregisted and non admin users.
 Import messages to show error messages to users.
 Import user profile model so userr data can be accessed.
 Import profile form to access profile data.
 """
 from django.shortcuts import render, get_object_or_404
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from purchase.models import Order
 from .models import UserProfile
 from .forms import ProfileForm
 
+
+@login_required
 def profile(request):
     """
     View to display registered user profile to the frontend.
@@ -39,6 +43,7 @@ def profile(request):
     }
 
     return render(request, template, context)
+
 
 def order_history(request, order_number):
     """

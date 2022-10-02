@@ -106,6 +106,7 @@
                 {% else %}
                     <img class="cover-art card-img-top img-fluid" src="{{ MEDIA_URL }}no_cover.jpg" alt="{{ product.name }}">
                 {% endif %}
+                {% if request.user.is_superuser %}
                 <div class="col-12 mb-5 text-center mt-4">
                     <a href="{% url 'edit_movie' product.id %}" class="btn details-link btn-info mt-2 p-3">
                         <span class="text-uppercase">Edit Movie</span>
@@ -113,7 +114,8 @@
                     <button class="btn delete-link btn-danger mt-2 p-3" data-toggle="modal" data-target="#delete_modal-{{ product.id }}">
                         <span class="text-uppercase">Remove Movie</span>
                     </button>
-                </div>         
+                </div>
+                {% endif %}        
             </div>
 
             <div class="col-md-12 mb-5">
