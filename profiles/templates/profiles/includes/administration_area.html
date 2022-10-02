@@ -1,0 +1,56 @@
+    <hr class="hr-50">
+<section class="main-area administration" style="background-color:var(--cream);">
+    <div class="container administration-main-inner">
+
+        <div class="row justify-content-center information-area">
+            <div class="col-lg-12 mb-4">
+                <h2 class="mb-4">Administrator profile area</h2>
+                <p>Welcome {{ user.username }}, you can manage the MovieBox online store using the below links.</p>
+            </div>
+            <div class="col-lg-4 mb-3">
+                <div class="card h-100 border-1 p-3">
+                    <h3 class="">Add a Movie product</h3>
+                    <p>To add a new movie to MovieBox, select the link below to go to the 'Add a Movie' form, and complete the 'Add movie' product form.</p>
+                    <a href="{% url 'add_movie' %}" class="btn basket-link p-5">
+                    Add a Movie
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-3">
+                <div class="card h-100 border-1 p-3">
+                    <h3 class="">Edit a Movie product</h3>
+                    <p>To edit a movie, you need to locate the movie you wish to edit and view the movie details, below ech cover art is a 'Edit' button.</p>
+                    <a href="{% url 'products' %}" class="btn basket-link p-5">
+                    Edit a Movie
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-3">
+                <div class="card h-100 border-1 p-3">
+                    <h3 class="">Delete a Movie produc3</h3>
+                    <p>To delete a movie, locate the movie you wish to delete and view the movie details, below ech cover art is a 'Delete' button.</p>
+                    <a href="{% url 'products' %}" class="btn basket-link p-5">
+                    Select a Movie
+                    </a>
+                </div>
+            </div>
+            <hr class="hr-50 m-5">
+            <div class="col-lg-12 mb-5">
+                <h2 class="">Manage customers orders</h2>
+                <p>Access the Backend administration panel to make amendments to the online store.</p>
+                <p>This Administration area cn be also accessed easily using the Admin link located in the account bar at the top of every page.</p>
+                <ul>
+                    <li>Create, edit and delete user accounts</li>
+                    <li>Create, edit and delete new and existing orders.</li>
+                    <li>Manage staff access levels.</li>
+                </ul>
+            </div>
+            <div class="col-lg-12 mb-5">
+                <a href="{% url 'homepage' %}admin/" class="btn basket-link p-5">
+                    MovieBox admin managment panel
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
