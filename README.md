@@ -25,6 +25,7 @@ MovieBox will clearly list and display titles using captive box art imagery and 
     - [Shopping basket area](#shopping-basket-area)  
     - [Secondary main area](#secondary-main-area)  
     - [Footer section](#footer-section)   
+    6.2 [Wireframes](#wireframes) 
 
 
 ## Overview  
@@ -121,3 +122,16 @@ On devices tablet and below the user will be able to expand/collapse this menu u
 
 #### Footer section  
 
+### Wireframes  
+Wireframe designs show Mobile, Tablet and Desktop views of the main concept  parts of the MovieBox e-commerce web application.  
+The application follows best practices and was developed using a mobile first approach to ensur the application was accessible to a wide audience.  
+
+#### Homepage  
+<details><summary>Mobile</summary>  
+<img src="docs/wireframes/mobile/mobile_homepage.png" alt="wireframe screenshot of MovieBox Homepage on mobile"></details>   
+
+<details><summary>Tablet</summary>  
+<img src="docs/wireframes/tablet/tablet_homepage.png" alt="wireframe screenshot of MovieBox Homepage on tablet"></details>  
+
+<details><summary>Desktop</summary>  
+<img src="docs/wireframes/desktop/desktop_homepage.png" alt="wireframe screenshot of MovieBox Homepage on desktop"></details>  
