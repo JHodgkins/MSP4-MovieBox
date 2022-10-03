@@ -164,10 +164,24 @@ The application follows best practices and was developed using a mobile first ap
 <img src="docs/wireframes/desktop/desktop_register.png" alt="wireframe screenshot of MovieBox Register page on desktop"></details>   
 
 #### Prodicts page  
+<details><summary>Mobile</summary>  
+<img src="docs/wireframes/mobile/mobile_products.png" alt="wireframe screenshot of MovieBox Products page on mobile"></details>   
 
+<details><summary>Tablet</summary>  
+<img src="docs/wireframes/tablet/tablet_products.png" alt="wireframe screenshot of MovieBox Products page on tablet"></details>  
+
+<details><summary>Desktop</summary>  
+<img src="docs/wireframes/desktop/desktop_products.png" alt="wireframe screenshot of MovieBox Products page on desktop"></details>  
 
 #### Product description page  
+<details><summary>Mobile</summary>  
+<img src="docs/wireframes/mobile/mobile_description.png" alt="wireframe screenshot of MovieBox Product descriptions page on mobile"></details>   
 
+<details><summary>Tablet</summary>  
+<img src="docs/wireframes/tablet/tablet_description.png" alt="wireframe screenshot of MovieBox Product description page on tablet"></details>  
+
+<details><summary>Desktop</summary>  
+<img src="docs/wireframes/desktop/desktop_description.png" alt="wireframe screenshot of MovieBox Product description page on desktop"></details>  
 
 #### Basket page  
 
