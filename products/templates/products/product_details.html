@@ -29,15 +29,15 @@
                     {% if product.certificate %}
                     <p class="lead certification text-left font-weight-bold"><strong>Certificate: </strong>
                         {% if product.certificate == '18' %}
-                            <img src="{{MEDIA_URL}}/certification_logos/BBFC_18_2019.svg.png" alt="This movies certificate is {{ product.certificate }}">
+                            <img src="{{ MEDIA_URL }}certification_logos/BBFC_18_2019.svg.png" alt="This movies certificate is {{ product.certificate }}">
                         {% elif product.certificate == '15' %}
-                            <img src="{{MEDIA_URL}}/certification_logos/BBFC_15_2019.svg.png" alt="This movies certificate is {{ product.certificate }}">
+                            <img src="{{ MEDIA_URL }}certification_logos/BBFC_15_2019.svg.png" alt="This movies certificate is {{ product.certificate }}">
                         {% elif product.certificate == '12' %}
-                            <img src="{{MEDIA_URL}}/certification_logos/BBFC_12_2019.svg.png" alt="This movies certificate is {{ product.certificate }}">
+                            <img src="{{ MEDIA_URL }}certification_logos/BBFC_12_2019.svg.png" alt="This movies certificate is {{ product.certificate }}">
                         {% elif product.certificate == 'PG' %}
-                            <img src="{{MEDIA_URL}}/certification_logos/BBFC_PG_2019.svg.png" alt="This movies certificate is {{ product.certificate }}">
+                            <img src="{{ MEDIA_URL }}certification_logos/BBFC_PG_2019.svg.png" alt="This movies certificate is {{ product.certificate }}">
                         {% elif product.certificate == 'U' %}
-                            <img src="{{MEDIA_URL}}/certification_logos/BBFC_U_2019.svg.png" alt="This movies certificate is {{ product.certificate }}">
+                            <img src="{{ MEDIA_URL }}certification_logos/BBFC_U_2019.svg.png" alt="This movies certificate is {{ product.certificate }}">
                         {% else %}
                             <p class="lead mb-0 text-left font-weight-bold">No rating available at this time.</p>
                         {% endif %}
