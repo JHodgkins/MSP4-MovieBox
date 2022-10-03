@@ -184,6 +184,7 @@ The application follows best practices and was developed using a mobile first ap
 <img src="docs/wireframes/desktop/desktop_description.png" alt="wireframe screenshot of MovieBox Product description page on desktop"></details>  
 
 #### Basket page  
+<details><summary>Mobile</summary> 
 <img src="docs/wireframes/mobile/mobile_basket.png" alt="wireframe screenshot of MovieBox Basket page on mobile"></details>   
 
 <details><summary>Tablet</summary>  
