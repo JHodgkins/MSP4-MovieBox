@@ -25,7 +25,14 @@ MovieBox will clearly list and display titles using captive box art imagery and 
     - [Shopping basket area](#shopping-basket-area)  
     - [Secondary main area](#secondary-main-area)  
     - [Footer section](#footer-section)   
-    6.2 [Wireframes](#wireframes) 
+    6.2 [Wireframes](#wireframes)  
+    - [Homepage](#homepage)  
+    - [Login page](#login-page)  
+    - [Register page](#register-page)  
+    - [Products page](#prodicts-page)  
+    - [Product description page](#product-description-page)  
+    - [Basket page](#basket-page)  
+    - [Purchase page](#purchase-page)  
 
 
 ## Overview  
@@ -135,3 +142,33 @@ The application follows best practices and was developed using a mobile first ap
 
 <details><summary>Desktop</summary>  
 <img src="docs/wireframes/desktop/desktop_homepage.png" alt="wireframe screenshot of MovieBox Homepage on desktop"></details>  
+
+#### Login page  
+<details><summary>Mobile</summary>  
+<img src="docs/wireframes/mobile/mobile_login.png" alt="wireframe screenshot of MovieBox Login page on mobile"></details>   
+
+<details><summary>Tablet</summary>  
+<img src="docs/wireframes/tablet/tablet_login.png" alt="wireframe screenshot of MovieBox Login page on tablet"></details>  
+
+<details><summary>Desktop</summary>  
+<img src="docs/wireframes/desktop/desktop_login.png" alt="wireframe screenshot of MovieBox Login page on desktop"></details>   
+
+#### Register page  
+<details><summary>Mobile</summary>  
+<img src="docs/wireframes/mobile/mobile_register.png" alt="wireframe screenshot of MovieBox Register page on mobile"></details>   
+
+<details><summary>Tablet</summary>  
+<img src="docs/wireframes/tablet/tablet_register.png" alt="wireframe screenshot of MovieBox Register page on tablet"></details>  
+
+<details><summary>Desktop</summary>  
+<img src="docs/wireframes/desktop/desktop_register.png" alt="wireframe screenshot of MovieBox Register page on desktop"></details>   
+
+#### Prodicts page  
+
+
+#### Product description page  
+
+
+#### Basket page  
+
+#### Purchase page  
