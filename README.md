@@ -220,7 +220,7 @@ The following colours were used across the MovieBox e-commerce web application, 
 - Name: Magnolia: Hex: #FCF7FF / rgb(252, 247, 255) / hsl(278, 100%, 98%)
 - Name: Blue Jeans: Hex: #5EB1FF / 	rgb(94, 177, 255) / hsl(209, 100%, 68%)  
 __Compllimentry__  
-- Name: Daves grey: Hex: #565555 / rgb(86, 85, 85) / hsl(0, 1%, 34%)  
+- Name: Davys grey: Hex: #565555 / rgb(86, 85, 85) / hsl(0, 1%, 34%)  
 __Default__  
 - Name: Black: Hex: #000000 / rgb: (0, 0, 0) / hsl: (0, 0%, 0%)
 - Name: White: Hex: #FFFFFF / rgb: (255, 255, 255) / hsl: (0, 0%, 100%)
@@ -243,3 +243,13 @@ I used a tool called Contrast Grid (colour palette) to determine the foreground 
 [Live view](https://contrast-grid.eightshapes.com/?version=1.1.0&background-colors=&foreground-colors=%23ffffff%0D%0A%23000000%0D%0A%0D%0A%23282e33%0D%0A%23565555%0D%0A%23FFB341%0D%0A%235EB1FF%0D%0A%23C4CAD0%0D%0A%23FCF7FF&es-color-form__tile-size=regular&es-color-form__show-contrast=aaa&es-color-form__show-contrast=aa&es-color-form__show-contrast=aa18)  
 
 ### Typography  
+Fonts used across the MovieBox e-commerce web application were provided by Google fonts and they were used in certain areas as to ensure good readability for all users.  
+The two font families used were, Bebas neue and Poppins, the fonts both had a default font family fall-back of Sans-Serif.  
+
+Heading elements of the MovieBox application used: Bebas neue, the reasoning behind this choice is because it gave a movie poster style feeling which matched the applications theme of Blockbuster movie titles.  
+![Bebas neue font image](docs/fonts/bebas_neue.png)  
+
+Poppins was used across the main interface of the e-commerce application, this font choice was chosen because it is an established font wildly used across the web for its readability and its clean look and feel.  
+![Poppins font image](docs/fonts/poppins.png)  
+
+
