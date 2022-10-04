@@ -35,8 +35,11 @@ MovieBox will clearly list and display titles using captive box art imagery and 
     - [Basket page](#basket-page)  
     - [Purchase page](#purchase-page)  
 
-    6.3 [Colour palette](#colour-palette)  
+    6.3 [Colours](#colours)  
+    - [Colour palette](#colour-palette)  
     - [Contrast grid](#contrast-grid)  
+
+    6.4 [Typography](#typography)  
 
 
 
@@ -208,7 +211,21 @@ The application follows best practices and was developed using a mobile first ap
 <details><summary>Desktop</summary>  
 <img src="docs/wireframes/desktop/desktop_purchase.png" alt="wireframe screenshot of MovieBox Purchase page on desktop"></details>  
 
-### Colour palette  
+### Colours  
+The following colours were used across the MovieBox e-commerce web application, these values were set on the root: using CSS variables to ensure easy maintence for further improvements regarding.colour accessibility barriers.  
+#### Hex/RGB/HSL values  
+- Name: Yellow Orange: Hex: #FFB341 / rgb(255, 179, 65) / hsl(36, 100%, 63%)
+- Name: Gun Metal: Hex: 	#282e33 / rgb(40, 46, 51) / hsl(207, 12%, 18%)
+- Name: Silver Sand: Hex: #C4CAD0 / rgb(196, 202, 208) / hsl(210, 11%, 79%)
+- Name: Magnolia: Hex: #FCF7FF / rgb(252, 247, 255) / hsl(278, 100%, 98%)
+- Name: Blue Jeans: Hex: #5EB1FF / 	rgb(94, 177, 255) / hsl(209, 100%, 68%)  
+__Compllimentry__  
+- Name: Daves grey: Hex: #565555 / rgb(86, 85, 85) / hsl(0, 1%, 34%)  
+__Default__  
+- Name: Black: Hex: #000000 / rgb: (0, 0, 0) / hsl: (0, 0%, 0%)
+- Name: White: Hex: #FFFFFF / rgb: (255, 255, 255) / hsl: (0, 0%, 100%)
+
+#### Colour palette  
 ![colour palette](docs/colours/accessible_colour_scheme.png)  
 
 - Yellow Orange: #FFB341 was used to represent the colour of Toffee popcorn, and the warm glowing atmosphere emitted from a cinema screen.  
@@ -225,3 +242,4 @@ I used a tool called Contrast Grid (colour palette) to determine the foreground 
 ![WCAG colour contrast grid ](docs/colours/accessible_colour_scheme_wcag_grid.png)  
 [Live view](https://contrast-grid.eightshapes.com/?version=1.1.0&background-colors=&foreground-colors=%23ffffff%0D%0A%23000000%0D%0A%0D%0A%23282e33%0D%0A%23565555%0D%0A%23FFB341%0D%0A%235EB1FF%0D%0A%23C4CAD0%0D%0A%23FCF7FF&es-color-form__tile-size=regular&es-color-form__show-contrast=aaa&es-color-form__show-contrast=aa&es-color-form__show-contrast=aa18)  
 
+### Typography  
