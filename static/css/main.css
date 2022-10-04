@@ -29,10 +29,6 @@ Edit movie page
 
 Footer
 media queries
-*/
-
-/* 1. resets */
-
 
 
 /* 2. Colour variables */
@@ -40,11 +36,10 @@ media queries
 :root { 
     --white: #ffffff;
     --black: #000000;
-    --darken-grey: #282e33;
+    --darken-grey: #282e33; /* Gun Metal */
     --grey: #565555; /* Davys Grey */
     --orange: #FFB341; /* Yellow Orange */
-    --blue: #5EB1FF; /* Blue */
-    --red: #ED254E; /* Red Crayola */
+    --blue: #5EB1FF; /* Blue Jeans */
     --silver: #C4CAD0; /* Silver Sand */
     --cream: #FCF7FF; /* Magnolia */
     }
@@ -56,7 +51,7 @@ media queries
 .bg-dark { background-color: var(--darken-grey)!important;}
 .divider:before {
   content: "|";
-  color: white;
+  color: var(--white);
 }
 /* 4. Structure styles */
 
@@ -217,11 +212,6 @@ blockquote {
 
 .blockquote h2 {
   font-size: 3rem;
-}
-
-.movie_number {
-  font-size: 3rem;
-  color: var(--red);
 }
 
 
