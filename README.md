@@ -25,6 +25,7 @@ MovieBox will clearly list and display titles using captive box art imagery and 
     - [Shopping basket area](#shopping-basket-area)  
     - [Secondary main area](#secondary-main-area)  
     - [Footer section](#footer-section)   
+
     6.2 [Wireframes](#wireframes)  
     - [Homepage](#homepage)  
     - [Login page](#login-page)  
@@ -33,6 +34,8 @@ MovieBox will clearly list and display titles using captive box art imagery and 
     - [Product description page](#product-description-page)  
     - [Basket page](#basket-page)  
     - [Purchase page](#purchase-page)  
+
+    6.3 [Colour palette](#colour-palette)  
 
 
 ## Overview  
@@ -202,3 +205,15 @@ The application follows best practices and was developed using a mobile first ap
 
 <details><summary>Desktop</summary>  
 <img src="docs/wireframes/desktop/desktop_purchase.png" alt="wireframe screenshot of MovieBox Purchase page on desktop"></details>  
+
+### Colour palette  
+![colour palette](docs/colours/accessible_colour_scheme.png)  
+
+- Yellow Orange: #FFB341 was used to represent the colour of Toffee popcorn, and the warm glowing atmosphere emitted from a cinema screen.  
+- Gun Metal: #282E33 was used as to represent the near darkness of a theatre, and a feeling of darkness to represent certain genres such as Thriller, and horror.  
+- Silver Sand: #C4CAD0 was used to represent steel book covers of DVDs and Blue Rays and leans on the play of words to represent the silver screen, a screen used in cinemas.  
+- Magnolia: #FCF7FF was used to represent the home, a widely used colour and is neutral in feeling.  
+- Blue Jeans: #5EB1FF was used to represent the blue hue of a projector as the image is beamed to the screen, it also gives a feeling of emotion leaning on the genre of true life.  
+- White: #FFFFFF and Black: 000000 were used for text and background colours as they are contrasting colours easily readable and have a feeling of sharp edges, representing the hard covers of DVD and blue-ray media.  
+- Davys Grey: #565555 was used as a contrasting colour to Yellow orange and tie together the darkness of Gun metal as a middle mutual but complimentary colour.  
+
