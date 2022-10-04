@@ -40,7 +40,7 @@ MovieBox will clearly list and display titles using captive box art imagery and 
     - [Contrast grid](#contrast-grid)  
 
     6.4 [Typography](#typography)  
-
+    6.5 [Icons and imagery](#icons-and-imagery)  
 
 
 ## Overview  
@@ -252,4 +252,28 @@ Heading elements of the MovieBox application used: Bebas neue, the reasoning beh
 Poppins was used across the main interface of the e-commerce application, this font choice was chosen because it is an established font wildly used across the web for its readability and its clean look and feel.  
 ![Poppins font image](docs/fonts/poppins.png)  
 
+### Icons and imagery
+All icons used within the MovieBox web application were sourced from Font Awesome free icon set kit, the image of 3 stacked movie covers located on the front landing page was created by myself within Photoshop using images supplied through an api called [1mdb Data Searching](https://rapidapi.com/standingapi-standingapi-default/api/1mdb-data-searching), this api was also used to gather the movie covers which are used as product images.  
+
+![MovieBox movie product images](docs/icons_and_imagery/movie_covers.jpg)  
+
+On each product description page, the correct certification symbols were also used, these were downloaded from the British [Board For Classification (BBFC)](https://www.bbfc.co.uk/industry-services/bbfc-age-ratings-symbols-user-guide)  
+
+![BBFC certification symbols](docs/icons_and_imagery/certification_icons.jpg)  
+
+The logo of Movie2Archive located throughout the web application in locations where a user is proceeding to purchase as a affiliate, cross promotion to drive traffic is a logo created by myself which I created using Photoshop during development of the milestone project module 3 which was Movie2Archive.  
+
+![Movie2Archive logo image](docs/icons_and_imagery/movie2archive.png)  
+
+The icons used were selected to aid accessibility by representing the section content or action that will be performed when the user selects or activates the item.  
+The icons are used as they can be scaled to high magnification levels whilst remaining clear and sharp.  
+
+![Font Awesome icon set for MocieBox](docs/icons_and_imagery/icon_set_font_awesome_moviebox.jpg)  
+
+The stacked movie cover image located on the front landing page was used as it sets the scene for the e-commerce web applications overall shop theme, it also grabs the user’s attention and the Call to action button to start shopping, it also aids in immediately making the user aware of what the e-commerce store is all about.  
+
+![MovieBox stacked covers image](docs/icons_and_imagery/hero_image.png)  
+
+MovieBox also provides a solution to getting started by using simple to understand steps through icons such as explaining how easy it is to purchase an item in 3 easy steps.  
+Social media icons for Facebook, twitter and Instagram were also used within the footer section to help encourage following and building of a community of movie fans of the e-commerce web application.  
 
