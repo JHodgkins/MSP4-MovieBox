@@ -36,6 +36,8 @@ MovieBox will clearly list and display titles using captive box art imagery and 
     - [Purchase page](#purchase-page)  
 
     6.3 [Colour palette](#colour-palette)  
+    - [Contrast grid](#contrast-grid)  
+
 
 
 ## Overview  
@@ -216,4 +218,10 @@ The application follows best practices and was developed using a mobile first ap
 - Blue Jeans: #5EB1FF was used to represent the blue hue of a projector as the image is beamed to the screen, it also gives a feeling of emotion leaning on the genre of true life.  
 - White: #FFFFFF and Black: 000000 were used for text and background colours as they are contrasting colours easily readable and have a feeling of sharp edges, representing the hard covers of DVD and blue-ray media.  
 - Davys Grey: #565555 was used as a contrasting colour to Yellow orange and tie together the darkness of Gun metal as a middle mutual but complimentary colour.  
+
+#### Contrast grid  
+I used a tool called Contrast Grid (colour palette) to determine the foreground and background combinations to ensure a minimum contrast ratio of 4.5:1 for main text and graphical elements was maintained to meet AA WCAG 2.1 [(Web Content Accessibility Guidelines)](https://www.w3.org/TR/WCAG21/).  
+
+![WCAG colour contrast grid ](docs/colours/accessible_colour_scheme_wcag_grid.png)  
+[Live view](https://contrast-grid.eightshapes.com/?version=1.1.0&background-colors=&foreground-colors=%23ffffff%0D%0A%23000000%0D%0A%0D%0A%23282e33%0D%0A%23565555%0D%0A%23FFB341%0D%0A%235EB1FF%0D%0A%23C4CAD0%0D%0A%23FCF7FF&es-color-form__tile-size=regular&es-color-form__show-contrast=aaa&es-color-form__show-contrast=aa&es-color-form__show-contrast=aa18)  
 
