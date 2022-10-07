@@ -9,6 +9,7 @@
 5. header
   -- account bar
   -- nav bar
+  -- search bar
   -- hero
   -- quote
 6. product listing
@@ -172,6 +173,10 @@ footer {
 }
 
 /* search bar */
+
+.search-bar {
+  margin-top: 89px!important;
+}
 .search-input {
   border: 1px solid var(--black);
 }
