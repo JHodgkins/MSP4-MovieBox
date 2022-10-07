@@ -5,13 +5,13 @@ Tests were carried out throughout development in an intergrated way, the tests w
 ## Table of contents
  
 1. [User stories](#user-stories)  
-    1.1[First time user](#first-time-user)  
+    1.1 [First time user](#first-time-user)  
     1.2 [Returning user](#returning-user)  
     1.3 [Site owner](#site-owner)  
 
 
 ## User stories testing from the UX section  
-#### First time user  
+### First time user  
 - As a first-time user, I want to understand what the applications purpose is so that I can decide if it meets my needs.  
 - As a first-time user, I want to be able to easily navigate to the various categories of products.  
 - As a first-time user, I want to be able to add a movie to my shopping basket.  
@@ -20,7 +20,7 @@ Tests were carried out throughout development in an intergrated way, the tests w
 - As a first-time user, I want to find out how much a product costs.  
 - As a first-time user, I want to know how to proceed to the checkout section so I can purchase an item.  
 
-#### Returning user  
+### Returning user  
 - As a returning user, I want to be able to easily navigate to the account login page.  
 - As a returning user, I want to be able to see a previous order I have made.  
 - As a returning user, I want to be able to see how many movies are in my shopping basket.  
@@ -28,7 +28,7 @@ Tests were carried out throughout development in an intergrated way, the tests w
 - As a returning user, I want to be able to change the type of a media item.  
 - As a returning user, I want to be able to update my account delivery details.  
 
-#### Site owner  
+### Site owner  
 - As the site owner, I want visitors to be able to find the correct information about a product and make an informed choice to purchase.  
 - As the site owner, I want visitors to be able to find the correct information about a product and make an informed choice to purchase.  
 - As the site owner, I want visitors to be able to easily add their movie choices to their shopping basket for purchase.  
