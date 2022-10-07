@@ -43,7 +43,8 @@ MovieBox will clearly list and display titles using captive box art imagery and 
     6.5 [Icons and imagery](#icons-and-imagery)  
 7. [Database and Sitemaps](#database-and-sitemaps)  
     7.1 [Overview of apps](#overview-of-apps)  
-    7.2 [Sitemap diagrams](#sitemap-diagrams)  
+    7.2 [Product data files](#product-data-files)  
+    7.3 [Sitemap diagrams](#sitemap-diagrams)  
 8. [Existing features and future implimentations]()  
     8.1 [Existing features](#existing-features)  
     8.2[Features to be implimented in future releases](#features-to-be-implimented-in-future-releases) 
@@ -326,6 +327,16 @@ __Profile app__
 The primary role of the profile app is to gather the users data from an order when placed and retain the information for a user to view at any time through a separate profile dashboard view.  
 When a user registeres for an account, the profile is created with placeholder information, as the user interacts with the e-commerce web application, the data is stored and updated automatically.  
 The user has access to prior transaction details and an area to speed up future purchases by saving delivery information within their profile but also populating the purchase form fields, leaving only the payment details to be completed.  
+
+### Product data files  
+Managment of gathering the data needed for MovieBox e-commerce web application used [imdb](https://www.imdb.com/) as a resource to quantify the details being returned through the api [1mdb Data Searching](https://rapidapi.com/standingapi-standingapi-default/api/1mdb-data-searching), after the data had been researched and collected, the data for entry into the e-commerce web application was constrcted into a JSON format data set which could then be imported using pythons built import commands:
+
+``` python3 manage.py loaddata categories ``` and ``` python3 manage.py loaddata products ```  
+
+The data contained within the JSON data files reflects how the models were constricted.  
+The JSON data files can be viewed using the links provided below:  
+- [Categories JSON data file](../MSP4-MovieBox/products/fixtures/categories.json)  
+- [Products JSON data file](../MSP4-MovieBox/products/fixtures/products.json)  
 
 ### Sitemap diagrams  
 The sitemap diagrams below show the different available pages and sections of the MovieBox e-commerce web application based upon their registered or non-registered status and authorisation level.  
