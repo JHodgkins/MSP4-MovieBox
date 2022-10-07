@@ -43,6 +43,7 @@ MovieBox will clearly list and display titles using captive box art imagery and 
     6.5 [Icons and imagery](#icons-and-imagery)  
 7. [Database and Sitemaps](#database-and-sitemaps)  
     7.1 [Overview of apps](#overview-of-apps)  
+    7.2 [Sitemap diagrams](#sitemap-diagrams)  
 
 
 
@@ -322,5 +323,28 @@ __Profile app__
 The primary role of the profile app is to gather the users data from an order when placed and retain the information for a user to view at any time through a separate profile dashboard view.  
 When a user registeres for an account, the profile is created with placeholder information, as the user interacts with the e-commerce web application, the data is stored and updated automatically.  
 The user has access to prior transaction details and an area to speed up future purchases by saving delivery information within their profile but also populating the purchase form fields, leaving only the payment details to be completed.  
+
+### Sitemap diagrams  
+The sitemap diagrams below show the different available pages and sections of the MovieBox e-commerce web application based upon their registered or non-registered status and authorisation level.  
+
+__Non registered user__  
+![Sitemap diagram for a non registered user visiting MovieBox ](docs/wireframes/database_and_route_diagrams/non_registered_user_sitemap.png)  
+A nonregistered user has access to all main navigation links including the option to register for an account and then login where further options will be made available through the application.  
+As a non-registered user, the facility to purchase is made available as registration is a feature not a requirement.  
+
+__Registered user__  
+![Sitemap diagram for a non registered user visiting MovieBox ](docs/wireframes/database_and_route_diagrams/registered_user_sitemap.png)  
+As a registered user, new areas of the site are revealed seamlessly and without interruption to the end user, the areas that are revealed are:  
+- Profile page which contains a history of their prior purchases, a delivery information form for efficiency when purchasing future products from the e-commerce application.  
+- They are also able to logout of MovieBox when they choose, their logged in status will be remembered for when they return if using the same computer and browser.  
+
+__Super user (Administer/site owner)__  
+![Sitemap diagram for a non registered user visiting MovieBox ](docs/wireframes/database_and_route_diagrams/super_user_sitemap.png)  
+As a super user or administrator of MovieBox such as a staff member, areas to change the content available eithin the frontend of the site are made available.
+These sections are:
+- On product pages, a movie product can be edited, to amend its details eliminating the need for a site owner to visit the management backend console for simple daily edits such as price changes or to with future feature updates, separate frontend content editors from purchase and backend management editors.  
+- Through the same profile links available to non and registered users, the admin panel is revealed to show quick access sections to site sections for carrying out additions, edits and deleations.  
+- There is a direct link to the backend management console on this age and a dynamic link to the admin backend is also added to the account bar on every page located at the top of the page.  
+
 
 
