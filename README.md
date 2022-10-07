@@ -47,7 +47,8 @@ MovieBox will clearly list and display titles using captive box art imagery and 
     7.3 [Sitemap diagrams](#sitemap-diagrams)  
 8. [Existing features and future implimentations]()  
     8.1 [Existing features](#existing-features)  
-    8.2[Features to be implimented in future releases](#features-to-be-implimented-in-future-releases) 
+    8.2[Features to be implimented in future releases](#features-to-be-implimented-in-future-releases)  
+9. [Testing](#testing)    
 
 
 
@@ -388,4 +389,6 @@ This section looks at features which were implemented into the MVP (minimum viab
 - Social media login, register functionality.  
 - Uncrease payment facility to include Apple Pay and Google Pay.  
 
+## Testing  
+Please see the [TESTING](/docs/testing/TESTING.md) document for a full breakdown of the testng carried out throughout the development stages and after development of the MovieBox e-commerce web application.  
 
