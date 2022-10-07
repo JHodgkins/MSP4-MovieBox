@@ -44,6 +44,9 @@ MovieBox will clearly list and display titles using captive box art imagery and 
 7. [Database and Sitemaps](#database-and-sitemaps)  
     7.1 [Overview of apps](#overview-of-apps)  
     7.2 [Sitemap diagrams](#sitemap-diagrams)  
+8. [Existing features and future implimentations]()  
+    8.1 [Existing features](#existing-features)  
+    8.2[Features to be implimented in future releases](#features-to-be-implimented-in-future-releases) 
 
 
 
@@ -316,8 +319,8 @@ The basket app handles collecting product information such as item id and the qu
 The basket app holds its information in session enabling a user to leave and return with no interruption to the previous sessions browsing and potential wishes to add an item to the basket for later purchase.  
 
 __Purchase app__  
-The purchase app is the heart of th purchasing process, the model has two purposes, it main goal is to gather data entered through the purchase form and secondly gather the Basket data stored in session and construct the finalised products and amounts.  
-Its second purpose is to pass the input data into a profile dataset and pass to the Profile app if the user is a registered and logged in ser so that data can be later retrieved.  
+The purchase app is the heart of th purchasing process, the model has two purposes, it main goal is to gather data entered through the purchase form and secondly gather the Basket data stored in session and construct the finalised products and amounts which are then handed to Stripe payment gateway to process the purchase amount.  
+Its second purpose is to pass the input data into a profile dataset and pass to the Profile app if the user is a registered and logged in so that data can be later retrieved and viewed by the end user.  
 
 __Profile app__  
 The primary role of the profile app is to gather the users data from an order when placed and retain the information for a user to view at any time through a separate profile dashboard view.  
@@ -346,5 +349,32 @@ These sections are:
 - Through the same profile links available to non and registered users, the admin panel is revealed to show quick access sections to site sections for carrying out additions, edits and deleations.  
 - There is a direct link to the backend management console on this age and a dynamic link to the admin backend is also added to the account bar on every page located at the top of the page.  
 
+## Existing features and future implimentations  
+This section looks at features which were implemented into the MVP (minimum viable product) and those that with further research technical knowledge alongside user feedback will be added to the existing set of features and be released in future feature updates.  
+
+### Existing features  
+- Responsive e-commerce web application which reflows up to 500% zoom using browser zoom controls.  
+- Responsive navigation menu bar with off canvas slide in over content.  
+- Persistent account bar for managing all user functions such as login, logout and visit the profile section.  
+- Form validation throughout with visual feedback given through on screen prompts, surrounds including successful form submission messages.  
+- CSRF (cross site request forgery) prevention, encryption on all forms throughout the e-commerce web application.  
+- Api integration for providing a trusted and secure payment gateway with complete data encryption processing handled securely by Stripe payment gateway through to purchase completion.  
+- Filterable product displays through integrated sort field.  
+- Full CRUD functionality for a registered user such as delivery address.  
+- Integrated admin management control for managing active listed products.  
+- Integrated backend management dashboard for managing purchase orders and reviewing live purchases.  
+- Simple logical layout with a consistent approach to ensure all content is accessible.  
+- Accessible on a wide range of devices with an internet connection.  
+- Accessible to keyboard and assistive technologies with built in screen reader text content for non-textual content.  
+- Secure encrypted payment system provided through Stripe payment gateway api.  
+
+### Features to be implimented in future releases  
+- Intergration of user accounts with Movie2Archive so a user is able to only need one account for purchase and archiving.  
+- Imdb api rating system so a user can rate the film and be sharable to imdb and the e-commerce web application MovieBox.  
+- UPC scanning of barcodes to allow users to sell to MovieBox.  
+- Third party seller section to expand content and variety of media available.   
+- Third party affiliate scheme to offer an easy way to trade in and recycle.  
+- Social media login, register functionality.  
+- Uncrease payment facility to include Apple Pay and Google Pay.  
 
 
