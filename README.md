@@ -42,6 +42,8 @@ MovieBox will clearly list and display titles using captive box art imagery and 
     6.4 [Typography](#typography)  
     6.5 [Icons and imagery](#icons-and-imagery)  
 7. [Database and Sitemaps](#database-and-sitemaps)  
+    7.1 [Overview of apps](#overview-of-apps)  
+
 
 
 ## Overview  
@@ -287,5 +289,38 @@ The PostgreSQL database has been setup as a highly normalised database, which wi
 Django provides a core structure for a user database, with this in mind each app that has been added, extends this functionality to bring together each piece to produce a functioning, secure e-commerce web application.  
 The e-commerce web application allows registered users and non-registered users to purchase items, as such the user model acts for the registered user and can retrieve data, whereas guest purchases are saved in session.  
 
+### Overview of apps  
+__Core Django framework__  
+The core framework of Django provides one view and a standard user login/register model for its management console, User.  
+The management console requires one Superuser to function, the super user is equivalent to an Admin account.  
+django.contrib.auth: https://docs.djangoproject.com/en/4.1/ref/contrib/auth/#id1 
+
+__Allauth__  
+Django-allauth has been used to extend this functionality to ensure a more secure and robust way for new users to register and authenticate themselves to MovieBox e-commerce store.  
+Django-allauth: https://django-allauth.readthedocs.io/en/latest/  
+
+__Homepage app__  
+The homepage app has been added to provide a view (landing page) for every user to experience when navigating to the e-commerce store.  
+
+The homepage app takes advantage of its inbuilt urls to import products through to the user interface to enable seemless intergration and functionality of adding an item to the basket and discovering more information about a product through the product details page.  
+
+__Products app__  
+The products app holds the information about every product available on MovieBox, this is also combined with a foreign key association to a category table which is used to order and categorise each product based upon a criteria.
+The app provides a view to retrieve all products and interact with the individual items available on the user interface.  
+The app is used to pass through data about a product to the Basket app which retrieves the product data and holds in session.  
+
+__Basket app__  
+The basket app is used to glue the product information through to the eventual Purchase app where purchases will be processed.  
+The basket app handles collecting product information such as item id and the quantity and price within a dictionary to be added and processed by the Order app.  
+The basket app holds its information in session enabling a user to leave and return with no interruption to the previous sessions browsing and potential wishes to add an item to the basket for later purchase.  
+
+__Purchase app__  
+The purchase app is the heart of th purchasing process, the model has two purposes, it main goal is to gather data entered through the purchase form and secondly gather the Basket data stored in session and construct the finalised products and amounts.  
+Its second purpose is to pass the input data into a profile dataset and pass to the Profile app if the user is a registered and logged in ser so that data can be later retrieved.  
+
+__Profile app__  
+The primary role of the profile app is to gather the users data from an order when placed and retain the information for a user to view at any time through a separate profile dashboard view.  
+When a user registeres for an account, the profile is created with placeholder information, as the user interacts with the e-commerce web application, the data is stored and updated automatically.  
+The user has access to prior transaction details and an area to speed up future purchases by saving delivery information within their profile but also populating the purchase form fields, leaving only the payment details to be completed.  
 
 
