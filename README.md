@@ -335,8 +335,8 @@ Managment of gathering the data needed for MovieBox e-commerce web application u
 
 The data contained within the JSON data files reflects how the models were constricted.  
 The JSON data files can be viewed using the links provided below:  
-- [Categories JSON data file](../MSP4-MovieBox/products/fixtures/categories.json)  
-- [Products JSON data file](../MSP4-MovieBox/products/fixtures/products.json)  
+- [Categories JSON data file](/products/fixtures/categories.json)  
+- [Products JSON data file](/products/fixtures/products.json)  
 
 ### Sitemap diagrams  
 The sitemap diagrams below show the different available pages and sections of the MovieBox e-commerce web application based upon their registered or non-registered status and authorisation level.  
