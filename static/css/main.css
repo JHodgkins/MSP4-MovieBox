@@ -224,8 +224,13 @@ blockquote {
 /* Homepage */
 
 /* hero area */
+
 .btn-primary {
   background-color: var(--dark-blue);
+}
+.btn-primary:hover .btn-primary:focus {
+  background-color: var(--blue);
+  color: var(--black);
 }
 /* Information area */
 
