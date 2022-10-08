@@ -94,7 +94,7 @@
                                     <option value="5">5 copies</option>
                                 </select>
                                 </div>
-                                <a class="col-6 details-link details-input" href="{% url 'product_details' product.id %}">
+                                <a class="col-6 details-link details-input" href="{% url 'product_details' product.id %}?name={{ product.name }}">
                                     More info
                                 </a>
                                 
