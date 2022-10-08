@@ -21,13 +21,18 @@ MovieBox will clearly list and display titles using captive box art imagery and 
 6. [Design](#design)  
     6.1 [Structure of pages](#structure-of-pages)  
     - [Header section](#header-section)  
+        - [Account bar section](#account-bar-section)  
+        - [Main navigation bar section](#main-navigation-bar-section)  
+        - [Search area section](#search-area-section)  
     - [Main content area](#main-content-area)  
-    - [Shopping basket area](#shopping-basket-area)  
-    - [Secondary main area](#secondary-main-area)  
+        - [Main top hero section](#main-top-hero-section)  
+        - [Homepage](#homepage)  
+        - [Secondary main area](#secondary-main-area)  
     - [Footer section](#footer-section)   
+    - [Overview of sections](#overview-of-sections)  
 
     6.2 [Wireframes](#wireframes)  
-    - [Homepage](#homepage)  
+    - [Homepage](#homepage-1)  
     - [Login page](#login-page)  
     - [Register page](#register-page)  
     - [Products page](#prodicts-page)  
@@ -174,7 +179,7 @@ When arriving at the homepage, this main area is used to introduce the e-commerc
 This leads onto a quote from the site to indicate the volume of products available within MovieBoxes portfolio.  
 The customer is then presented with the top four deals available to entice curiosity and possible purchase.  
 
-#### Secondary main area  
+##### Secondary main area  
 This area is used across the site as a promotional or affiliate area to promote features of the site which include the speedy delivery service and a third-party service related to archiving movie collections.  
 The content changes dependant on the page being viewed and is relevant dependant on the stage of the purchasing journey.  
 
@@ -184,6 +189,11 @@ a unique dashboard will be available in the area of the profile page.
 This area allows a site owner or admin to see a summary of the whole application and to also add, edit or delete the sites categories, Media type, edition type and location area.  
 
 #### Footer section  
+The footer section was designed to be useful and useable; the footer is divided into two half page sections at tablet and above screen sizes.  
+The right side will show the MovieBox social media icon links with the left side displaying a copyright notice.  
+
+#### Overview of sections  
+The approach to keep areas consistent and similar was used to ensure that the user felt comfortable within the web application, encompassing content within the header area sections allows the user to become familiar with the site navigation and always know how to navigate away or too their chosen area within the application.  
 
 ### Wireframes  
 Wireframe designs show Mobile, Tablet and Desktop views of the main concept  parts of the MovieBox e-commerce web application.  
