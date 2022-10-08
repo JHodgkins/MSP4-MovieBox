@@ -157,14 +157,31 @@ The search bar uses dynamic filtering to search all product listing information,
 
 All these sections are present throughout the site to ensure consistency and aid navigation as a user becomes familiar with the e-commerce web applications layout.   
 
- 
+#### Main content area  
+The main content area is used to display content dynamically dependant on the user’s choice of action.  
+All pages of the e-commerce web application use the main top header section to aid placement within the site and provide useful information related to the main content being shown within the area.  
 
+##### Main top hero section  
+This area is used to inform the user briefly of their location and the section they are currently browsing.  
+Examples of this are:  
+- All movies page, this displays the number of products displayed alongside a sort select field to enable users to filter their chosen results.  
+This was done so that a consistent approach was taken and that a user would be familiar and comfortable knowing the placement of such a control.  
+- Shopping basket page, the page heaer includes the total of the basket including delivery, so a user can see quickly the total value of the basket items.  
 
-#### Shopping basket area  
-
+##### Homepage  
+The homepage was designed to be a promotional page, delivering bite sized pieces of MovieBox to fully represent the function of the site when a user first visits.  
+When arriving at the homepage, this main area is used to introduce the e-commerce web application, a large above the fold title with accompanying image covers.  
+This leads onto a quote from the site to indicate the volume of products available within MovieBoxes portfolio.  
+The customer is then presented with the top four deals available to entice curiosity and possible purchase.  
 
 #### Secondary main area  
+This area is used across the site as a promotional or affiliate area to promote features of the site which include the speedy delivery service and a third-party service related to archiving movie collections.  
+The content changes dependant on the page being viewed and is relevant dependant on the stage of the purchasing journey.  
 
+__As a site owner or admin:__  
+This area is replaced with administrative controls where appropriate,
+a unique dashboard will be available in the area of the profile page.  
+This area allows a site owner or admin to see a summary of the whole application and to also add, edit or delete the sites categories, Media type, edition type and location area.  
 
 #### Footer section  
 
