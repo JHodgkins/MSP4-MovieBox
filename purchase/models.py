@@ -68,7 +68,7 @@ class Order(models.Model):
 
 class OrderLineItem(models.Model):
     """
-    line order item, used y the aadmin to read, create, edit and
+    line order item, used by the admin to create, read, edit and
     delete individual customer orders
     """
 
