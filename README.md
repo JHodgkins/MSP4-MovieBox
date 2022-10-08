@@ -131,11 +131,33 @@ As a person with a visual impairment, the e-commerce web application has been de
 The website application uses a mobile first approach with the page having a maximum width of 1320px at retina resolutions or a 1140px for most standard displays which centre aligns at higher resolutions. These constraints were used to maintain the user’s focus, attention and aid with sight lines.  
 
 #### Header section  
+Within the header section there are three main components, Account bar, navigation bar and the search area.  
+
+##### Account bar section  
+The account bar section is as described, it holds every navigational link related to account function across the MovieBox e-commerce web application.
+The account links dynamically adjust dependant on logged in status and privileges, the differences are described below:  
+__Non-logged in user__  
+The account bar displays two links, ‘Sign in’ and ‘Sign up’, this is to allow the user to register for an account and then have the ability to save delivery information for future purchases which will aid friction for returning customers.  
+__Registered user__  
+The account bar dynamically adjusts size and links available to include a profile icon to indicate that it contains user data and a link to the user’s profile page where they can manage delivery address details and view prior purchases.  
+__Super user (administrator/siteowner)__  
+The account bar adjusts again to now include a direct link to the backend of the MovieBox management console.  
+The management console is where site owners. Can view real time data such as recent purchase orders and amend any order placed by an end user if there was an error that occurred.  
+
+##### Main navigation bar section  
 The application follows a universal approach which comprises of a left aligned logo for Mobile through to Desktop.  
 To the right is the applications main navigation, which is responsive, and full text links remain right aligned until tablet size and below where it will collapse to a right aligned Hamburger menu (toggle button).  
-On devices tablet and below the user will be able to expand/collapse this menu using the menu toggle button to access all available menu items dependant on their logged in status.  
+On devices tablet and below the user will be able to expand/collapse this menu using the menu toggle button to access all available menu items.  
+The main navigation area section also contains the ‘basket’ area which dynamically updates as new products are added and is indicated using a counter to indicate number of items within the basket.  
+The total is also inclusive of pstage and adapts dynamically dependant on total cost.  
 
-#### Main content area  
+##### Search area section  
+The search section has only one purpose which is to allow users to easily drill down to th movies that appeal to them in the most efficient way.  
+The search bar uses dynamic filtering to search all product listing information, using the data stored to return a result to the end user, this can be a single word or an actor who may have played within a movie or even a director, the reasoning for the type of searching is so that related products will be presentated to a user which may appeal even if not realised that for instance a director had directed another film which had not been originally thought of.  
+
+All these sections are present throughout the site to ensure consistency and aid navigation as a user becomes familiar with the e-commerce web applications layout.   
+
+ 
 
 
 #### Shopping basket area  
