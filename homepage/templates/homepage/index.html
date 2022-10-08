@@ -29,7 +29,6 @@
 {% endblock %}
 
 {% block content %}
-<i class="fa-solid fa-1"></i>
 {% include 'includes/page_sections/quote.html' %}
     <div class="container main-body">
             <div class="row">
@@ -39,7 +38,7 @@
             </div>
         
         <div class="row">
-            {% for product in products|slice:"14:20" %}
+            {% for product in products|slice:"14:18" %}
             
             <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 mb-5">
 
@@ -105,18 +104,88 @@
                     </div>
                 </div>
                 <!-- end product cards -->
-                
             </div>
-            
-            {% endfor %}
-
-            {% for item in products %}
-            {% if item.category.name == 'thriller' %}
-                {{ item.name }}
-                {{ item.category.friendly_name }}
-            {% endif %}
             {% endfor %}
         </div>
     </div>
-{% include 'includes/page_sections/introduction_section.html' %}
+    {% include 'includes/page_sections/introduction_section.html' %}
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 mt-3">
+                        <h2 class="">Highest rated on imdb</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    {% for item in products %}
+                    {% if item.imdbrating > 8.2 %}
+                    <div class="col-md-3">
+                        <!-- start of top 4 product cards -->
+                <div class="card h-100 border-1">
+                    {% if item.image %}
+                    <a href="{% url 'product_details' item.id %}">
+                        <img class="product-card card-img-top img-fluid" src="{{ item.image.url }}" alt="{{ item.name }}">
+                    </a>
+                    {% else %}
+                    <a href="{% url 'product_details' item.id %}">
+                        <img class="product-card card-img-top img-fluid" src="{{ MEDIA_URL }}no_cover.jpg" alt="{{ item.name }}">
+                    </a>
+                    {% endif %}
+                    <div class="card-body pb-0">
+                        <p class="mb-0">{{ item.name }}</p>
+                    </div>
+                    <div class="card-footer bg-white pt-0 border-0 text-left">
+                        <div class="row">
+                            <div class="col">
+                                <p class="lead mb-0 text-left font-weight-bold">£{{ item.price }}</p>
+                                {% if item.category %}
+                                <p class="small mt-1 mb-0">
+                                    <a class="text-muted" href="{% url 'products' %}?category={{ item.category.name }}">
+                                    {% if item.category.name == "limited_time" %}
+                                        <i class="fas fa-clock"></i>
+                                    {% elif item.category.name == "clearance" %}
+                                        <i class="fas fa-tags mr-1"></i>
+                                    {% elif item.category.name == "new_arrivals" %}
+                                        <i class="fas fa-bullhorn"></i>
+                                    {% else %}
+                                        <i class="fas fa-video mr-1"></i>
+                                    {% endif %}
+                                        {{ item.category.friendly_name }}
+                                    </a>
+                                </p>
+                                {% endif %}
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-1 card-buttons">
+                        <div class="row" style="margin:0!important;" >
+                        <div class="col-12">
+                            <form class="" action="{% url 'add_to_the_basket' item.id %}" method="POST">
+                                {% csrf_token %}
+                                <select hidden name="quantity" data-item_id="{{ item.id }}" id="id_qty_{{ item.id }}">
+                                    <option value="1" selected>1 copy</option>
+                                    <option value="2">2 copies</option>
+                                    <option value="3">3 copies</option>
+                                    <option value="4">4 copies</option>
+                                    <option value="5">5 copies</option>
+                                </select>
+                                </div>
+                                <a class="col-6 details-link details-input" href="{% url 'product_details' item.id %}?name={{ item.name }}">
+                                    More info
+                                </a>
+                                
+                                <input type="submit" class="col-12 basket-link  basket-input text-uppercase"  value="Add to Basket">
+                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- end product cards -->
+                    </div>
+                
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+    {% include 'includes/page_sections/register_section.html' %}
 {% endblock content %}
