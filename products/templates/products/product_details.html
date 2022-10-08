@@ -48,7 +48,7 @@
                     {% endif%}
                     <p class="lead mb-0 text-left font-weight-bold"><strong>Product Grade:</strong> {{ product.grade_info }}</p>
                     {% if product.category %}
-                        <p class="product-category small mt-1 mb-0">
+                        <p class="product-category mt-1 mb-0">
                             <a class="" href="{% url 'products' %}?category={{ product.category.name }}">
                             {% if product.category.name == "limited_time" %}
                                 <i class="fas fa-clock"></i>
@@ -59,7 +59,7 @@
                             {% else %}
                                 <i class="fas fa-video mr-1"></i>
                             {% endif %}
-                                {{ product.category.friendly_name }}
+                                <strong>{{ product.category.friendly_name }}</strong>
                             </a>
                         </p>
                     {% endif %}
