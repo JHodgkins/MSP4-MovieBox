@@ -25,10 +25,7 @@
         <link rel="stylesheet" href="{% static 'css/main.css' %}">
     {% endblock core_css %}
 
-    {% block extra_css %}
-    {% endblock extra_css %}
-
-        {% block core_js %}
+    {% block core_js %}
         <!-- Font Awesome kkit -->
         <script src="https://kit.fontawesome.com/1a728906ad.js" crossorigin="anonymous"></script>
         <!-- jQuery and Bootstrap Bundle includes Popper -->
@@ -41,109 +38,101 @@
     {% block extra_js %}
     {% endblock extra_js %}
 
-    <title>MovieBox | {% block title %}{% endblock title %}</title>
+    <title>MovieBox {% if title %}{% block title %}| {% endblock title %}{% endif %}</title>
   </head>
   <body>
     <header>
     <div class="fixed-top">
-    <div class="account-bar" style="background-color: lightgrey;">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 my-1">
-                    <ul class="list-inline text-right">
-                        {% if request.user.is_authenticated %}
-                            <li class="list-inline-item"><i class="fas fa-user-circle"></i> {{ user.username }} | 
-                            <a class="" href="{% url 'profile' %}">Profile</a>
-                            </li>
-                            {% if request.user.is_superuser %}
-                
-                                <li class="list-inline-item">
-                                <a class="" href="{% url 'homepage' %}admin/" rel="noopener" target="_blank">admin area
-                                <span class="sr-only">Site owner administration area (opens in a new window)</span></a>
+        <div class="account-bar">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 my-1">
+                        <ul class="list-inline text-right">
+                            {% if request.user.is_authenticated %}
+                                <li class="list-inline-item"><i class="fas fa-user-circle"></i> {{ user.username }} | 
+                                <a class="" href="{% url 'profile' %}">Profile</a>
                                 </li>
-                
+                                {% if request.user.is_superuser %}
+                    
+                                    <li class="list-inline-item">
+                                    <a class="" href="{% url 'homepage' %}admin/" rel="noopener" target="_blank">admin area
+                                    <span class="sr-only">Site owner administration area (opens in a new window)</span></a>
+                                    </li>
+                    
+                                {% endif %}
+                                <li class="list-inline-item">
+                                <a class="" href="{% url 'account_logout' %}">Logout</a>
+                                </li>
+                            {% else %}
+                                <li class="list-inline-item">
+                                    <a class="" href="{% url 'account_login' %}">Login</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="" href="{% url 'account_signup' %}">Signup</a>
+                                </li>
                             {% endif %}
-                            <li class="list-inline-item">
-                            <a class="" href="{% url 'account_logout' %}">Logout</a>
-                            </li>
-                        {% else %}
-                            <li class="list-inline-item">
-                                <a class="" href="{% url 'account_login' %}">Login</a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a class="" href="{% url 'account_signup' %}">Signup</a>
-                            </li>
-                        {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end account bar -->
+
+        <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand mr-auto mr-lg-0" href="{% url 'homepage' %}"><img src="{{ MEDIA_URL }}logo_white.png" alt="MovieBox logo" class="site-logo"></a>
+                <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+        
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{% url 'homepage' %}">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="{% url 'products' %}?category=new_arrivals">New arrivals <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'products' %}">All Movies</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">Genres</a>
+                            <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{% url 'products' %}?category=action">Action</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?category=horror">Horror</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?category=comedy">Comedy</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?category=sci_fi">Sci-Fi</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?category=true_life">True life</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?category=thriller">Thriller</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?category=action,comedy,sci_fi,true_life,thriller,horror">All Genres</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">Hot deals</a>
+                            <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{% url 'products' %}?category=limited_time">Limited time offers</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?category=clearance">Clearance</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?category=limited_time,clearance">All deals</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'view_basket' %}"><span class="divider"></span>
+                            {% if grand_total %}
+                            <i class="fas fa-shopping-basket text-white"></i><span class="badge badge-primary ml-1 mr-2">{{ product_count }}</span>
+                                <span class="font-weight-bold text-white"> |  Total £{{ grand_total|floatformat:2 }}</span>
+                            {% else %}
+                            <i class="fas fa-shopping-basket"></i>
+                                <span>  £0.00</span>
+                            {% endif %}
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
-        </div>
-    </div> <!-- end account bar -->
+        </nav> <!-- end main navbar -->
+    </div><!-- end fixed top -->
 
-    <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand mr-auto mr-lg-0" href="{% url 'homepage' %}"><img src="{{ MEDIA_URL }}logo_white.png" alt="MovieBox logo" class="site-logo"></a>
-            <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
-    
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{% url 'homepage' %}">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{% url 'products' %}?category=new_arrivals">New arrivals <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'products' %}">All Movies</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">Genres</a>
-                        <div class="dropdown-menu">
-                        <a class="dropdown-item" href="{% url 'products' %}?category=action">Action</a>
-                        <a class="dropdown-item" href="{% url 'products' %}?category=horror">Horror</a>
-                        <a class="dropdown-item" href="{% url 'products' %}?category=comedy">Comedy</a>
-                        <a class="dropdown-item" href="{% url 'products' %}?category=sci_fi">Sci-Fi</a>
-                        <a class="dropdown-item" href="{% url 'products' %}?category=true_life">True life</a>
-                        <a class="dropdown-item" href="{% url 'products' %}?category=thriller">Thriller</a>
-                        <a class="dropdown-item" href="{% url 'products' %}?category=action,comedy,sci_fi,true_life,thriller,horror">All Genres</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">Hot deals</a>
-                        <div class="dropdown-menu">
-                        <a class="dropdown-item" href="{% url 'products' %}?category=limited_time">Limited time offers</a>
-                        <a class="dropdown-item" href="{% url 'products' %}?category=clearance">Clearance</a>
-                        <a class="dropdown-item" href="{% url 'products' %}?category=limited_time,clearance">All deals</a>
-                        </div>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">Filter</a>
-                        <div class="dropdown-menu">
-                        <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc">Price</a>
-                        <a class="dropdown-item" href="{% url 'products' %}?sort=imdbrating&direction=desc">imdb rating</a>
-                        <a class="dropdown-item" href="{% url 'products' %}?sort=category&direction=asc">Category nam</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'view_basket' %}"><span class="divider"></span>
-                        {% if grand_total %}
-                        <i class="fas fa-shopping-basket text-white"></i><span class="badge badge-primary ml-1 mr-2">{{ product_count }}</span>
-                            <span class="font-weight-bold text-white"> |  Total £{{ grand_total|floatformat:2 }}</span>
-                        {% else %}
-                        <i class="fas fa-shopping-basket"></i>
-                            <span>  £0.00</span>
-                        {% endif %}
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav> <!-- end main navbar -->
-</div>
     <!-- search bar -->
     <div class="search-bar" style="background-color: lightgrey;">
         <div class="container">
@@ -167,10 +156,12 @@
     </div> <!-- end search bar -->
     </header>
 
+    <!-- page header -->
     <section class="site-header">
     {% block page_header %}
     {% endblock page_header %}
     </section>
+    <!-- end page header -->
 
     {% if messages %}
         <div class="message-container">
@@ -196,16 +187,18 @@
         </div>
     {% endif %}
 
+    <!-- main content area -->
     <main class="">
     {% block content %}
     {% endblock content %}
     </main>
+    <!-- end main content area -->
 
+    <!-- footer area -->
     <footer class="d-flex flex-wrap justify-content-center align-items-center py-3 border-top site-footer">
         <div class="col-md-4 d-flex align-items-center copyright-text">
             <span class="mb-3 mb-md-0 copyright">&copy;<span id="copyright"></span> MovieBox | Developer: J Hodgkins | Educational project</span>
         </div>
-
         <ul class="nav col-md-4 list-unstyled d-flex social-icons">
         <li class="ms-3">
             <a target="_blank" href="https://www.facebook.com/" rel="noopener">
@@ -229,6 +222,7 @@
         </li>
         </ul>
     </footer>
+    <!-- end footer -->
 
     {% block footerjs %}
     <script src="{% static 'js/toggle_and_reveal.js' %}"></script>
