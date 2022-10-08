@@ -387,7 +387,7 @@ This section looks at features which were implemented into the MVP (minimum viab
 - Third party seller section to expand content and variety of media available.   
 - Third party affiliate scheme to offer an easy way to trade in and recycle.  
 - Social media login, register functionality.  
-- Uncrease payment facility to include Apple Pay and Google Pay.  
+- Increase payment facility to include Apple Pay and Google Pay.  
 
 ## Testing  
 Please see the [TESTING](/docs/testing/TESTING.md) document for a full breakdown of the testng carried out throughout the development stages and after development of the MovieBox e-commerce web application.  
