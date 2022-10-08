@@ -232,6 +232,12 @@
 
     {% block footerjs %}
     <script src="{% static 'js/toggle_and_reveal.js' %}"></script>
+    <script>
+        let autofocus = document.querySelector('#id_username');
+        if (autofocus) {
+            autofocus.removeAttribute('autofocus');
+        }
+    </script>
     {% endblock footerjs %}
   </body>
 </html>
