@@ -141,10 +141,13 @@ Within the header section there are three main components, Account bar, navigati
 ##### Account bar section  
 The account bar section is as described, it holds every navigational link related to account function across the MovieBox e-commerce web application.
 The account links dynamically adjust dependant on logged in status and privileges, the differences are described below:  
+
 __Non-logged in user__  
 The account bar displays two links, ‘Sign in’ and ‘Sign up’, this is to allow the user to register for an account and then have the ability to save delivery information for future purchases which will aid friction for returning customers.  
+
 __Registered user__  
 The account bar dynamically adjusts size and links available to include a profile icon to indicate that it contains user data and a link to the user’s profile page where they can manage delivery address details and view prior purchases.  
+
 __Super user (administrator/siteowner)__  
 The account bar adjusts again to now include a direct link to the backend of the MovieBox management console.  
 The management console is where site owners. Can view real time data such as recent purchase orders and amend any order placed by an end user if there was an error that occurred.  
