@@ -342,7 +342,7 @@ Social media icons for Facebook, twitter and Instagram were also used within the
 Database structure diagram outlining the data structure across the MovieBox e-commerce web application relational database.  
 The PostgreSQL database has been setup as a highly normalised database, which will provide a good structure to organise the users, products and orders through the use of relational tables, this approach ensures flexibility to incorporate other data tables whilst eliminating redundancy and any inconsistent dependencies.  
 
-![Database structure diagram for MovieBox and connecting Django models and settiings](docs/wireframes/database_and_route_diagrams/moviebox_database_diagram_overview.png)  
+ 
 
 Django provides a core structure for a user database, with this in mind each app that has been added, extends this functionality to bring together each piece to produce a functioning, secure e-commerce web application.  
 The e-commerce web application allows registered users and non-registered users to purchase items, as such the user model acts for the registered user and can retrieve data, whereas guest purchases are saved in session.  
