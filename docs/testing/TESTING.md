@@ -1,4 +1,4 @@
-# Testing  document
+# Testing  document for MovieBox e-commerce web application  
 This document details how the MovieBox e-commerce web application was tested throughout its development and deployment stages to ensure that complience, a good user experiance was achieved and to make the application as accessible to all its end users.  
 Tests were carried out throughout development in an intergrated way, the tests were carried out at each main application development stage or when a new feature addition was being developed to ensure PEP8 complence within Python code was maintained and ensure when developng fromtend elements that, HTML, CSS and JS complience was maintained also, alongside ensuring scren reader enhancements using WAI-ATIA functioned also.  
 
@@ -9,6 +9,7 @@ Tests were carried out throughout development in an intergrated way, the tests w
     1.2 [Returning user](#returning-user)  
     1.3 [Site owner](#site-owner)  
 2. [Testing overview](#testing-overview)  
+3. [Test results overview](#test-results-overview)  
 
 
 ## User stories testing from the UX section  
@@ -186,3 +187,19 @@ All results from accessibility extensions were verified using manual tests and w
 
 __Screen Reader software__  
 NVDA and JAWS were used in some tests, this is software which I own and was run in real time and not simulated through an extension or virtual environment on a non-windows environment machine.  
+
+## Test results overview  
+Below is a table which represents a high level overview of the various tests undertaken during and through development of the MovieBox e-commerce web application, results of these tests and issues were collected and stored in an Excel document for functionality and accessibility reasons due to my sight loss for easier navigation using a screen reader, the excel document contains 3 sheets of tests.  
+Please find the [moviebox_test_and_issue_record.xlsx]() file on the GitHub repository.  
+ 
+| Test             | Logged out user | logged in user | Admin user |
+|------------------|----------|-------------------|------|
+| Database connection  | PASS     | Pass              | PASS | 
+| HTML Validation  | PASS     | Pass              | PASS | 
+| CSS Validation   | PASS     | PASS               | PASS | 
+| JShint           | PASS     | PASS              | PASS | 
+| PEP8            | Code PASS     | Code PASS              | Code PASS | 
+| Links            | PASS     | PASS              | PASS | 
+| Landmark Regions | PASS     | PASS              | PASS |
+| Screen reader    | PASS     | PASS              | PASS |
+| Lighthoise - <br>Performance,<br>Accessibility,<br>Best practice,<br>SEO | PASS         | PASS         | PASS          |
