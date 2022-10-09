@@ -88,13 +88,9 @@
                                     {% csrf_token %}
                                     <select hidden name="quantity" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
                                         <option value="1" selected>1 copy</option>
-                                        <option value="2">2 copies</option>
-                                        <option value="3">3 copies</option>
-                                        <option value="4">4 copies</option>
-                                        <option value="5">5 copies</option>
                                     </select>
                                     <div class="row">
-                                    <a class="col-6 details-link details-input" href="{% url 'product_details' product.id %}?name={{ product.name }}">
+                                    <a class="col-6 details-link details-input" href="{% url 'product_details' product.id %}">
                                         More info
                                     </a>
                                     
@@ -112,17 +108,17 @@
         </div>
     </div>
     {% include 'includes/page_sections/introduction_section.html' %}
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 mt-3">
-                        <h2 class="">Highest rated on imdb</h2>
-                    </div>
-                </div>
-                <div class="row">
-                    {% for item in products %}
-                    {% if item.imdbrating > 8.2 %}
-                    <div class="col-md-3">
-                        <!-- start of top 4 product cards -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 mt-3">
+                <h2 class="">Highest rated on imdb</h2>
+            </div>
+        </div>
+        <div class="row">
+            {% for item in products %}
+            {% if item.imdbrating > 8.2 %}
+            <div class="col-md-3">
+                <!-- start of top 4 product cards -->
                 <div class="card h-100 border-1">
                     {% if item.image %}
                     <a href="{% url 'product_details' item.id %}">
@@ -156,39 +152,35 @@
                                     </a>
                                 </p>
                                 {% endif %}
-                                
                             </div>
                         </div>
                     </div>
                     <div class="border-1 card-buttons">
                         <div class="row" style="margin:0!important;" >
-                        <div class="col-12">
-                            <form class="" action="{% url 'add_to_the_basket' item.id %}" method="POST">
-                                {% csrf_token %}
-                                <select hidden name="quantity" data-item_id="{{ item.id }}" id="id_qty_{{ item.id }}">
-                                    <option value="1" selected>1 copy</option>
-                                    <option value="2">2 copies</option>
-                                    <option value="3">3 copies</option>
-                                    <option value="4">4 copies</option>
-                                    <option value="5">5 copies</option>
-                                </select>
-                                </div>
-                                <a class="col-6 details-link details-input" href="{% url 'product_details' item.id %}?name={{ item.name }}">
-                                    More info
-                                </a>
-                                
-                                <input type="submit" class="col-12 basket-link  basket-input text-uppercase"  value="Add to Basket">
-                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                            </form>
+                            <div class="col-12">
+                                <form class="" action="{% url 'add_to_the_basket' item.id %}" method="POST">
+                                    {% csrf_token %}
+                                    <select hidden name="quantity" data-item_id="{{ item.id }}" id="id_qty_{{ item.id }}">
+                                        <option value="1" selected>1 copy</option>
+                                    </select>
+                                    <div class="row">
+                                        <a class="col-6 details-link details-input" href="{% url 'product_details' item.id %}">
+                                            More info
+                                        </a>
+                                        
+                                        <input type="submit" class="col-12 basket-link  basket-input text-uppercase"  value="Add to Basket">
+                                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <!-- end product cards -->
-                    </div>
-                
-                    {% endif %}
-                    {% endfor %}
-                </div>
             </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
     {% include 'includes/page_sections/register_section.html' %}
 {% endblock content %}
