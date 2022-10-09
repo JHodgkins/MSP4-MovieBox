@@ -58,12 +58,45 @@ On every card, the product price is shown, the product price is also shown on th
 Located within the shopping basket page is a clearly marked button titled ‘complete purchase’, activating this button will take a user to the purchase page to complete their purchase.  
 
 ### Returning user  
-- As a returning user, I want to be able to easily navigate to the account login page.  
-- As a returning user, I want to be able to see a previous order I have made.  
-- As a returning user, I want to be able to see how many movies are in my shopping basket.  
-- As a returning user, I want to be able to view items based on a filter I select.  
+- __As a returning user, I want to be able to easily navigate to the account sign in page.__  
+
+![User stories - Returning user q1](/docs/testing/user_stories_testing_images/returning_user/returning_user_question_1.png)  
+
+Located at the top right of the account bar which is available on every page of MovieBox e-commerce website is a link to take the user to a sign in page where they can login.  
+
+- __As a returning user, I want to be able to see a previous order I have made.__  
+
+![User stories - Returning user q2](/docs/testing/user_stories_testing_images/returning_user/returning_user_question_2.png)  
+
+When a user is signed in, activating the profile link in the account bar will take a user to their personalised profile.  
+Within this area is a section titled past purchases where a user can view and activate a view purchase link to view its details.  
+
+- __As a returning user, I want to be able to see how many movies are in my shopping basket.__  
+
+![User stories - Returning user q3](/docs/testing/user_stories_testing_images/returning_user/returning_user_question_3.png)  
+
+A user can see briefly within the navigation bar shopping basket area an indicator number or when visiting the shopping basket page, a user is told within the main page heading of the page how many items are within their shopping basket, this counter adjusts automatically from singular to plural dependant on the count.  
+
+- __As a returning user, I want to be able to view items based on a filter I select.__  
+
+![User stories - Returning user q4](/docs/testing/user_stories_testing_images/returning_user/returning_user_question_4.png)  
+
+Located on every product listing page, there is a sort field, this allows a user to select filters such as price highest to lowest and imdb rating from lowest to highest.  
+
+
 - As a returning user, I want to be able to view the latest offers available.  
+
+![User stories - Returning user q5](/docs/testing/user_stories_testing_images/returning_user/returning_user_question_5.png)  
+
+Located along the main navigation bar are links to the latest offers, these links include limited time offers and clearance items, selecting these filters will display all items within that category.  
+
+
 - As a returning user, I want to be able to update my account delivery details.  
+
+![User stories - Returning user q6](/docs/testing/user_stories_testing_images/returning_user/returning_user_question_6.png)  
+
+When a registered user is signed in, they can access their personalised profile section, within this area is a form that holds their delivery information.  
+The user can amend as many times as they wish, this information will be used the next time that they purchase an item.  
 
 ### Site owner  
 - As the site owner, I want visitors to be able to find the correct information about a product and make an informed choice to purchase.  
