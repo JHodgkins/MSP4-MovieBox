@@ -273,9 +273,7 @@ blockquote {
 
 /* cards */
 
-.product-card {
-  max-height: 365px;
-}
+
 
 .card-buttons {
   padding: 0;
@@ -304,15 +302,10 @@ blockquote {
   background-color: var(--grey);
 }
 
-.details-input {
-  max-width:40%;
-}
-
 .basket-input {
-  padding: 1rem;
-  max-width: 60%;
+  max-width: 50%;
   border: none;
-  font-size: 1rem;
+  font-size: 0.90rem;
 }
 
 /* 7. Product details */

@@ -32,11 +32,11 @@
 {% block content %}
 {% include 'includes/page_sections/quote.html' %}
     <div class="container main-body">
-            <div class="row">
-                <div class="col-md-12 mt-3">
-                    <h2 class="">MovieBox's Top Picks for this month!</h2>
-                </div>
+        <div class="row">
+            <div class="col-md-12 mt-3">
+                <h2 class="">MovieBox's Top Picks for this month!</h2>
             </div>
+        </div>
         
         <div class="row">
             {% for product in products|slice:"14:18" %}
@@ -83,28 +83,30 @@
                     </div>
                     <div class="border-1 card-buttons">
                         <div class="row" style="margin:0!important;" >
-                        <div class="col-12">
-                            <form class="" action="{% url 'add_to_the_basket' product.id %}" method="POST">
-                                {% csrf_token %}
-                                <select hidden name="quantity" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
-                                    <option value="1" selected>1 copy</option>
-                                    <option value="2">2 copies</option>
-                                    <option value="3">3 copies</option>
-                                    <option value="4">4 copies</option>
-                                    <option value="5">5 copies</option>
-                                </select>
-                                </div>
-                                <a class="col-6 details-link details-input" href="{% url 'product_details' product.id %}?name={{ product.name }}">
-                                    More info
-                                </a>
-                                
-                                <input type="submit" class="col-12 basket-link  basket-input text-uppercase"  value="Add to Basket">
-                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                            </form>
+                            <div class="col-12">
+                                <form class="" action="{% url 'add_to_the_basket' product.id %}" method="POST">
+                                    {% csrf_token %}
+                                    <select hidden name="quantity" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
+                                        <option value="1" selected>1 copy</option>
+                                        <option value="2">2 copies</option>
+                                        <option value="3">3 copies</option>
+                                        <option value="4">4 copies</option>
+                                        <option value="5">5 copies</option>
+                                    </select>
+                                    <div class="row">
+                                    <a class="col-6 details-link details-input" href="{% url 'product_details' product.id %}?name={{ product.name }}">
+                                        More info
+                                    </a>
+                                    
+                                    <input type="submit" class="col-6  basket-link  basket-input text-uppercase"  value="Add to Basket">
+                                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
+                    <!-- end product cards -->
                 </div>
-                <!-- end product cards -->
             </div>
             {% endfor %}
         </div>
