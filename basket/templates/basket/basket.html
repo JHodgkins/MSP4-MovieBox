@@ -33,7 +33,13 @@
     <div class="container">
         <div class="row">
             <div class="col-12 basket-heading">
-                <h2 class="">Basket contents</h2>
+                <h2 class="">Basket contents 
+                {% if product_count == 1 %}
+                <span class="badge badge-primary ml-1 mr-2 mb-1 basket-count-purchase">{{ product_count }} item</span>
+                {% elif product_count >= 2 %}
+                    <span class="badge badge-primary ml-1 mr-2 mb-1 basket-count-purchase">{{ product_count }} items</span>
+                {% endif %}
+                </h2>
             </div>
         </div>
         <div class="row">
