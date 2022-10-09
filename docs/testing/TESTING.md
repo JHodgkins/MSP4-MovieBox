@@ -10,6 +10,10 @@ Tests were carried out throughout development in an intergrated way, the tests w
     1.3 [Site owner](#site-owner)  
 2. [Testing overview](#testing-overview)  
 3. [Test results overview](#test-results-overview)  
+4. [Validation Testing](#validation-testing)  
+    4.1 [HTML validation](#html-validation)  
+    4.2 [CSS validation](#css-validation)  
+    4.3 [JS validation](#js-validation)  
 
 
 ## User stories testing from the UX section  
@@ -203,3 +207,16 @@ Please find the [moviebox_test_and_issue_record.xlsx]() file on the GitHub repos
 | Landmark Regions | PASS     | PASS              | PASS |
 | Screen reader    | PASS     | PASS              | PASS |
 | Lighthoise - <br>Performance,<br>Accessibility,<br>Best practice,<br>SEO | PASS         | PASS         | PASS          |
+
+## Validation Testing
+
+### HTML validation  
+-  Homepage -   
+![W3C HTML Validator result]()  
+
+### CSS validation  
+
+
+### JS validation  
+
+
