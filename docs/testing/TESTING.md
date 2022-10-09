@@ -8,6 +8,7 @@ Tests were carried out throughout development in an intergrated way, the tests w
     1.1 [First time user](#first-time-user)  
     1.2 [Returning user](#returning-user)  
     1.3 [Site owner](#site-owner)  
+2. [Testing overview](#testing-overview)  
 
 
 ## User stories testing from the UX section  
@@ -148,3 +149,40 @@ The user will then be able to select purchases table and view or amend, and dele
 
 Located across the site is an advertisement to sugget trying out Movie2Archive as a tool to catalogue the items bought through MovieBox or to help archive the customers current movie collection.  
 
+## Testing Overview  
+
+__Automated testing__  
+All automated tests were carried out using incognito mode to eliminate extension conflicts or false positives and errors due to the extension requests.  
+
+__Manual testing__   
+All manual testing was carried out in standard browser mode to simulate a real-world users experience of the MovieBox e-commerce web application.  
+
+__Libraries__   
+As the project technologies used the Bootstrap framework and Font Awesome for icons there is a possible effect on performance audit scored, this is due to the js scripts and in the instance of Bootstrap, jQuery library has to be loaded to enable features of Bootstrap 4 to function.  
+
+The features include popper.js which is used for modals and is used for the responsive navigation.  
+CDN's were used where possible across MovieBox, this was done to provide a minified cached version of frameworks and to ensure reliability, but this can still be a larger file when the page initially loads until it is cached.  
+
+CSS pre-loader tags were used to eliminate render blocking script flag within Lighthouse and deferring of scripts where necessary was used on JavaScript libraries and custom scripts.    
+
+__External apis__  
+External apis were used during the development of MovieBox, the apis include imdb data searching and Stripe payment api.  
+Imdb data searching was tested manually for the information provided back through its api using official imdb website data store and Stripe was tested manually to verify its transaction was validating using the Stripe website developer portal and also automated testing verifies that the data was being passed back through to the MovieBox application.  
+Throughout and in deployment, test card numbers are used to simulate a real-world example of a real purchase being made.  
+
+__Performance__  
+Due to experiance and the restrictions of the shared environment of Heroku for compiling and serving the application on the frontend, certain performance metrics are affected as the shared hosting will sleep after a few minites of inactivity to conserve resources and wake when needed which can take a few moments to be responsive, a paid plan would provide an always on connection and produce a higher performance which would yield faster performance for the end user.    
+
+__PEP8 complience__  
+PEP8 complience has been followed throughout the project, the project was developed using GitPod and the full template provided by Code Institute which includes Python linting to ensure compliance.  
+
+There is some string too long lints, the tuition we have been taught is only how to expand to two lines, after research it is also worth noting that dependant on operating system, expanding to multiple 
+lines can introduce incompatible code and may fail to run.  
+
+The lint and PEP8 line too long are also a style guide and this varies from 80 characters up to 150 characters dependant on the technology industry the application is running within, it is also similar to a warning in CSS, HTML validators or WCAG guidelines and is not an actual error but a visual cue to aim for a written best practice standard.  
+
+__Accessibility extensions__  
+All results from accessibility extensions were verified using manual tests and where relevant were validated using real Screen Reader software using a human tester.  
+
+__Screen Reader software__  
+NVDA and JAWS were used in some tests, this is software which I own and was run in real time and not simulated through an extension or virtual environment on a non-windows environment machine.  
