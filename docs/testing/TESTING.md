@@ -84,14 +84,14 @@ A user can see briefly within the navigation bar shopping basket area an indicat
 Located on every product listing page, there is a sort field, this allows a user to select filters such as price highest to lowest and imdb rating from lowest to highest.  
 
 
-- As a returning user, I want to be able to view the latest offers available.  
+- __As a returning user, I want to be able to view the latest offers available.__  
 
 ![User stories - Returning user q5](/docs/testing/user_stories_testing_images/returning_user/returning_user_question_5.png)  
 
 Located along the main navigation bar are links to the latest offers, these links include limited time offers and clearance items, selecting these filters will display all items within that category.  
 
 
-- As a returning user, I want to be able to update my account delivery details.  
+- __As a returning user, I want to be able to update my account delivery details.__  
 
 ![User stories - Returning user q6](/docs/testing/user_stories_testing_images/returning_user/returning_user_question_6.png)  
 
@@ -99,8 +99,52 @@ When a registered user is signed in, they can access their personalised profile 
 The user can amend as many times as they wish, this information will be used the next time that they purchase an item.  
 
 ### Site owner  
-- As the site owner, I want visitors to be able to find the correct information about a product and make an informed choice to purchase.  
-- As the site owner, I want visitors to be able to find the correct information about a product and make an informed choice to purchase.  
-- As the site owner, I want visitors to be able to easily add their movie choices to their shopping basket for purchase.  
-- As the site owner, I want the site visitors to be able to see what they have previously bought.  
-- As the site owner, I want to encourage users to visit clearance and sale areas.   
+- __As the site owner, I want visitors to be able to find the correct information about a product and make an informed choice to purchase.__  
+
+![User stories - Site owner q1](/docs/testing/user_stories_testing_images/site_owner/site_owner_question_1.png)  
+
+Located on each movie product listing is a detailed information box, this area contains more detailed information about a product including no of discs, running time and a detailed section on MovieBoxes grading system and delivery information.  
+
+- __As the site owner, I want staff admins to be able to edit the information about a product to ensure information is kept up to date.__  
+
+![User stories - Site owner q2](/docs/testing/user_stories_testing_images/site_owner/site_owner_question_2.png)  
+
+When an admin user is logged in, they will be able to select the edit movie button located below the movie cover art and edit its details in real time, if an error was discovered by a customer this allows quick editing and saving of product information.  
+
+- __As the site owner, I want visitors to be able to easily add their movie choices to their shopping basket and amend the quantity if necessary for them to purchase.__  
+
+![User stories - Site owner q3](/docs/testing/user_stories_testing_images/site_owner/site_owner_question_3.png)  
+
+Located within every movie product page is a quantity select box where customers can decide on the amount of an item they wish to purchase, also located within the shopping bag area is a quantity selector box where a customer can update and remove items before purchase.  
+
+- __As the site owner, I want the site visitors to be able to see what they have previously bought.__  
+
+![User stories - Site owner q4](/docs/testing/user_stories_testing_images/site_owner/site_owner_question_4.png)  
+
+Located within every registered user’s profile is a breakdown of every purchase a customer has made, the listing includes a view purchase link where they can see a historic receipt of. When they purchased the item.  
+
+- __As the site owner, I want to encourage users to visit clearance and sale areas.__  
+
+![User stories - Site owner q5](/docs/testing/user_stories_testing_images/site_owner/site_owner_question_5.png)  
+
+Located on the home page are listings for the items within clearance and limited time category, this is done as the prices are lower and will help entice curiosity about other products available within MovieBox e-commerce website.  
+
+- __As the site owner, I want to be able to add new products to the site easily and efficiently.__  
+
+![User stories - Site owner q6](/docs/testing/user_stories_testing_images/site_owner/site_owner_question_6.png)  
+
+When a suer user is signed in, their profile will have a new admin section added where they can add, edit and delete products from the MovieBox website without the need to go through the management console.  
+
+- __As the site owner, I want to be able to view a real time record of purchases and amend where necessary customer orders.__  
+
+![User stories - Site owner q7](/docs/testing/user_stories_testing_images/site_owner/site_owner_question_7.png)  
+
+A super user can login with their details into the management console which is accessed through the admin link located within the account navigation bar.  
+The user will then be able to select purchases table and view or amend, and delete purchases made on MovieBox.  
+
+- __As the site owner, I want to encourage users to visit MovieBox’s sister site Movie2Archive.__  
+
+![User stories - Site owner q8](/docs/testing/user_stories_testing_images/site_owner/site_owner_question_8.png)  
+
+Located across the site is an advertisement to sugget trying out Movie2Archive as a tool to catalogue the items bought through MovieBox or to help archive the customers current movie collection.  
+
