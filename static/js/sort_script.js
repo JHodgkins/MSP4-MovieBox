@@ -1,6 +1,6 @@
 // Main top hero section sort selector
 $('#sort-selector').change(function() {
-    let selector = $(this)
+    let selector = $(this);
     let currentUrl = new URL(window.location);
 
     let selectedVal = selector.val();
@@ -18,4 +18,4 @@ $('#sort-selector').change(function() {
 
             window.location.replace(currentUrl);
         }
-    })
+    });
