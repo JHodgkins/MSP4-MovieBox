@@ -14,6 +14,7 @@ Tests were carried out throughout development in an intergrated way, the tests w
     4.1 [HTML validation](#html-validation)  
     4.2 [CSS validation](#css-validation)  
     4.3 [JS validation](#js-validation)  
+5. [Database and application testing stages](#database-and-application-testing-stages)  
 
 
 ## User stories testing from the UX section  
@@ -262,6 +263,18 @@ As the site uses one CSS style sheet, the style sheet was validated by pasing in
 
 ### JS validation  
 ![JShint Validator result](/docs/testing/validator_testing_images/test_validator_js_hint_js_scripts.png)  
-Jhint was used and no errors were detected.  
+JS hint was used and no errors were detected, Stripe variable is mentioned because the JSHint does not have access to the installed python package Stripe.  
 
-
+## Database and application testing stages
+- Construct and render Django application to browser:  
+PEP8 complience - Python, django structure files - PASS  
+- Django homepage app created.  PEP8 complience - PASS  
+- Django products app created, models Category, Product  PEP8 complience - PASS  
+- Django basket app created.  PEP8 complience - PASS  
+- Django purchase app created, models Order, OrderLineItem  PEP8 complience - PASS  
+- Django profile app created, models UserProfile  PEP8 complience - PASS  
+- Test deployment to Heroku - No deployment issues - PASS  
+- Creation of Postgresql data base on Heroku and import of models - No issues - PASS  
+- Test new webhook with stripe using Heroku domain name - No issues - PASS  
+- Connect AWS S3 Bucket to MovieBox - No issues with transfer of Static files - PASS  
+- Test django email message confirmation of order through Heroku app - No issues - PASS   
