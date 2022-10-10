@@ -19,6 +19,7 @@ Tests were carried out throughout development in an intergrated way, the tests w
     6.1 [Rendering in the browser & Reflow tests](#rendering-in-the-browser--reflow-tests)  
     6.2 [Link testing](#link-testing)  
     6.3 [Tab order test](#tab-order-test)  
+    6.4 [Landmark test](#landmark-test)  
 
 
 ## User stories testing from the UX section  
@@ -312,3 +313,8 @@ The Accessibility insights extension was used to visually test the tab order on 
 The tab order was tested to ensure all focusable elements could receive focus for keyboard only users of the e-commerce web application, this also ensures that screen reader users assistive technology will be able to read these elements to when they recieve focus.    
 No issues were found during tests, an Example page of the test being carried out is shown below:  
 ![Tab order test](/docs/testing/accessibility_testing_images/test_tab_order.jpg)  
+
+### Landmark test  
+Screen reader users can use landmarks to navigate to sections within a page more quickly and effectively rather than navigating through each element on the page, landmarks are used as a form of quick navigation and understanding placement of page sections.    
+These landmarks have been implemented using HTML5 semantic markup and where appropriate, ARIA has also been used where an item would need a role to identify itself or additional functionality added using ARIA.    
+![Landmark test](/docs/testing/accessibility_testing_images/test_landmarks.png)  
