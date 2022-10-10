@@ -18,6 +18,7 @@ Tests were carried out throughout development in an intergrated way, the tests w
 6. [Manual testing](#manual-testing)  
     6.1 [Rendering in the browser & Reflow tests](#rendering-in-the-browser--reflow-tests)  
     6.2 [Link testing](#link-testing)  
+    6.3 [Tab order test](#tab-order-test)  
 
 
 ## User stories testing from the UX section  
@@ -305,3 +306,9 @@ an example of such code is shown below:
 </li>
 ```  
 All pages were tested, and no issues were discovered.  
+
+### Tab order test  
+The Accessibility insights extension was used to visually test the tab order on all pages.  
+The tab order was tested to ensure all focusable elements could receive focus for keyboard only users of the e-commerce web application, this also ensures that screen reader users assistive technology will be able to read these elements to when they recieve focus.    
+No issues were found during tests, an Example page of the test being carried out is shown below:  
+![Tab order test](/docs/testing/accessibility_testing_images/test_tab_order.jpg)  
