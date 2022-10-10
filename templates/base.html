@@ -39,6 +39,7 @@
     {% endblock extra_js %}
 
     <title>MovieBox {% if title %}{% block title %}| {% endblock title %}{% endif %}</title>
+    <meta name="description" content="MovieBox is an online e-co,,erce store specialising in selling used DVD and Blue Ray media">
 
     <!-- favicon links -->
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/apple_touch_icon.png' %}">
@@ -229,7 +230,7 @@
 
     {% block footerjs %}
     <script src="{% static 'js/toggle_and_reveal.js' %}"></script>
-    <script src="{% static 'js/focus_override' %}"></script>
+    <script src="{% static 'js/focus_override.js' %}"></script>
     {% endblock footerjs %}
   </body>
 </html>
