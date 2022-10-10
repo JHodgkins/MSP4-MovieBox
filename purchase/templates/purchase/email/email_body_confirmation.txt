@@ -6,7 +6,7 @@ We are currently processing your order and it will be sent out to you in the nex
 
 Here is a summary of your order:
 Order:
-{{ order.original_basket }}
+{{ order.product.name }}
 
 Delivery address:
 {{ order.street_address1 }}
