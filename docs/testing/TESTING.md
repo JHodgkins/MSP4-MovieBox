@@ -17,6 +17,7 @@ Tests were carried out throughout development in an intergrated way, the tests w
 5. [Database and application testing stages](#database-and-application-testing-stages)  
 6. [Manual testing](#manual-testing)  
     6.1 [Rendering in the browser & Reflow tests](#rendering-in-the-browser--reflow-tests)  
+    6.2 [Link testing](#link-testing)  
 
 
 ## User stories testing from the UX section  
@@ -290,3 +291,17 @@ Desktops
 Tablet and mobile
 -  Safari - PASS  
 I found that the e-commerce website application and all components reflowed and displayed correctly as expected on the various different screen sizes and systems that were used to test the MovieBox e-commerce web application.  
+
+### Link testing  
+All links within the e-commerce web application were tested to ensure that internal links behaved correctly, and external facing links such as social media links, third party links such as Movie2Archive opened in a new tab and did not take the user away from MovieBox.  
+A screen reader was also used during these tests on PC and MAC to ensure that the Sr-Only CSS help text classes and aria-hidden classes which have been applied at varioys sections throughout the application were announced and behaved as expected correctly by the screen reader software.  
+an example of such code is shown below:  
+```
+<li class="ms-3">
+    <a target="_blank" href="https://www.instagram.com/" rel="noopener">
+        <i class="fab fa-instagram" aria-hidden="true"></i>
+            <span class="sr-only">Find us on Instagram (opens in a new window)</span>
+    </a>
+</li>
+```  
+All pages were tested, and no issues were discovered.  
