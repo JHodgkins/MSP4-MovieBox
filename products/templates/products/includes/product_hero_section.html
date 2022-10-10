@@ -16,7 +16,7 @@
                     </div>
                     {% if active_categories %}
                         <div class="category-genres">
-                            <h3 class="text-white">Categories</h3>
+                            <h2 class="text-white">Categories</h2>
                         </div>
                         {% for c in active_categories %}
                             <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
