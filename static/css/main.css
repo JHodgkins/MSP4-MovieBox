@@ -110,6 +110,11 @@ footer {
     background-color: var(--orange);
 }
 
+a {
+  color: #0163cc;
+  text-decoration: underline;
+}
+
 /* header */
 
 /* account bar */
