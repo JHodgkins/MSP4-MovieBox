@@ -214,6 +214,47 @@ Please find the [moviebox_test_and_issue_record.xlsx]() file on the GitHub repos
 -  Homepage - PASS   
 ![W3C HTML Validator result](/docs/testing/validator_testing_images/test_html_validator_homepage.png)  
 
+-  Login - PASS   
+![W3C HTML Validator result](/docs/testing/validator_testing_images/test_html_validator_login.png)  
+
+-  Logout - PASS   
+![W3C HTML Validator result](/docs/testing/validator_testing_images/test_html_validator_logout.png)  
+
+-  Profile - PASS   
+![W3C HTML Validator result](/docs/testing/validator_testing_images/test_html_validator_profile.png)  
+
+-  New arrivals - PASS   
+![W3C HTML Validator result](/docs/testing/validator_testing_images/test_html_validator_new_arrivals.png)  
+
+-  Genre (action) - PASS   
+All genre pages load the same, this is why there is only one test as the page is the same.  
+![W3C HTML Validator result](/docs/testing/validator_testing_images/test_html_validator_new_arrivals.png)  
+
+-  All movies - PASS   
+![W3C HTML Validator result](/docs/testing/validator_testing_images/test_html_validator_all_movies.png)  
+
+-  All deals - PASS   
+![W3C HTML Validator result](/docs/testing/validator_testing_images/test_html_validator_all_deals.png)  
+
+-  Product_details - PASS   
+![W3C HTML Validator result](/docs/testing/validator_testing_images/test_html_validator_product_details.png)  
+
+-  Basket - PASS   
+![W3C HTML Validator result](/docs/testing/validator_testing_images/test_html_validator_basket.png)  
+
+-  Purchase - PASS   
+![W3C HTML Validator result](/docs/testing/validator_testing_images/test_html_validator_purchase.png)  
+
+-  Purchase complete - PASS   
+![W3C HTML Validator result](/docs/testing/validator_testing_images/test_html_validator_purchase_complete.png)  
+
+-  Add movie - PASS   
+![W3C HTML Validator result](/docs/testing/validator_testing_images/test_html_validator_add_movie.png)  
+
+-  Edit movie - PASS   
+![W3C HTML Validator result](/docs/testing/validator_testing_images/test_html_validator_edit_movie.png)  
+
+
 ### CSS validation  
 
 
