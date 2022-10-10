@@ -64,7 +64,7 @@
                         </p>
                     {% endif %}
                     {% if product.imdbrating %}
-                        <div class="imdb-rating"><i class="fab fa-imdb mr-1" aria-label="imdb rating"></i>{{ product.imdbrating }} / 10</div>
+                        <div class="imdb-rating"><i class="fab fa-imdb mr-1" aria-hidden="true"></i><strong>imdb rating</strong>: {{ product.imdbrating }} / 10</div>
                     {% else %}
                         <div class="imdb-rating">No imdb Rating found.</div>
                     {% endif %}
@@ -82,7 +82,7 @@
                     <button class="nav-link" id="profile-tab" data-toggle="tab" data-target="#grading" type="button" role="tab" aria-controls="grading" aria-selected="false">Grading</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="profile-tab" data-toggle="tab" data-target="#delivery" type="button" role="tab" aria-controls="delivery" aria-selected="false">Delivery</button>
+                    <button class="nav-link" id="delivery-tab" data-toggle="tab" data-target="#delivery" type="button" role="tab" aria-controls="delivery" aria-selected="false">Delivery</button>
                 </li>
                 </ul>
 
