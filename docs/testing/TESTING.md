@@ -261,5 +261,7 @@ As the site uses one CSS style sheet, the style sheet was validated by pasing in
 ![W3C CSS Validator result](/docs/testing/validator_testing_images/test_css_validator_main_css_stylesheet.png)  
 
 ### JS validation  
+![JShint Validator result](/docs/testing/validator_testing_images/test_validator_js_hint_js_scripts.png)  
+Jhint was used and no errors were detected.  
 
 
