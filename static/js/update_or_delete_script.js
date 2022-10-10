@@ -2,7 +2,7 @@
     $('.update-link').click(function(e) {
         let form = $(this).prev('.update-form');
         form.submit();
-    })
+    });
 
     // Remove item from basket and reload page
     $('.remove-item').click(function(e) {
@@ -16,4 +16,4 @@
          .done(function() {
              location.reload();
          });
-    })
+    });
