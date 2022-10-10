@@ -22,6 +22,8 @@ Tests were carried out throughout development in an intergrated way, the tests w
     6.4 [Landmark test](#landmark-test)  
     6.5 [Heading test](#heading-test)  
     6.6 [Screen reader testing](#screen-reader-testing)  
+7. [Automated testing](#automated-testing)  
+    7.1 [Lighthouse](#lighthouse)  
 
 
 ## User stories testing from the UX section  
@@ -329,3 +331,12 @@ Heading structure was also checked and meets Wcag guidelines for headings appear
 All areas of the e-commerce web application behaved as expected and no keyboard traps or block points were found during testing using a screen reader.  
 Devices used: Windows 10 using NVDA 2022 and JAWS 2022, Mac using VoiceOver for Mac and iPhone 14 Pro Max using VoiceOver.  
 
+## Automated testing  
+### Lighthouse  
+Google Chrome DevTools was used to run the audit and test the Performance, Accessibility, Best practice, and SEO of each page within the e-commerce web application.  
+
+- Homepage desktop  
+![Lighthouse test - Homepage desktop]()  
+
+- Homepage mobile  
+![Lighthouse test - Homepage mobile]()  
