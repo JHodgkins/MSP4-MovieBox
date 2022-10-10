@@ -342,7 +342,7 @@ blockquote {
   box-shadow: 0 5px 20px rgba(0,0,0,.25);
 }
 .cover-art:hover, .card:hover {
-  box-shadow: 0 15 80px  rgba(0,0,0,.25);
+  box-shadow: 0 15px 80px  rgba(0,0,0,.25);
 }
 
 /* 8. Shopping basket */
