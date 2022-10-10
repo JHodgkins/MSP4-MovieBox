@@ -5,6 +5,9 @@ Your order number is: {{ order.order_number }}
 We are currently processing your order and it will be sent out to you in the next 24 hours.
 
 Here is a summary of your order:
+Order:
+{{ order.original_basket }}
+
 Delivery address:
 {{ order.street_address1 }}
 {{ order.town_or_city }}
