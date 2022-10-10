@@ -15,6 +15,8 @@ Tests were carried out throughout development in an intergrated way, the tests w
     4.2 [CSS validation](#css-validation)  
     4.3 [JS validation](#js-validation)  
 5. [Database and application testing stages](#database-and-application-testing-stages)  
+6. [Manual testing](#manual-testing)  
+    6.1 [Rendering in the browser & Reflow tests](#rendering-in-the-browser--reflow-tests)  
 
 
 ## User stories testing from the UX section  
@@ -278,3 +280,13 @@ PEP8 complience - Python, django structure files - PASS
 - Test new webhook with stripe using Heroku domain name - No issues - PASS  
 - Connect AWS S3 Bucket to MovieBox - No issues with transfer of Static files - PASS  
 - Test django email message confirmation of order through Heroku app - No issues - PASS   
+
+## Manual testing  
+### Rendering in the browser & Reflow tests.  
+Devices used: Windows 10 PC, Mac Studio, iPad Air 2, iPhone 14 Pro Max  
+Desktops  
+-  Chrome, EDGE, Firefox on PC - PASS  
+-  Safari, Chrome on Mac - PASS  
+Tablet and mobile
+-  Safari - PASS  
+I found that the e-commerce website application and all components reflowed and displayed correctly as expected on the various different screen sizes and systems that were used to test the MovieBox e-commerce web application.  
