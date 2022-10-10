@@ -79,7 +79,7 @@
                     </div>
                     {% endfor %}
             </div>
-                <div class="col-sm-12 col-md-6">
+            <div class="col-sm-12 col-md-6">
                     <div class="row">
                         <div class="col-12 basket-heading">
                             <h2 class="">Delivery address</h2>
@@ -146,52 +146,52 @@
                             <p class="mb-0">{{ order.country }}</p>
                         </div>
                     </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6">
+                <div class="row">
+                    <div class="col-12 basket-heading">
+                        <h2 class="">Purchase and Delivery costs</h2>
+                    </div>
+                </div>
+                <hr class="my-3">
+                
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <p class="mb-0 text-black font-weight-bold">Basket Total:</p>
+                    </div>
+                    <div class="col-12 col-md-8 text-md-right">
+                        <p class="mb-0">£ {{ order.order_total }}</p>
+                    </div>
                 </div>
 
-                <div class="col-sm-12 col-md-6">
-                    <div class="row">
-                        <div class="col-12 basket-heading">
-                            <h2 class="">Purchase and Delivery costs</h2>
-                        </div>
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <p class="mb-0 text-black font-weight-bold">Delivery cost (10%):</p>
                     </div>
-                    <hr class="my-3">
+                    <div class="col-12 col-md-8 text-md-right">
+                        <p class="mb-0">£ {{ order.delivery_cost }}</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <p class="mb-0 text-black font-weight-bold">Purchase Total:</p>
+                    </div>
+                    <div class="col-12 col-md-8 text-md-right">
+                        <p class="mb-0">£ {{ order.grand_total }}</p>
+                    </div>
+                </div>    
+            </div>   
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-12 mb-5">
+                <a href="{% url 'products' %}" class="btn basket-link my-2 p-3">
                     
-                    <div class="row">
-                        <div class="col-12 col-md-4">
-                            <p class="mb-0 text-black font-weight-bold">Basket Total:</p>
-                        </div>
-                        <div class="col-12 col-md-8 text-md-right">
-                            <p class="mb-0">£ {{ order.order_total }}</p>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-12 col-md-4">
-                            <p class="mb-0 text-black font-weight-bold">Delivery cost (10%):</p>
-                        </div>
-                        <div class="col-12 col-md-8 text-md-right">
-                            <p class="mb-0">£ {{ order.delivery_cost }}</p>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-12 col-md-4">
-                            <p class="mb-0 text-black font-weight-bold">Purchase Total:</p>
-                        </div>
-                        <div class="col-12 col-md-8 text-md-right">
-                            <p class="mb-0">£ {{ order.grand_total }}</p>
-                        </div>
-                    </div>    
-                </div>   
-            <!-- </div> -->
-            <div class="row">
-                <div class="col-12 col-lg-12 mb-5">
-                    <a href="{% url 'products' %}" class="btn basket-link my-2 p-3">
-                        
-                        <span class="text-uppercase">Visit all movies</span>
-                    </a>
-                </div>
+                    <span class="text-uppercase">Visit all movies</span>
+                </a>
             </div>
         </div>
+
     </div>
 {% endblock content %}
