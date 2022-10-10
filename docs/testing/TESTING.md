@@ -20,6 +20,8 @@ Tests were carried out throughout development in an intergrated way, the tests w
     6.2 [Link testing](#link-testing)  
     6.3 [Tab order test](#tab-order-test)  
     6.4 [Landmark test](#landmark-test)  
+    6.5 [Heading test](#heading-test)  
+    6.6 [Screen reader testing](#screen-reader-testing)  
 
 
 ## User stories testing from the UX section  
@@ -318,3 +320,12 @@ No issues were found during tests, an Example page of the test being carried out
 Screen reader users can use landmarks to navigate to sections within a page more quickly and effectively rather than navigating through each element on the page, landmarks are used as a form of quick navigation and understanding placement of page sections.    
 These landmarks have been implemented using HTML5 semantic markup and where appropriate, ARIA has also been used where an item would need a role to identify itself or additional functionality added using ARIA.    
 ![Landmark test](/docs/testing/accessibility_testing_images/test_landmarks.png)  
+
+### Heading test  
+Heading structure was also checked and meets Wcag guidelines for headings appearing in a sequential order as to distinguish priority, H1 through to H6.  
+![Landmark test](/docs/testing/accessibility_testing_images/test_headings.png)   
+
+### Screen reader testing  
+All areas of the e-commerce web application behaved as expected and no keyboard traps or block points were found during testing using a screen reader.  
+Devices used: Windows 10 using NVDA 2022 and JAWS 2022, Mac using VoiceOver for Mac and iPhone 14 Pro Max using VoiceOver.  
+
