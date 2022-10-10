@@ -211,8 +211,8 @@ Please find the [moviebox_test_and_issue_record.xlsx]() file on the GitHub repos
 ## Validation Testing
 
 ### HTML validation  
--  Homepage -   
-![W3C HTML Validator result]()  
+-  Homepage - PASS   
+![W3C HTML Validator result](/docs/testing/validator_testing_images/test_html_validator_homepage.png)  
 
 ### CSS validation  
 
