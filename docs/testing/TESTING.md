@@ -254,9 +254,11 @@ All genre pages load the same, this is why there is only one test as the page is
 -  Edit movie - PASS   
 ![W3C HTML Validator result](/docs/testing/validator_testing_images/test_html_validator_edit_movie.png)  
 
-
 ### CSS validation  
+As the site uses one CSS style sheet, the style sheet was validated by pasing in the raw code to the validator.  
 
+-  CSS stylesheet - PASS  
+![W3C CSS Validator result](/docs/testing/validator_testing_images/test_css_validator_main_css_stylesheet.png)  
 
 ### JS validation  
 
