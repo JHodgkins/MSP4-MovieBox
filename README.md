@@ -539,4 +539,7 @@ Forking a GitHub Repository will make a copy of the original repository on your 
 [Stripe custom payment flow](https://stripe.com/docs/payments/quickstart) was used to hlp construct the payment system and the return calls.    
 [Code Institute Django walk through project)](https://codeinstitute.net/full-stack-software-development-diploma/?utm_term=code%20institute&utm_campaign=CI+-+UK+-+Search+-+Brand&utm_source=adwords&utm_medium=ppc&hsa_acc=8983321581&hsa_cam=1578649861&hsa_grp=62188641240&hsa_ad=581730217381&hsa_src=g&hsa_tgt=kwd-319867646331&hsa_kw=code%20institute&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAjwqJSaBhBUEiwAg5W9p3k30OqBaH5pz85MnpLKQzEY3btySrfUk1HjuK9aIjMGcWNHfBhzZhoCrEAQAvD_BwE) The project videos gave tremendous help in understanding Django and the framework, the project showed how to impliment products, this helped tremendously when creating the MovieBox application.  
 [How to create amazon S3 bucket using Python](https://www.youtube.com/watch?v=qGS9UiCFVbo) this video heled me visually see how to navigate and setup the amazon bucket.  
- 
+
+### Images and icons  
+- Icons used within the application were from the Font Awesome free icon set.  
+- Pictures of the movie covers were used from [umdb data searching api](https://rapidapi.com/standingapi-standingapi-default/api/1mdb-data-searching/details) which was also used to lookup movie title details, the api returns a poster image which is wha is used as movie covers for the products on the e-commerce web application MovieBox.    
