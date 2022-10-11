@@ -58,6 +58,7 @@ MovieBox will clearly list and display titles using captive box art imagery and 
     10.1 [Languages](#languages)  
     10.2 [Databases](#databases)  
     10.3 [Frameworks and libraries](#frameworks-and-libraries)  
+    10.4 [Programs and online resources](#programs-and-online-resources)  
 
 ## Overview  
 The MovieBox application is a database driven ecommerce web application which stores stock of physical media and helpfully categorises available media into an easy-to-understand front-end experience which can then be used by a wide range of audiences and potential customers.  
@@ -470,3 +471,18 @@ A list of all technologies and software and online resources used to create the 
 -  [Heroku](https://heroku.com), Used to deploy the MovieBox application.  
 -  [Amazon AWS](https://aws.amazon.com/), Used to host static files and images for the MovieBox application.  
 -  [Django allauth](https://django-allauth.readthedocs.io/en/latest/installation.html), Used to enhance the authentication system of the MovieBox web application.  
+
+### Programs and online resources  
+-  [favicon.io](https://favicon.io) used to create the favicon.
+-  [GitHub](https://github.io), was used to store committed files
+-  [Git](https://git-scm.com/) and [Gitpod](https://gitpod.io/), used in conjunction through Gitpod to commit and push files to GitHub
+-  [Photoshop 2022](https://adobe.com), used for editing of screenshots and saving into WebP format.   
+-  [Figma](https://www.figma.com/), used to create the wireframe designs of the applicaion.
+-  [Colour scheme](https://coolors.co/565555-ffb341-fcf7ff-c4cad0-ed254e), used to create a colour palette.  
+-  [Lighthouse](https://developers.google.com/web/tools/lighthouse), used to test performance, accessibility, best practices, and SEO within the Chrome browser.
+-  [Am I Responsive](http://ami.responsivedesign.is/), used for generating the main README image.  
+-  [CSS Minifier](https://www.toptal.com/developers/cssminifier/), used to minify CSS.  
+- [Python JinJa documentation](https://jinja.palletsprojects.com/en/3.1.x/)  Used to trouble shoot some templating issues with rendering for loops and count of items in for loops.  
+- [Black](https://black.readthedocs.io/en/stable/getting_started.html) Python code formatter, used to solve PEP8 issues and ensure code is readable.   
+- [Gloomaps](https://www.gloomaps.com/) used to create the site map and user stories storyboards for MovieBox.  
+- [Lucid](https://lucid.app) which was used to create the database models diagram for the application.  
