@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<section>
+    <!-- 403 error container -->
+    <div class="container text-center">
+        <div class="row d-flex align-items-center">
+            <div class="col mt-5">
+                <h1 class= "display-1 fw-bolder"> 403 error</h1>
+                <h2>Page Forbidden</h2>
+                <hr>
+                <p>Sorry, but you do not have permission to access this page, if you thiink this is a mistake, please do let us know.</p>
+                <p>Return to the home page using the link below and try again.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Back to home page button -->
+    <div class="m-2 text-center">
+        <a href="{% url 'homepage'%}" class="btn basket-link p-3">Back to Home</a>
+    </div>
+</section>
+
+{% endblock %}
