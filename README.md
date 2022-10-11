@@ -533,12 +533,12 @@ Forking a GitHub Repository will make a copy of the original repository on your 
 
 ### Code snippets and tutorials    
 - [Javascript tutorial.net](https://www.javascripttutorial.net/javascript-dom/javascript-removeattribute/#:~:text=Use%20the%20removeAttribute()%20to,the%20removeAttribute()%20method%20instead.) method used to remove attribute on form field.  
-[imdb](http://imdb.com) was used as inspiration for how to structure movie information.  
-[1mdb data searching](https://rapidapi.com/standingapi-standingapi-default/api/1mdb-data-searching/) was used as the source for searching movie information and the returned JSON to construct the fixture files.  
-[Django source code (GitHub)](https://github.com/django/django/blob/a6291394256aa758d74eec9ce0cfae8aea6475f2/django/contrib/auth/forms.py#L108) was used to understand the data structure of django and what models the framework uses.    
-[Stripe custom payment flow](https://stripe.com/docs/payments/quickstart) was used to hlp construct the payment system and the return calls.    
-[Code Institute Django walk through project)](https://codeinstitute.net/full-stack-software-development-diploma/?utm_term=code%20institute&utm_campaign=CI+-+UK+-+Search+-+Brand&utm_source=adwords&utm_medium=ppc&hsa_acc=8983321581&hsa_cam=1578649861&hsa_grp=62188641240&hsa_ad=581730217381&hsa_src=g&hsa_tgt=kwd-319867646331&hsa_kw=code%20institute&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAjwqJSaBhBUEiwAg5W9p3k30OqBaH5pz85MnpLKQzEY3btySrfUk1HjuK9aIjMGcWNHfBhzZhoCrEAQAvD_BwE) The project videos gave tremendous help in understanding Django and the framework, the project showed how to impliment products, this helped tremendously when creating the MovieBox application.  
-[How to create amazon S3 bucket using Python](https://www.youtube.com/watch?v=qGS9UiCFVbo) this video heled me visually see how to navigate and setup the amazon bucket.  
+- [imdb](http://imdb.com) was used as inspiration for how to structure movie information.  
+- [1mdb data searching](https://rapidapi.com/standingapi-standingapi-default/api/1mdb-data-searching/) was used as the source for searching movie information and the returned JSON to construct the fixture files.  
+- [Django source code (GitHub)](https://github.com/django/django/blob/a6291394256aa758d74eec9ce0cfae8aea6475f2/django/contrib/auth/forms.py#L108) was used to understand the data structure of django and what models the framework uses.    
+- [Stripe custom payment flow](https://stripe.com/docs/payments/quickstart) was used to hlp construct the payment system and the return calls.    
+- [Code Institute Django walk through project](https://codeinstitute.net/full-stack-software-development-diploma/?utm_term=code%20institute&utm_campaign=CI+-+UK+-+Search+-+Brand&utm_source=adwords&utm_medium=ppc&hsa_acc=8983321581&hsa_cam=1578649861&hsa_grp=62188641240&hsa_ad=581730217381&hsa_src=g&hsa_tgt=kwd-319867646331&hsa_kw=code%20institute&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAjwqJSaBhBUEiwAg5W9p3k30OqBaH5pz85MnpLKQzEY3btySrfUk1HjuK9aIjMGcWNHfBhzZhoCrEAQAvD_BwE) The project videos gave tremendous help in understanding Django and the framework, the project showed how to impliment products, this helped tremendously when creating the MovieBox application.  
+- [How to create amazon S3 bucket using Python](https://www.youtube.com/watch?v=qGS9UiCFVbo) this video heled me visually see how to navigate and setup the amazon bucket.  
 
 ### Images and icons  
 - Icons used within the application were from the Font Awesome free icon set.  
