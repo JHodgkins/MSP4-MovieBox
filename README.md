@@ -63,6 +63,10 @@ MovieBox will clearly list and display titles using captive box art imagery and 
     11.1 [Deploying the app to Heroku](#deploying-the-app-to-heroku)  
     11.2 [Forking the GitHub Repository](#forking-the-github-repository)  
     11.3 [Cloning to GitPod](#cloning-to-gitpod)  
+12. [Credits and resources used](#credits-and-resources-used)  
+    12.1 [Code snippets and tutorials](#code-snippets-and-tutorials)  
+    12.2 [Images and icons](#images-and-icons)  
+    12.3 [Content](#content)  
 
 
 ## Overview  
@@ -491,6 +495,9 @@ A list of all technologies and software and online resources used to create the 
 - [Black](https://black.readthedocs.io/en/stable/getting_started.html) Python code formatter, used to solve PEP8 issues and ensure code is readable.   
 - [Gloomaps](https://www.gloomaps.com/) used to create the site map and user stories storyboards for MovieBox.  
 - [Lucid](https://lucid.app) which was used to create the database models diagram for the application.  
+- [Colour converter](https://www.w3schools.com/colors/colors_converter.asp) which was used convert colours from hex to rgb, hsl etc.  
+- [Accessibility bookmarklets](https://accessibility-bookmarklets.org/install.html) used as a checking tool for accessibility testing.  
+- [GitHub markdown spec](https://github.github.com/gfm/#hard-line-breaks) used as a guide when creating the markdown files.  
 
 ## Deployments  
 Please find below the steps on how to Deploy, Fork and Clone.  
@@ -521,3 +528,15 @@ Forking a GitHub Repository will make a copy of the original repository on your 
 5.	Change the current working directory to the location where you wish the cloned directory to be made.  
 6.	Type git clone, and then paste the URL you copied above. e.g., $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY 
 7.	Press Enter and your local clone will start to be created.  
+
+## Credits and resources used  
+
+### Code snippets and tutorials    
+- [Javascript tutorial.net](https://www.javascripttutorial.net/javascript-dom/javascript-removeattribute/#:~:text=Use%20the%20removeAttribute()%20to,the%20removeAttribute()%20method%20instead.) method used to remove attribute on form field.  
+[imdb](http://imdb.com) was used as inspiration for how to structure movie information.  
+[1mdb data searching](https://rapidapi.com/standingapi-standingapi-default/api/1mdb-data-searching/) was used as the source for searching movie information and the returned JSON to construct the fixture files.  
+[Django source code (GitHub)](https://github.com/django/django/blob/a6291394256aa758d74eec9ce0cfae8aea6475f2/django/contrib/auth/forms.py#L108) was used to understand the data structure of django and what models the framework uses.    
+[Stripe custom payment flow](https://stripe.com/docs/payments/quickstart) was used to hlp construct the payment system and the return calls.    
+[Code Institute Django walk through project)](https://codeinstitute.net/full-stack-software-development-diploma/?utm_term=code%20institute&utm_campaign=CI+-+UK+-+Search+-+Brand&utm_source=adwords&utm_medium=ppc&hsa_acc=8983321581&hsa_cam=1578649861&hsa_grp=62188641240&hsa_ad=581730217381&hsa_src=g&hsa_tgt=kwd-319867646331&hsa_kw=code%20institute&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAjwqJSaBhBUEiwAg5W9p3k30OqBaH5pz85MnpLKQzEY3btySrfUk1HjuK9aIjMGcWNHfBhzZhoCrEAQAvD_BwE) The project videos gave tremendous help in understanding Django and the framework, the project showed how to impliment products, this helped tremendously when creating the MovieBox application.  
+[How to create amazon S3 bucket using Python](https://www.youtube.com/watch?v=qGS9UiCFVbo) this video heled me visually see how to navigate and setup the amazon bucket.  
+ 
