@@ -54,8 +54,10 @@ MovieBox will clearly list and display titles using captive box art imagery and 
     8.1 [Existing features](#existing-features)  
     8.2[Features to be implimented in future releases](#features-to-be-implimented-in-future-releases)  
 9. [Testing](#testing)    
-
-
+10. [Technologies used](#technologies-used)  
+    10.1 [Languages](#languages)  
+    10.2 [Databases](#databases)  
+    10.3 [Frameworks and libraries](#frameworks-and-libraries)  
 
 ## Overview  
 The MovieBox application is a database driven ecommerce web application which stores stock of physical media and helpfully categorises available media into an easy-to-understand front-end experience which can then be used by a wide range of audiences and potential customers.  
@@ -444,3 +446,27 @@ This section looks at features which were implemented into the MVP (minimum viab
 ## Testing  
 Please see the [TESTING](/docs/testing/TESTING.md) document for a full breakdown of the testng carried out throughout the development stages and after development of the MovieBox e-commerce web application.  
 
+## Technologies used  
+A list of all technologies and software and online resources used to create the MovieBox e-commerce web application.  
+
+### Languages  
+-  [HTML](https://en.wikipedia.org/wiki/HTML5)  
+-  [CSS](https://en.wikipedia.org/wiki/CSS)  
+-  [JS](https://en.wikipedia.org/wiki/JavaScript)  
+-  [JQuery](https://jquery.com/)  
+-  [Python](https://en.wikipedia.org/wiki/Python_(programming_language))  
+-  [JinJa](https://en.wikipedia.org/wiki/Jinja_(template_engine))  
+
+### Databases  
+- [PostgreSQL](https://en.wikipedia.org/wiki/PostgreSQL)  
+- [SQLite - Development database](https://en.wikipedia.org/wiki/SQLite)  
+
+### Frameworks and libraries  
+-  [Django](https://www.djangoproject.com/)  
+-  [Bootstrap version 4.6.2](https://getbootstrap.com/)  
+-  [Font Awesome](https://fontawesome.com/), Icons used throughout the e=commerce web application.  
+-  [Google fonts](https://fonts.google.com/), Bebas Neue and Poppins fonts were used across the web application.  
+-  [Stripe payment gateway api](https://stripe.com/docs/api), Used to process card details on the purchase page.  
+-  [Heroku](https://heroku.com), Used to deploy the MovieBox application.  
+-  [Amazon AWS](https://aws.amazon.com/), Used to host static files and images for the MovieBox application.  
+-  [Django allauth](https://django-allauth.readthedocs.io/en/latest/installation.html), Used to enhance the authentication system of the MovieBox web application.  
