@@ -59,6 +59,11 @@ MovieBox will clearly list and display titles using captive box art imagery and 
     10.2 [Databases](#databases)  
     10.3 [Frameworks and libraries](#frameworks-and-libraries)  
     10.4 [Programs and online resources](#programs-and-online-resources)  
+11. [Deployments](#deployments)  
+    11.1 [Deploying the app to Heroku](#deploying-the-app-to-heroku)  
+    11.2 [Forking the GitHub Repository](#forking-the-github-repository)  
+    11.3 [Cloning to GitPod](#cloning-to-gitpod)  
+
 
 ## Overview  
 The MovieBox application is a database driven ecommerce web application which stores stock of physical media and helpfully categorises available media into an easy-to-understand front-end experience which can then be used by a wide range of audiences and potential customers.  
@@ -486,3 +491,33 @@ A list of all technologies and software and online resources used to create the 
 - [Black](https://black.readthedocs.io/en/stable/getting_started.html) Python code formatter, used to solve PEP8 issues and ensure code is readable.   
 - [Gloomaps](https://www.gloomaps.com/) used to create the site map and user stories storyboards for MovieBox.  
 - [Lucid](https://lucid.app) which was used to create the database models diagram for the application.  
+
+## Deployments  
+Please find below the steps on how to Deploy, Fork and Clone.  
+### Deploying the app to Heroku and setup of AWS S3   
+Please see this [DEPLOYMENT](/docs/deployment/DEPLOYMENT.md) document for full instructions on creating the Heroku app and the database and Amazon AWS S3 bucket, to fully replicate this project.  
+
+### Forking the GitHub repository  
+Forking a GitHub Repository will make a copy of the original repository on your GitHub account to view, edit or make changes without worrying about affecting the original repository.
+1.	Log in to GitHub and locate the GitHub Repository you wish to fork
+2.	At the top of the Repository, to the right above the "Settings" link on the menu, locate the "Fork" Button and select.
+3.	You should now have a copy of the original repository within your GitHub account.  
+
+### Cloning to Gitpod  
+1.	Go to [gitpod.io](https://gitpod.io)
+2.	Create an account or sign in
+3.	Open a new window and navigate to the extension store of your browser
+-   [Chromium browsers](https://chrome.google.com/webstore/detail/gitpod-online-ide/dodmmooeoklaejobgleioelladacbeki)
+-   [Firefox](https://addons.mozilla.org/firefox/addon/gitpod/)
+4.	Accept permissions for the extensions and then return to the repository you wish to clone.
+5.	There should be a green Gitpod button now located to the right, selecting this will open GitHub new repository screen.
+6.	Create a new repository and Gitpod will launch your new repository into the user interface.  
+
+### Making a local clone  
+1.	Log in to GitHub and locate the GitHub Repository  
+2.	Locate the Code button located to the right of the screen, click on this to reveal a sub menu, "Clone or download a zip file should be seen".  
+3.	To clone the repository using HTTPS, under "Clone with HTTPS title", copy the link to your clipboard.
+4.	Open Git Bash  
+5.	Change the current working directory to the location where you wish the cloned directory to be made.  
+6.	Type git clone, and then paste the URL you copied above. e.g., $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY 
+7.	Press Enter and your local clone will start to be created.  
