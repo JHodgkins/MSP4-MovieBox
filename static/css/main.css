@@ -2,37 +2,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins&display=swap');
 
 /* Stylesheet Index
-1. resets
-2. Colour variables
-3. Commonly used styles
-4. Structure styles
-5. header
+
+1. Colour variables
+2. Commonly used styles
+3. Structure styles
+4. header
   -- account bar
   -- nav bar
   -- search bar
   -- hero
   -- quote
+5. Homepage
+  -- Hero area
+  -- Information area
 6. product listing
   -- hero sort area
   -- cards
-Homepage
-  -- information area
 7. product details
   -- icons
   -- descriptions
+  -- Certification logos
   -- cover art
 8. shopping basket
 9. purchase page
   -- item counter
   -- Stripe payment gateway
-Edit movie page
+10. Profile page
+  -- Hero section
+11. Page sections
+  -- promotion
+12. Edit movie page
   -- cover art
+13. Footer
+14. media queries
 
-Footer
-media queries
-
-
-/* 2. Colour variables */
+/* 1. Colour variables */
 
 :root { 
     --white: #ffffff;
@@ -46,7 +50,7 @@ media queries
     --cream: #FCF7FF; /* Magnolia */
     }
 
-/* 3. commonly used styles */
+/* 2. commonly used styles */
 .lh-100 { line-height: 1; }
 .lh-125 { line-height: 1.25; }
 .lh-150 { line-height: 1.5; }
@@ -55,7 +59,7 @@ media queries
   content: "|";
   color: var(--white);
 }
-/* 4. Structure styles */
+/* 3. Structure styles */
 
 html,
 body {
@@ -115,7 +119,7 @@ a {
   text-decoration: none;
 }
 
-/* header */
+/* 4. header */
 
 /* account bar */
 
@@ -207,7 +211,7 @@ a {
   text-align: center;
 }
 
-/* - Quote section */
+/* Quote section */
 
 .bg-quotes-wrapper {
   background-color: var(--cream);
@@ -225,8 +229,7 @@ blockquote {
   font-size: 3rem;
 }
 
-
-/* Homepage */
+/* 5. Homepage */
 
 /* hero area */
 
@@ -277,8 +280,6 @@ blockquote {
 }
 
 /* cards */
-
-
 
 .card-buttons {
   padding: 0;
@@ -379,8 +380,8 @@ blockquote {
   position: absolute;
 }
 
-
 /* Stripe payment gateway */
+
 .StripeElement {
   box-sizing: border-box;
   height: 40px;
@@ -446,7 +447,7 @@ select:invalid, select option[value=""] {
     height: 100%;
 }
 
-/* Profile page */
+/* 10. Profile page */
 
 /* Hero section */
 .profile-heading {
@@ -457,9 +458,10 @@ select:invalid, select option[value=""] {
   text-align: left;
 }
 
-/* Page sections */
+/* 11. Page sections */
 
 /* promotion */
+
 .movie2archive-icon i {
   font-size: 4rem;
 }
@@ -476,7 +478,7 @@ select:invalid, select option[value=""] {
   padding-top: 0;
 }
 
-/* Edit movie page */
+/* 12. Edit movie page */
 
 /* Cover art */
 
@@ -491,7 +493,7 @@ select:invalid, select option[value=""] {
 }
 
 
-/* Footer */
+/* 13. Footer */
 
 .site-footer {
   margin-bottom: 0;
@@ -520,7 +522,7 @@ select:invalid, select option[value=""] {
 }
 
 
-/* media queries */
+/* 14. media queries */
 
 @media (max-width: 991.98px) {
     .offcanvas-collapse {
