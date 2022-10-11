@@ -1,8 +1,10 @@
 # MovieBox  
+![Site image](/docs/icons_and_imagery/site_image.png)  
+
 MovieBox is an online web ecommerce store application which specialises in past available titles which were released on DVD and Blue-Ray formats.  
 MovieBox will clearly list and display titles using captive box art imagery and clear informative details surrounding the title to allow end users to make a clear and informative buying choices.  
 
-[Live site preview link coming soon]()  
+[Live site preview](https://moviebox-store.herokuapp.com/)  
 
 ## Table of contents  
 1. [Overview](#overview)  
