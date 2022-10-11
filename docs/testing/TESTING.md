@@ -336,7 +336,87 @@ Devices used: Windows 10 using NVDA 2022 and JAWS 2022, Mac using VoiceOver for 
 Google Chrome DevTools was used to run the audit and test the Performance, Accessibility, Best practice, and SEO of each page within the e-commerce web application.  
 
 - Homepage desktop  
-![Lighthouse test - Homepage desktop]()  
+![Lighthouse test - Homepage desktop](/docs/testing/lighthouse_testing/desktop/lighthouse_test_desktop_homepage.png)  
 
 - Homepage mobile  
+![Lighthouse test - Homepage mobile]()  
+
+- Login desktop  
+![Lighthouse test - Homepage desktop](/docs/testing/lighthouse_testing/desktop/lighthouse_test_desktop_login.png)  
+
+- Login mobile  
+![Lighthouse test - Homepage mobile]()  
+
+- Log out desktop  
+![Lighthouse test - Homepage desktop](/docs/testing/lighthouse_testing/desktop/lighthuse_test_desktop_logout.png)  
+
+- Log out mobile  
+![Lighthouse test - Homepage mobile]()  
+
+- Profile desktop  
+![Lighthouse test - Homepage desktop](/docs/testing/lighthouse_testing/desktop/lighthouse_test_desktop_profile.png)  
+
+- Profile mobile  
+![Lighthouse test - Homepage mobile]()  
+
+- New arrivals desktop  
+![Lighthouse test - Homepage desktop](/docs/testing/lighthouse_testing/desktop/lighthouse_test_desktop_profile.png)  
+
+- New arrivals mobile  
+![Lighthouse test - Homepage mobile]()  
+
+- Genre (action) desktop  
+![Lighthouse test - Homepage desktop](/docs/testing/lighthouse_testing/desktop/lighthouse_test_desktop_genre_action.png)  
+
+The genre displays titles based on their category and is the same page, results were the same acrossfilters and this is why only one result is shown.
+
+- Genre (action) mobile  
+![Lighthouse test - Homepage mobile]()  
+
+- All movies desktop  
+![Lighthouse test - Homepage desktop](/docs/testing/lighthouse_testing/desktop/lighthouse_test_desktop_all_movies.png)  
+
+- All movies mobile  
+![Lighthouse test - Homepage mobile]()  
+
+- All deals desktop  
+![Lighthouse test - Homepage desktop](/docs/testing/lighthouse_testing/desktop/lighthouse_test_desktop_all_deals.png)  
+
+- All deals mobile  
+![Lighthouse test - Homepage mobile]()  
+
+- Product details desktop  
+![Lighthouse test - Homepage desktop](/docs/testing/lighthouse_testing/desktop/lighthouse_test_desktop_product_details.png)  
+
+- Product details mobile  
+![Lighthouse test - Homepage mobile]()  
+
+- Basket desktop  
+![Lighthouse test - Homepage desktop](/docs/testing/lighthouse_testing/desktop/lighthuse_test_desktop_basket.png)  
+
+- Basket mobile  
+![Lighthouse test - Homepage mobile]()  
+
+- Purchase desktop  
+![Lighthouse test - Homepage desktop](/docs/testing/lighthouse_testing/desktop/lighthouse_test_desktop_purchase.png)  
+
+- Purchase mobile  
+![Lighthouse test - Homepage mobile]()  
+
+- Purchase complete desktop  
+![Lighthouse test - Homepage desktop](/docs/testing/lighthouse_testing/desktop/lighthouse_test_desktop_purchase_complete.png)  
+
+- Purchase complte mobile  
+![Lighthouse test - Homepage mobile]()  
+
+- Add movie desktop  
+![Lighthouse test - Homepage desktop](/docs/testing/lighthouse_testing/desktop/lighthouse_test_desktop_add_movie.png)  
+
+- Add movie mobile  
+![Lighthouse test - Homepage mobile]()  
+
+- Edit movie desktop  
+![Lighthouse test - Homepage desktop](/docs/testing/lighthouse_testing/desktop/lighthouse_test_desktop_edit_movie.png)  
+
+- Edit movie mobile  
 ![Lighthouse test - Homepage mobile]()  
