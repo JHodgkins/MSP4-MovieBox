@@ -1,6 +1,6 @@
 # Testing  document for MovieBox e-commerce web application  
 This document details how the MovieBox e-commerce web application was tested throughout its development and deployment stages to ensure that complience, a good user experiance was achieved and to make the application as accessible to all its end users.  
-Tests were carried out throughout development in an intergrated way, the tests were carried out at each main application development stage or when a new feature addition was being developed to ensure PEP8 complence within Python code was maintained and ensure when developng fromtend elements that, HTML, CSS and JS complience was maintained also, alongside ensuring scren reader enhancements using WAI-ATIA functioned also.  
+Tests were carried out throughout development in an intergrated way, the tests were carried out at each main application development stage or when a new feature addition was being developed to ensure PEP8 complence within Python code was maintained and ensure when developing frontend elements that, HTML, CSS and JS complience was maintained also, alongside ensuring screen reader enhancements using WAI-ATIA functioned also.  
 
 ## Table of contents
  
@@ -138,7 +138,7 @@ Located within every movie product page is a quantity select box where customers
 
 ![User stories - Site owner q4](/docs/testing/user_stories_testing_images/site_owner/site_owner_question_4.png)  
 
-Located within every registered user’s profile is a breakdown of every purchase a customer has made, the listing includes a view purchase link where they can see a historic receipt of. When they purchased the item.  
+Located within every registered user’s profile is a breakdown of every purchase a customer has made, the listing includes a view purchase link where they can see a historic receipt of when they purchased the item.  
 
 - __As the site owner, I want to encourage users to visit clearance and sale areas.__  
 
@@ -150,7 +150,7 @@ Located on the home page are listings for the items within clearance and limited
 
 ![User stories - Site owner q6](/docs/testing/user_stories_testing_images/site_owner/site_owner_question_6.png)  
 
-When a suer user is signed in, their profile will have a new admin section added where they can add, edit and delete products from the MovieBox website without the need to go through the management console.  
+When a super user is signed in, their profile will have a new admin section added where they can add, edit and delete products from the MovieBox website without the need to go through the management console.  
 
 - __As the site owner, I want to be able to view a real time record of purchases and amend where necessary customer orders.__  
 
@@ -187,7 +187,7 @@ Imdb data searching was tested manually for the information provided back throug
 Throughout and in deployment, test card numbers are used to simulate a real-world example of a real purchase being made.  
 
 __Performance__  
-Due to experiance and the restrictions of the shared environment of Heroku for compiling and serving the application on the frontend, certain performance metrics are affected as the shared hosting will sleep after a few minites of inactivity to conserve resources and wake when needed which can take a few moments to be responsive, a paid plan would provide an always on connection and produce a higher performance which would yield faster performance for the end user.    
+Due to experiance and the restrictions of the shared environment of Heroku for compiling and serving the application on the frontend, certain performance metrics are affected as the shared hosting will sleep after a few minutes of inactivity to conserve resources and wake when needed which can take a few moments to be responsive, a paid plan would provide an always on connection and produce a higher performance which would yield faster performance for the end user.    
 
 __PEP8 complience__  
 PEP8 complience has been followed throughout the project, the project was developed using GitPod and the full template provided by Code Institute which includes Python linting to ensure compliance.  
@@ -200,7 +200,7 @@ The lint and PEP8 line too long are also a style guide and this varies from 80 c
 __Stripe payment testing__  
 All scenerios have been tested through the form on MovieBox and checked using the Stripe console to ensure payments go through and are reflected within the admin console of Django.  
 Stripe provides test card numbers to test each scenerio and these have been tested to ensure that each one is successful and causes the action it should.  
-Stripe hides the card details and states they should not be ublically shared, these card numbers have been shared along wit the project so that they can be checked.  
+Stripe hides the card details and states they should not be ublically shared, these card numbers have been shared along with the project so that they can be checked.  
 
 __Accessibility extensions__  
 All results from accessibility extensions were verified using manual tests and where relevant were validated using real Screen Reader software using a human tester.  
@@ -306,7 +306,7 @@ I found that the e-commerce website application and all components reflowed and 
 
 ### Link testing  
 All links within the e-commerce web application were tested to ensure that internal links behaved correctly, and external facing links such as social media links, third party links such as Movie2Archive opened in a new tab and did not take the user away from MovieBox.  
-A screen reader was also used during these tests on PC and MAC to ensure that the Sr-Only CSS help text classes and aria-hidden classes which have been applied at varioys sections throughout the application were announced and behaved as expected correctly by the screen reader software.  
+A screen reader was also used during these tests on PC and MAC to ensure that the Sr-Only CSS help text classes and aria-hidden classes which have been applied at various sections throughout the application were announced and behaved as expected correctly by the screen reader software.  
 an example of such code is shown below:  
 ```
 <li class="ms-3">
@@ -374,7 +374,7 @@ Google Chrome DevTools was used to run the audit and test the Performance, Acces
 - Genre (action) desktop  
 ![Lighthouse test - Genre (action) desktop](/docs/testing/lighthouse_testing/desktop/lighthouse_test_desktop_genre_action.png)  
 
-The genre displays titles based on their category and is the same page, results were the same acrossfilters and this is why only one result is shown.
+The genre displays titles based on their category and is the same page, results were the same across filters and this is why only one result is shown.
 
 - Genre (action) mobile  
 ![Lighthouse test - Genre (action) mobile](/docs/testing/lighthouse_testing/mobile/lighthouse_test_mobile_genre_action.png)  
@@ -412,7 +412,7 @@ The genre displays titles based on their category and is the same page, results 
 - Purchase complete desktop  
 ![Lighthouse test - Purchase complete desktop](/docs/testing/lighthouse_testing/desktop/lighthouse_test_desktop_purchase_complete.png)  
 
-- Purchase complte mobile  
+- Purchase complete mobile  
 ![Lighthouse test - Purchase complete mobile](/docs/testing/lighthouse_testing/mobile/lighthouse_test_mobile_purchase_complete.png)  
 
 - Add movie desktop  
@@ -429,6 +429,6 @@ The genre displays titles based on their category and is the same page, results 
 
 ### Simulated devive testing  
 Chromes built in device simulator which covers many different device sizes was used to simulate the application on a variety of device screen sizes.  
-All simulated screen sizes rendered the e=commerce web application correctly and as expected.  
+All simulated screen sizes rendered the e-commerce web application correctly and as expected.  
 
 [Back to Repository](https://github.com/JHodgkins/MSP4-MovieBox)   

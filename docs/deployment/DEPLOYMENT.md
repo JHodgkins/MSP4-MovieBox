@@ -20,8 +20,8 @@ The project relies upon certain technologies, ensure you have these installed or
 
 - An IDE (such as [Visual Studio Code](https://code.visualstudio.com/) or [GitPod](https://www.gitpod.io/))
 - [Python](https://www.python.org/downloads/) The project uses Python version 3.8.12  
-- An [AWS](https://aws.amazon.com/) accountm and a [S3 Bucket](https://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html) this will be needed for storing the static files.
-- [Stripe](https://dashboard.stripe.com/register) Sign up for a free account to have access to test card details, this is what is sed to process the purchases on the web application.
+- An [AWS](https://aws.amazon.com/) account and a [S3 Bucket](https://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html) this will be needed for storing the static files.
+- [Stripe](https://dashboard.stripe.com/register) Sign up for a free account to have access to test card details, this is what is used to process the purchases on the web application.
 
 ## Cloning the repository (Gitpod) 
 
@@ -77,7 +77,7 @@ python3 manage.py makemigrations
 
 python3 manage.py migrate
 ```
-6. (optional) There are fixtuure files which contain JSON data to populate the database tables, this can be done using the commands below or data can be added using the djanngo admin console later.  
+6. (optional) There are fixture files which contain JSON data to populate the database tables, this can be done using the commands below or data can be added using the django admin console later.  
 The fixtures file is located in the 'Products' app folder.  
 
 ```

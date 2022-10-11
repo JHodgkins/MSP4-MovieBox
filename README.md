@@ -72,13 +72,13 @@ MovieBox will clearly list and display titles using captive box art imagery and 
 
 
 ## Overview  
-The MovieBox application is a database driven ecommerce web application which stores stock of physical media and helpfully categorises available media into an easy-to-understand front-end experience which can then be used by a wide range of audiences and potential customers.  
-The business purpose of MovieBox is to provide a varied selection of past and present DVD and Blue-Ray media titles to its audience in a clear and usable ecommerce web application to generate revenue to support the repurchasing of new and used titles for its platform.  
+The MovieBox application is a database driven e-commerce web application which stores stock of physical media and helpfully categorises available media into an easy-to-understand front-end experience which can then be used by a wide range of audiences and potential customers.  
+The business purpose of MovieBox is to provide a varied selection of past and present DVD and Blue-Ray media titles to its audience in a clear and usable e-commerce web application to generate revenue to support the repurchasing of new and used titles for its platform.  
 The sites expected audience will be to anyone looking to purchase a small to large selection of media titles, the sites audience would be any user who wishes to buy media from an online store through their desktop or mobile device.  
-The application will provide to new users a reassurance and positive feeling by providing a simple intrusive interface which is clean and simple to use, the applications purpose is maintained throughout its interface and will help guide its customers through to completed order by providing clear informative information about a tile whilst browsing the web application and though its ordering and payment system.  
+The application will provide to new users a reassurance and positive feeling by providing a simple intuitive interface which is clean and simple to use, the applications purpose is maintained throughout its interface and will help guide its customers through to completed order by providing clear informative information about a tile whilst browsing the web application and though its ordering and payment system.  
 
 ## Design brief  
-Plan, design and build a data driven ecommerce web application for potential customers who wish to purchase present and past DVD and Blue-Ray movies titles with a consistent and approachable user interface.  
+Plan, design and build a data driven ecommerce web application for potential customers who wish to purchase present and past DVD and Blue-Ray movie titles with a consistent and approachable user interface.  
 The application will provide a safe and secure online shopping experience with a secure payment gateway using integration with industry leading payment system Stripe.  
 The application will use external resources to inform the end user about interesting information relating to their possible media order.  
 The application will allow for easier processing of future orders by allowing a user to securely save previously entered order details required for future checkout interactions.  
@@ -157,7 +157,7 @@ The account bar section is as described, it holds every navigational link relate
 The account links dynamically adjust dependant on logged in status and privileges, the differences are described below:  
 
 __Non-logged in user__  
-The account bar displays two links, ‘Sign in’ and ‘Sign up’, this is to allow the user to register for an account and then have the ability to save delivery information for future purchases which will aid friction for returning customers.  
+The account bar displays two links, ‘Sign in’ and ‘Sign up’, this is to allow the user to register for an account and then have the ability to save delivery information for future purchases which will help returning customers with the purchasing process.  
 
 __Registered user__  
 The account bar dynamically adjusts size and links available to include a profile icon to indicate that it contains user data and a link to the user’s profile page where they can manage delivery address details and view prior purchases.  
@@ -174,7 +174,7 @@ The main navigation area section also contains the ‘basket’ area which dynam
 The total is also inclusive of pstage and adapts dynamically dependant on total cost.  
 
 ##### Search area section  
-The search section has only one purpose which is to allow users to easily drill down to th movies that appeal to them in the most efficient way.  
+The search section has only one purpose which is to allow users to easily drill down to the movies that appeal to them in the most efficient way.  
 The search bar uses dynamic filtering to search all product listing information, using the data stored to return a result to the end user, this can be a single word or an actor who may have played within a movie or even a director, the reasoning for the type of searching is so that related products will be presentated to a user which may appeal even if not realised that for instance a director had directed another film which had not been originally thought of.  
 
 All these sections are present throughout the site to ensure consistency and aid navigation as a user becomes familiar with the e-commerce web applications layout.   
@@ -206,7 +206,7 @@ a unique dashboard will be available in the area of the profile page.
 This area allows a site owner or admin to see a summary of the whole application and to also add, edit or delete the sites categories, Media type, edition type and location area.  
 
 #### Footer section  
-The footer section was designed to be useful and useable; the footer is divided into two half page sections at tablet and above screen sizes.  
+The footer section was designed to be useful and useable, the footer is divided into two half page sections at tablet and above screen sizes.  
 The right side will show the MovieBox social media icon links with the left side displaying a copyright notice.  
 
 #### Overview of sections  
@@ -214,7 +214,7 @@ The approach to keep areas consistent and similar was used to ensure that the us
 
 ### Wireframes  
 Wireframe designs show Mobile, Tablet and Desktop views of the main concept  parts of the MovieBox e-commerce web application.  
-The application follows best practices and was developed using a mobile first approach to ensur the application was accessible to a wide audience.  
+The application follows best practices and was developed using a mobile first approach to ensure the application was accessible to a wide audience.  
 
 #### Homepage  
 <details><summary>Mobile</summary>  
@@ -246,7 +246,7 @@ The application follows best practices and was developed using a mobile first ap
 <details><summary>Desktop</summary>  
 <img src="docs/wireframes/desktop/desktop_register.png" alt="wireframe screenshot of MovieBox Register page on desktop"></details>   
 
-#### Prodicts page  
+#### Products page  
 <details><summary>Mobile</summary>  
 <img src="docs/wireframes/mobile/mobile_products.png" alt="wireframe screenshot of MovieBox Products page on mobile"></details>   
 
@@ -364,7 +364,7 @@ The e-commerce web application allows registered users and non-registered users 
 ### Overview of apps  
 __Core Django framework__  
 The core framework of Django provides one view and a standard user login/register model for its management console, User.  
-The management console requires one Superuser to function, the super user is equivalent to an Admin account.  
+The management console requires one Super user to function, the super user is equivalent to an Admin account.  
 django.contrib.auth: https://docs.djangoproject.com/en/4.1/ref/contrib/auth/#id1 
 
 __Allauth__  
@@ -387,8 +387,8 @@ The basket app handles collecting product information such as item id and the qu
 The basket app holds its information in session enabling a user to leave and return with no interruption to the previous sessions browsing and potential wishes to add an item to the basket for later purchase.  
 
 __Purchase app__  
-The purchase app is the heart of th purchasing process, the model has two purposes, it main goal is to gather data entered through the purchase form and secondly gather the Basket data stored in session and construct the finalised products and amounts which are then handed to Stripe payment gateway to process the purchase amount.  
-Its second purpose is to pass the input data into a profile dataset and pass to the Profile app if the user is a registered and logged in so that data can be later retrieved and viewed by the end user.  
+The purchase app is the heart of the purchasing process, the model has two purposes, it main goal is to gather data entered through the purchase form and secondly gather the Basket data stored in session and construct the finalised products and amounts which are then handed to Stripe payment gateway to process the purchase amount.  
+Its second purpose is to pass the input data into a profile dataset and pass this to the Profile app if the user is a registered user and is logged in so that data can be later retrieved and viewed by the end user.  
 
 __Profile app__  
 The primary role of the profile app is to gather the users data from an order when placed and retain the information for a user to view at any time through a separate profile dashboard view.  
@@ -421,7 +421,7 @@ As a registered user, new areas of the site are revealed seamlessly and without 
 
 __Super user (Administer/site owner)__  
 ![Sitemap diagram for a non registered user visiting MovieBox ](docs/wireframes/database_and_route_diagrams/super_user_sitemap.png)  
-As a super user or administrator of MovieBox such as a staff member, areas to change the content available eithin the frontend of the site are made available.
+As a super user or administrator of MovieBox such as a staff member, areas change and content becomes available within the frontend of the site.
 These sections are:
 - On product pages, a movie product can be edited, to amend its details eliminating the need for a site owner to visit the management backend console for simple daily edits such as price changes or to with future feature updates, separate frontend content editors from purchase and backend management editors.  
 - Through the same profile links available to non and registered users, the admin panel is revealed to show quick access sections to site sections for carrying out additions, edits and deleations.  
@@ -476,7 +476,7 @@ A list of all technologies and software and online resources used to create the 
 ### Frameworks and libraries  
 -  [Django](https://www.djangoproject.com/)  
 -  [Bootstrap version 4.6.2](https://getbootstrap.com/)  
--  [Font Awesome](https://fontawesome.com/), Icons used throughout the e=commerce web application.  
+-  [Font Awesome](https://fontawesome.com/), Icons used throughout the e-commerce web application.  
 -  [Google fonts](https://fonts.google.com/), Bebas Neue and Poppins fonts were used across the web application.  
 -  [Stripe payment gateway api](https://stripe.com/docs/api), Used to process card details on the purchase page.  
 -  [Heroku](https://heroku.com), Used to deploy the MovieBox application.  
@@ -487,13 +487,13 @@ A list of all technologies and software and online resources used to create the 
 -  [favicon.io](https://favicon.io) used to create the favicon.
 -  [GitHub](https://github.io), was used to store committed files
 -  [Git](https://git-scm.com/) and [Gitpod](https://gitpod.io/), used in conjunction through Gitpod to commit and push files to GitHub
--  [Photoshop 2022](https://adobe.com), used for editing of screenshots and saving into WebP format.   
+-  [Photoshop 2022](https://adobe.com), used for editing of screenshots.   
 -  [Figma](https://www.figma.com/), used to create the wireframe designs of the applicaion.
 -  [Colour scheme](https://coolors.co/565555-ffb341-fcf7ff-c4cad0-ed254e), used to create a colour palette.  
 -  [Lighthouse](https://developers.google.com/web/tools/lighthouse), used to test performance, accessibility, best practices, and SEO within the Chrome browser.
 -  [Am I Responsive](http://ami.responsivedesign.is/), used for generating the main README image.  
 -  [CSS Minifier](https://www.toptal.com/developers/cssminifier/), used to minify CSS.  
-- [Python JinJa documentation](https://jinja.palletsprojects.com/en/3.1.x/)  Used to trouble shoot some templating issues with rendering for loops and count of items in for loops.  
+- [Python JinJa documentation](https://jinja.palletsprojects.com/en/3.1.x/)  Used to troubleshoot some templating issues with rendering for loops and count of items in for loops.  
 - [Black](https://black.readthedocs.io/en/stable/getting_started.html) Python code formatter, used to solve PEP8 issues and ensure code is readable.   
 - [Gloomaps](https://www.gloomaps.com/) used to create the site map and user stories storyboards for MovieBox.  
 - [Lucid](https://lucid.app) which was used to create the database models diagram for the application.  
@@ -528,7 +528,7 @@ Forking a GitHub Repository will make a copy of the original repository on your 
 3.	To clone the repository using HTTPS, under "Clone with HTTPS title", copy the link to your clipboard.
 4.	Open Git Bash  
 5.	Change the current working directory to the location where you wish the cloned directory to be made.  
-6.	Type git clone, and then paste the URL you copied above. e.g., $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY 
+6.	Type git clone, and then paste the URL you copied above. e.g., git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY 
 7.	Press Enter and your local clone will start to be created.  
 
 ## Credits and resources used  
@@ -538,20 +538,20 @@ Forking a GitHub Repository will make a copy of the original repository on your 
 - [imdb](http://imdb.com) was used as inspiration for how to structure movie information.  
 - [1mdb data searching](https://rapidapi.com/standingapi-standingapi-default/api/1mdb-data-searching/) was used as the source for searching movie information and the returned JSON to construct the fixture files.  
 - [Django source code (GitHub)](https://github.com/django/django/blob/a6291394256aa758d74eec9ce0cfae8aea6475f2/django/contrib/auth/forms.py#L108) was used to understand the data structure of django and what models the framework uses.    
-- [Stripe custom payment flow](https://stripe.com/docs/payments/quickstart) was used to hlp construct the payment system and the return calls.    
+- [Stripe custom payment flow](https://stripe.com/docs/payments/quickstart) was used to help construct the payment system and the return calls.    
 - [Code Institute Django walk through project](https://codeinstitute.net/full-stack-software-development-diploma/?utm_term=code%20institute&utm_campaign=CI+-+UK+-+Search+-+Brand&utm_source=adwords&utm_medium=ppc&hsa_acc=8983321581&hsa_cam=1578649861&hsa_grp=62188641240&hsa_ad=581730217381&hsa_src=g&hsa_tgt=kwd-319867646331&hsa_kw=code%20institute&hsa_mt=e&hsa_net=adwords&hsa_ver=3&gclid=CjwKCAjwqJSaBhBUEiwAg5W9p3k30OqBaH5pz85MnpLKQzEY3btySrfUk1HjuK9aIjMGcWNHfBhzZhoCrEAQAvD_BwE) The project videos gave tremendous help in understanding Django and the framework, the project showed how to impliment products, this helped tremendously when creating the MovieBox application.  
 - [How to create amazon S3 bucket using Python](https://www.youtube.com/watch?v=qGS9UiCFVbo) this video heled me visually see how to navigate and setup the amazon bucket.  
 
 ### Images and icons  
 - Icons used within the application were from the Font Awesome free icon set.  
-- Pictures of the movie covers were used from [umdb data searching api](https://rapidapi.com/standingapi-standingapi-default/api/1mdb-data-searching/details) which was also used to lookup movie title details, the api returns a poster image which is wha is used as movie covers for the products on the e-commerce web application MovieBox.    
+- Pictures of the movie covers were used from [umdb data searching api](https://rapidapi.com/standingapi-standingapi-default/api/1mdb-data-searching/details) which was also used to lookup movie title details, the api returns a poster image which is what is used as movie covers for the products on the e-commerce web application MovieBox.    
 
 ### Content  
 Movie information is supplied by RapidApi using the api [1mdb Data searching](https://rapidapi.com/standingapi-standingapi-default/api/1mdb-data-searching/).    
-The content recieved from the api was also checked against the data held on the imdb website and other media outlets to ensure details wer correct.  
+The content recieved from the api was also checked against the data held on the imdb website and other media outlets to ensure details were correct.  
 
 ## Acknowledgments  
 Thank you to my Tutor Philip Morris, my mentor Chris Quinn and a huge thank you to my wife Jeanmarie and my children for giving me so much support and understanding through the tougher times of the project and the course entirety.  
 Reaching the end of the course would not of been possible without all my families support and the support provided by my tutor at Harlow College.    
 To my classmates who have become such great friends and I very much look forward to working with them in the future and seeing where we all go with this new knowledge.  
-This final project which marks the end of this chapter is dedicated to my Nan, Granddad and Father who I wish could of been here to shared this milestone in my learning to become a developer xxx  
+This final project which marks the end of this chapter is dedicated to my Nan, Granddad and Father who I wish could of been here to share this milestone in my learning to become a developer xxx  

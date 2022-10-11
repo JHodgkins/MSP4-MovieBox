@@ -21,7 +21,7 @@ I found in this area that every supplier has its own way to determine these grad
 I have also considered the ease of use of the applications as an important factor as the application is required to be usable, understandable and accessible to a large audience.  
 
 ## User research  
-I asked my family and friends, were asked for their feedback in relation to the current offerings offered by online stores and their experience with buying used media.  
+I asked my family and friends for their feedback in relation to the current offerings offered by online stores and their experience with buying used media.  
 
 ### Initial questions asked  
 **Question.** Have you bought online before?    
@@ -32,7 +32,7 @@ I asked my family and friends, were asked for their feedback in relation to the 
 **User.** _‘Yes, but I did have to ask quite a few questions before buying as I wanted to make sure it was exactly the correct item in a condition that I was happy with.’_  
 **User.** _‘Once or twice, but I always stick with the things I know how they age as condition is always a worry.’_  
 
-**Question.** Do you buy stream movies or buy physical media?  
+**Question.** Do you buy movies to stream or buy physical media?  
 **User.** _‘Yes, I do both, I normally find streaming some older movies is easier as I am not too sure where to buy the media.’_  
 **User.** _‘We often buy a movie for when we have a movie night as our internet is not that great, and streaming can result in a lower quality we have found.’_  
 
@@ -60,12 +60,12 @@ The research proved interesting and raised some points surrounding buying physic
 Finding the media efficiently was a key factor and having enough information to make a purchase were also important factors.  
 Condition is also an area that arose, unless new, any media needs to be in perfect working order to play, the packaging may in some cases not matter which is sometimes the criteria for other stores selling media.  
 
-It also became clear also that larger stores can be overwhelming to some, and a simple easy to navigate interface to find a product is just as important to some as filters and features is to some.  
+It also became clear that larger stores can be overwhelming to some, and a simple easy to navigate interface to find a product is just as important to some as filters and features is to some.  
 Looking at the proposed application, research showed that other offerings can indeed offer more features, but the projects strengths are that it can offer a positive and pleasing offering which meets the business and target audience goals and aligns with feedback.  
 
 ## Conclusion
 The project meets its goals and can help by offering a suitable resource for buying media.  
 The e-commerce web application will provide a simple to use accessible store that will be accessible to a wide range of audiences whilst provide a secure and reassuring experience for anyone buying through an online store.  
-The store will sit alongside other offerings with a niche which offers specific offerings which are used and new DVD and Blue-Ray movie titles.  
+The store will sit alongside other sellers with a niche which carries specific offerings which are used and new DVD and Blue-Ray movie titles.  
 
 [Back to Repository](https://github.com/JHodgkins/MSP4-MovieBox)  
