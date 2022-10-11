@@ -197,6 +197,11 @@ lines can introduce incompatible code and may fail to run.
 
 The lint and PEP8 line too long are also a style guide and this varies from 80 characters up to 150 characters dependant on the technology industry the application is running within, it is also similar to a warning in CSS, HTML validators or WCAG guidelines and is not an actual error but a visual cue to aim for a written best practice standard.  
 
+__Stripe payment testing__  
+All scenerios have been tested through the form on MovieBox and checked using the Stripe console to ensure payments go through and are reflected within the admin console of Django.  
+Stripe provides test card numbers to test each scenerio and these have been tested to ensure that each one is successful and causes the action it should.  
+Stripe hides the card details and states they should not be ublically shared, these card numbers have been shared along wit the project so that they can be checked.  
+
 __Accessibility extensions__  
 All results from accessibility extensions were verified using manual tests and where relevant were validated using real Screen Reader software using a human tester.  
 
