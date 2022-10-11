@@ -14,7 +14,7 @@ Delivery address:
 In case our delivery driver needs to contact you, we have your contact number: {{ order.phone_number }}
 
 ---------------------
-Total order cost: {{ order.grand_total }}
+Total order cost: £{{ order.grand_total }}
 
 All the best
 The MovieBox Team
