@@ -543,3 +543,13 @@ Forking a GitHub Repository will make a copy of the original repository on your 
 ### Images and icons  
 - Icons used within the application were from the Font Awesome free icon set.  
 - Pictures of the movie covers were used from [umdb data searching api](https://rapidapi.com/standingapi-standingapi-default/api/1mdb-data-searching/details) which was also used to lookup movie title details, the api returns a poster image which is wha is used as movie covers for the products on the e-commerce web application MovieBox.    
+
+### Content  
+Movie information is supplied by RapidApi using the api [1mdb Data searching](https://rapidapi.com/standingapi-standingapi-default/api/1mdb-data-searching/).    
+The content recieved from the api was also checked against the data held on the imdb website and other media outlets to ensure details wer correct.  
+
+## Acknowledgments  
+Thank you to my Tutor Philip Morris, my mentor Chris Quinn and a huge thank you to my wife Jeanmarie and my children for giving me so much support and understanding through the tougher times of the project and the course entirety.  
+Reaching the end of the course would not of been possible without all my families support and the support provided by my tutor at Harlow College.    
+To my classmates who have become such great friends and I very much look forward to working with them in the future and seeing where we all go with this new knowledge.  
+This final project which marks the end of this chapter is dedicated to my Nan, Granddad and Father who I wish could of been here to shared this milestone in my learning to become a developer xxx  
