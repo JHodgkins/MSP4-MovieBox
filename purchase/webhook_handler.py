@@ -25,7 +25,7 @@ class StripeWebHook:
 
     def __init__(self, request):
         self.request = request
-    
+
     def _send_confirmation_email(self, order):
         """
         confirmation email
@@ -37,13 +37,13 @@ class StripeWebHook:
         body = render_to_string(
             'purchase/email/email_body_confirmation.txt',
             {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
-        
+
         send_mail(
             subject,
             body,
             settings.DEFAULT_FROM_EMAIL,
             [customer_email]
-        )     
+        )
 
     def handle_event(self, event):
         """
@@ -52,7 +52,7 @@ class StripeWebHook:
         return HttpResponse(
             content=f'Webhook received: {event["type"]}',
             status=200)
-    
+
     def handle_payment_intent_succeeded(self, event):
         """
         Handles the payment_intent.succeeded webhook from Stripe
@@ -70,7 +70,6 @@ class StripeWebHook:
         for field, value in shipping_details.address.items():
             if value == "":
                 shipping_details.address[field] = None
-        
 
         # If save info active save user data
         profile = None
@@ -114,7 +113,8 @@ class StripeWebHook:
         if order_exists:
             self._send_confirmation_email(order)
             return HttpResponse(
-                content=f'Webhook received: {event["type"]} | SUCCESS: Verifies that order is present in the database',
+                content=f'Webhook received: {event["type"]} | \
+                    SUCCESS: Verifies that order is present in the database',
                 status=200)
         else:
             order = None
@@ -133,7 +133,7 @@ class StripeWebHook:
                     original_basket=basket,
                     stripe_pid=pid,
                 )
-                for item_id, item_data in json.loads(bag).items():
+                for item_id, item_data in json.loads(basket).items():
                     product = Product.objects.get(id=item_id)
                     if isinstance(item_data, int):
                         order_line_item = OrderLineItem(
