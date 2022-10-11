@@ -24,6 +24,7 @@ Tests were carried out throughout development in an intergrated way, the tests w
     6.6 [Screen reader testing](#screen-reader-testing)  
 7. [Automated testing](#automated-testing)  
     7.1 [Lighthouse](#lighthouse)  
+    7.2 [Simulated device testing](#simulated-devive-testing)  
 
 
 ## User stories testing from the UX section  
@@ -420,3 +421,9 @@ The genre displays titles based on their category and is the same page, results 
 
 - Edit movie mobile  
 ![Lighthouse test - Edit movie mobile](/docs/testing/lighthouse_testing/mobile/lighthouse_test_mobile_edit_movie.png)  
+
+### Simulated devive testing  
+Chromes built in device simulator which covers many different device sizes was used to simulate the application on a variety of device screen sizes.  
+All simulated screen sizes rendered the e=commerce web application correctly and as expected.  
+
+[Back to Repository](https://github.com/JHodgkins/MSP4-MovieBox)   
