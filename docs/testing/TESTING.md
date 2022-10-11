@@ -339,84 +339,84 @@ Google Chrome DevTools was used to run the audit and test the Performance, Acces
 ![Lighthouse test - Homepage desktop](/docs/testing/lighthouse_testing/desktop/lighthouse_test_desktop_homepage.png)  
 
 - Homepage mobile  
-![Lighthouse test - Homepage mobile]()  
+![Lighthouse test - Homepage mobile](/docs/testing/lighthouse_testing/mobile/lighthouse_test_mobile_homepage.png)  
 
 - Login desktop  
-![Lighthouse test - Homepage desktop](/docs/testing/lighthouse_testing/desktop/lighthouse_test_desktop_login.png)  
+![Lighthouse test - Log in desktop](/docs/testing/lighthouse_testing/desktop/lighthouse_test_desktop_login.png)  
 
 - Login mobile  
-![Lighthouse test - Homepage mobile]()  
+![Lighthouse test - Log in mobile](/docs/testing/lighthouse_testing/mobile/lighthouse_test_mobile_login.png)  
 
 - Log out desktop  
-![Lighthouse test - Homepage desktop](/docs/testing/lighthouse_testing/desktop/lighthuse_test_desktop_logout.png)  
+![Lighthouse test - Log out desktop](/docs/testing/lighthouse_testing/desktop/lighthuse_test_desktop_logout.png)  
 
 - Log out mobile  
-![Lighthouse test - Homepage mobile]()  
+![Lighthouse test - Log out mobile](/docs/testing/lighthouse_testing/mobile/lighthouse_test_mobile_logout.png)  
 
 - Profile desktop  
-![Lighthouse test - Homepage desktop](/docs/testing/lighthouse_testing/desktop/lighthouse_test_desktop_profile.png)  
+![Lighthouse test - Profile desktop](/docs/testing/lighthouse_testing/desktop/lighthouse_test_desktop_profile.png)  
 
 - Profile mobile  
-![Lighthouse test - Homepage mobile]()  
+![Lighthouse test - Profile mobile](/docs/testing/lighthouse_testing/mobile/lighthouse_test_mobile_profile.png)  
 
 - New arrivals desktop  
-![Lighthouse test - Homepage desktop](/docs/testing/lighthouse_testing/desktop/lighthouse_test_desktop_profile.png)  
+![Lighthouse test - New arrivals desktop](/docs/testing/lighthouse_testing/desktop/lighthouse_test_desktop_profile.png)  
 
 - New arrivals mobile  
-![Lighthouse test - Homepage mobile]()  
+![Lighthouse test - New arrivals mobile](/docs/testing/lighthouse_testing/mobile/lighthouse_test_mobile_new_arrivals.png)  
 
 - Genre (action) desktop  
-![Lighthouse test - Homepage desktop](/docs/testing/lighthouse_testing/desktop/lighthouse_test_desktop_genre_action.png)  
+![Lighthouse test - Genre (action) desktop](/docs/testing/lighthouse_testing/desktop/lighthouse_test_desktop_genre_action.png)  
 
 The genre displays titles based on their category and is the same page, results were the same acrossfilters and this is why only one result is shown.
 
 - Genre (action) mobile  
-![Lighthouse test - Homepage mobile]()  
+![Lighthouse test - Genre (action) mobile](/docs/testing/lighthouse_testing/mobile/lighthouse_test_mobile_genre_action.png)  
 
 - All movies desktop  
-![Lighthouse test - Homepage desktop](/docs/testing/lighthouse_testing/desktop/lighthouse_test_desktop_all_movies.png)  
+![Lighthouse test - All movies desktop](/docs/testing/lighthouse_testing/desktop/lighthouse_test_desktop_all_movies.png)  
 
 - All movies mobile  
-![Lighthouse test - Homepage mobile]()  
+![Lighthouse test - All movies mobile](/docs/testing/lighthouse_testing/mobile/lighthouse_test_mobile_all_movies.png)  
 
 - All deals desktop  
-![Lighthouse test - Homepage desktop](/docs/testing/lighthouse_testing/desktop/lighthouse_test_desktop_all_deals.png)  
+![Lighthouse test - All deals desktop](/docs/testing/lighthouse_testing/desktop/lighthouse_test_desktop_all_deals.png)  
 
 - All deals mobile  
-![Lighthouse test - Homepage mobile]()  
+![Lighthouse test - All deals mobile](/docs/testing/lighthouse_testing/mobile/lighthouse_test_mobile_all_deals.png)  
 
 - Product details desktop  
-![Lighthouse test - Homepage desktop](/docs/testing/lighthouse_testing/desktop/lighthouse_test_desktop_product_details.png)  
+![Lighthouse test - Product details desktop](/docs/testing/lighthouse_testing/desktop/lighthouse_test_desktop_product_details.png)  
 
 - Product details mobile  
-![Lighthouse test - Homepage mobile]()  
+![Lighthouse test - Product details mobile](/docs/testing/lighthouse_testing/mobile/lighthouse_test_mobile_product_details.png)  
 
 - Basket desktop  
-![Lighthouse test - Homepage desktop](/docs/testing/lighthouse_testing/desktop/lighthuse_test_desktop_basket.png)  
+![Lighthouse test - Basket desktop](/docs/testing/lighthouse_testing/desktop/lighthuse_test_desktop_basket.png)  
 
 - Basket mobile  
-![Lighthouse test - Homepage mobile]()  
+![Lighthouse test - Basket mobile](/docs/testing/lighthouse_testing/mobile/lighthouse_test_mobile_basket.png)  
 
 - Purchase desktop  
-![Lighthouse test - Homepage desktop](/docs/testing/lighthouse_testing/desktop/lighthouse_test_desktop_purchase.png)  
+![Lighthouse test - Purchase desktop](/docs/testing/lighthouse_testing/desktop/lighthouse_test_desktop_purchase.png)  
 
 - Purchase mobile  
-![Lighthouse test - Homepage mobile]()  
+![Lighthouse test - Purchase mobile](/docs/testing/lighthouse_testing/mobile/lighthouse_test_mobile_purchase.png)  
 
 - Purchase complete desktop  
-![Lighthouse test - Homepage desktop](/docs/testing/lighthouse_testing/desktop/lighthouse_test_desktop_purchase_complete.png)  
+![Lighthouse test - Purchase complete desktop](/docs/testing/lighthouse_testing/desktop/lighthouse_test_desktop_purchase_complete.png)  
 
 - Purchase complte mobile  
-![Lighthouse test - Homepage mobile]()  
+![Lighthouse test - Purchase complete mobile](/docs/testing/lighthouse_testing/mobile/lighthouse_test_mobile_purchase_complete.png)  
 
 - Add movie desktop  
-![Lighthouse test - Homepage desktop](/docs/testing/lighthouse_testing/desktop/lighthouse_test_desktop_add_movie.png)  
+![Lighthouse test - Add movie desktop](/docs/testing/lighthouse_testing/desktop/lighthouse_test_desktop_add_movie.png)  
 
 - Add movie mobile  
-![Lighthouse test - Homepage mobile]()  
+![Lighthouse test - Add movie mobile](/docs/testing/lighthouse_testing/mobile/lighthouse_test_mobile_add_movie.png)  
 
 - Edit movie desktop  
-![Lighthouse test - Homepage desktop](/docs/testing/lighthouse_testing/desktop/lighthouse_test_desktop_edit_movie.png)  
+![Lighthouse test - Edit movie desktop](/docs/testing/lighthouse_testing/desktop/lighthouse_test_desktop_edit_movie.png)  
 
 - Edit movie mobile  
-![Lighthouse test - Homepage mobile]()  
+![Lighthouse test - Edit movie mobile](/docs/testing/lighthouse_testing/mobile/lighthouse_test_mobile_edit_movie.png)  
