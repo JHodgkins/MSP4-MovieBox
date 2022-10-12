@@ -11,7 +11,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-12">
                     <div class="my-5 profile-page-main-heading">
-                        <h1 class="display-5 fw-bolder text-white mb-2 ">Verify your email</h1>
+                        <h1 class="display-5 fw-bolder text-white mb-2 ">Please verify your email</h1>
                     </div>
                 </div>
             </div>
@@ -22,6 +22,6 @@
 {% block inner %}
     <h2>{% trans "Verify Your E-mail Address" %}</h2>
 
-    <p>{% blocktrans %}We have sent an e-mail to you for verification. Follow the link provided to finalize the signup process. Please contact us if you do not receive it within a few minutes.{% endblocktrans %}</p>
+    <p>{% blocktrans %}We have sent an e-mail to you for verification. Follow the link provided to finalize the signup process. <br>Please <a href="mailto:moviebox.moviestore@gmail.com">contact us</a> if you do not receive this verification email within a few minutes.{% endblocktrans %}</p>
 
 {% endblock %}
