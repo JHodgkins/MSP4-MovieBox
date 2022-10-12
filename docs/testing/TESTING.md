@@ -15,16 +15,17 @@ Tests were carried out throughout development in an intergrated way, the tests w
     4.2 [CSS validation](#css-validation)  
     4.3 [JS validation](#js-validation)  
 5. [Database and application testing stages](#database-and-application-testing-stages)  
-6. [Manual testing](#manual-testing)  
-    6.1 [Rendering in the browser & Reflow tests](#rendering-in-the-browser--reflow-tests)  
-    6.2 [Link testing](#link-testing)  
-    6.3 [Tab order test](#tab-order-test)  
+6. [Stripe Webhook api test](#stripe-webhook-api-test)  
+7. [Manual testing](#manual-testing)  
+    7.1 [Rendering in the browser & Reflow tests](#rendering-in-the-browser--reflow-tests)  
+    7.2 [Link testing](#link-testing)  
+    7.3 [Tab order test](#tab-order-test)  
     6.4 [Landmark test](#landmark-test)  
-    6.5 [Heading test](#heading-test)  
-    6.6 [Screen reader testing](#screen-reader-testing)  
-7. [Automated testing](#automated-testing)  
-    7.1 [Lighthouse](#lighthouse)  
-    7.2 [Simulated device testing](#simulated-devive-testing)  
+    7.5 [Heading test](#heading-test)  
+    7.6 [Screen reader testing](#screen-reader-testing)  
+8. [Automated testing](#automated-testing)  
+    8.1 [Lighthouse](#lighthouse)  
+    8.2 [Simulated device testing](#simulated-devive-testing)  
 
 
 ## User stories testing from the UX section  
@@ -294,6 +295,11 @@ PEP8 complience - Python, django structure files - PASS
 - Test new webhook with stripe using Heroku domain name - No issues - PASS  
 - Connect AWS S3 Bucket to MovieBox - No issues with transfer of Static files - PASS  
 - Test django email message confirmation of order through Heroku app - No issues - PASS   
+
+## Stripe Webhook api test  
+The image shows below the api webhook payment_intent.succeeded being confirmed, this is te hook that can take care of processing payments should the browser close unexpectedly or a user accidently closes the session during processing a purchase.  
+This test shows a record of an order would be placed n MovieBox admin console if a customer had a query.  
+![Stripe webhook payment_intent.succeeded](/docs/testing/stripe/stripe_payment_intent.png)  
 
 ## Manual testing  
 ### Rendering in the browser & Reflow tests.  
