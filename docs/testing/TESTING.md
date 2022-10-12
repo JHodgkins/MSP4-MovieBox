@@ -210,7 +210,7 @@ NVDA and JAWS were used in some tests, this is software which I own and was run 
 
 ## Test results overview  
 Below is a table which represents a high level overview of the various tests undertaken during and through development of the MovieBox e-commerce web application, results of these tests and issues were collected and stored in an Excel document for functionality and accessibility reasons due to my sight loss for easier navigation using a screen reader, the excel document contains 3 sheets of tests.  
-Please find the [moviebox_test_and_issue_record.xlsx]() file on the GitHub repository.  
+Please find the [moviebox_test_and_issue_record.xlsx](/docs/testing/moviebox_test_and_issue_record.xlsx) file on the GitHub repository.  
  
 | Test             | Logged out user | logged in user | Admin user |
 |------------------|----------|-------------------|------|
@@ -221,6 +221,7 @@ Please find the [moviebox_test_and_issue_record.xlsx]() file on the GitHub repos
 | PEP8            | Code PASS     | Code PASS              | Code PASS | 
 | Links            | PASS     | PASS              | PASS | 
 | Landmark Regions | PASS     | PASS              | PASS |
+| Headings            | PASS     | PASS              | PASS | 
 | Screen reader    | PASS     | PASS              | PASS |
 | Lighthoise - <br>Performance,<br>Accessibility,<br>Best practice,<br>SEO | PASS         | PASS         | PASS          |
 
