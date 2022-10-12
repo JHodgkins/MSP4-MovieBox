@@ -356,7 +356,7 @@ Social media icons for Facebook, twitter and Instagram were also used within the
 Database structure diagram outlining the data structure across the MovieBox e-commerce web application relational database.  
 The PostgreSQL database has been setup as a highly normalised database, which will provide a good structure to organise the users, products and orders through the use of relational tables, this approach ensures flexibility to incorporate other data tables whilst eliminating redundancy and any inconsistent dependencies.  
 
- 
+[Database structure diagram for MovieBox and connecting Django models and settiings](docs/wireframes/database_and_route_diagrams/moviebox_database_diagram_overview.png)  
 
 Django provides a core structure for a user database, with this in mind each app that has been added, extends this functionality to bring together each piece to produce a functioning, secure e-commerce web application.  
 The e-commerce web application allows registered users and non-registered users to purchase items, as such the user model acts for the registered user and can retrieve data, whereas guest purchases are saved in session.  
@@ -426,6 +426,11 @@ These sections are:
 - On product pages, a movie product can be edited, to amend its details eliminating the need for a site owner to visit the management backend console for simple daily edits such as price changes or to with future feature updates, separate frontend content editors from purchase and backend management editors.  
 - Through the same profile links available to non and registered users, the admin panel is revealed to show quick access sections to site sections for carrying out additions, edits and deleations.  
 - There is a direct link to the backend management console on this age and a dynamic link to the admin backend is also added to the account bar on every page located at the top of the page.  
+
+__User payment journeys__
+The diagram shows the available routes a user can take to make a purchase of a movie on the MovieBox e-commerce web application.  
+
+[User payment journey diagram](/docs/testing/user_stories_testing_images/user_story_payment_journeys.png)  
 
 ## Existing features and future implimentations  
 This section looks at features which were implemented into the MVP (minimum viable product) and those that with further research technical knowledge alongside user feedback will be added to the existing set of features and be released in future feature updates.  
