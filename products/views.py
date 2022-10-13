@@ -43,9 +43,9 @@ def all_products(request):
                 messages.error(request, "You did not enter a search criteria")
                 return redirect(reverse('products'))
 
-            queries = Q(name__icontains=search) | Q(
-                description__icontains=search) | Q(
-                    actors__icontains=search) | Q(
+            queries = Q(name__icontains=search) or Q(
+                description__icontains=search) or Q(
+                    actors__icontains=search) or Q(
                         directed_by__icontains=search)
             products = products.filter(queries)
 
@@ -55,10 +55,10 @@ def all_products(request):
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 products = products.annotate(lower_name=Lower('name'))
-            
+
             if sortkey == 'category':
                 sortkey = 'category__name'
-            
+
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
@@ -85,6 +85,7 @@ def product_details(request, product_id):
     return render(request, 'products/product_details.html', context)
 
 # MovieBox admin area section
+
 
 @login_required
 def add_movie(request):
@@ -129,10 +130,14 @@ def edit_movie(request, product_id):
         form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
             form.save()
-            messages.success(request, f'Movie: {product.name} was sucessfully amended, the changess will be live on MovieBox immediately.')
+            messages.success(
+                request, f'Movie: {product.name} was sucessfully amended, \
+                    the changess will be live on MovieBox immediately.')
             return redirect(reverse('product_details', args=[product.id]))
         else:
-            messages.error(request, 'There was an issue with commiting these changes, ensre all required fields are filled out correctly.')
+            messages.error(
+                request, 'There was an issue with commiting these changes, \
+                    ensre all required fields are filled out correctly.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are currently editing movie: \

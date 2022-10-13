@@ -1,12 +1,9 @@
-""" render for rendering templates to frontend  """
+"""
+Import render for rendering templates to frontend
+Import Product to display movie on the homepage
+"""
 from django.shortcuts import render
 from products.models import Product
-
-
-# Renders homepage template.
-#def index(request):
- #   """ A view to return the home page """
-  #  return render(request, 'homepage/index.html')
 
 
 def all_products(request):

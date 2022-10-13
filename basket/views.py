@@ -4,8 +4,11 @@ Import reverse to handle when rturning to a url..
 import render for rendering templates to frontend.
 import HttpResponse to handle errors returned through JavaScript.
 import get object or 404 to handle errors if no oject is returned from dataase.
+Import messages for on screen messages
+Import Product so product model can be accessed
 """
-from django.shortcuts import redirect, reverse, render, HttpResponse, get_object_or_404
+from django.shortcuts import (
+    redirect, reverse, render, HttpResponse, get_object_or_404)
 from django.contrib import messages
 from products.models import Product
 
@@ -25,10 +28,12 @@ def add_to_the_basket(request, item_id):
 
     if item_id in list(basket.keys()):
         basket[item_id] += quantity
-        messages.success(request, f'Updated {product.name} quantity to {basket[item_id]}')
+        messages.success(
+            request, f'Updated {product.name} quantity to {basket[item_id]}')
     else:
         basket[item_id] = quantity
-        messages.success(request, f'{product.name} was sucessfully added to your basket!')
+        messages.success(
+            request, f'{product.name} was sucessfully added to your basket!')
 
     request.session['basket'] = basket
 
@@ -43,7 +48,8 @@ def update_basket(request, item_id):
 
     if quantity > 0:
         basket[item_id] = quantity
-        messages.success(request, f'Updated {product.name} quantity to {basket[item_id]}')
+        messages.success(
+            request, f'Updated {product.name} quantity to {basket[item_id]}')
     else:
         basket.pop(item_id)
         messages.success(request, f'Removed {product.name} from your basket')
@@ -60,7 +66,8 @@ def remove_from_the_basket(request, item_id):
 
             basket = request.session.get('basket', {})
             basket.pop(item_id)
-            messages.success(request, f'Removed {product.name} from your basket')
+            messages.success(
+                request, f'Removed {product.name} from your basket')
 
             request.session['basket'] = basket
             return HttpResponse(status=200)
