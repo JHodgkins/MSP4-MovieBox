@@ -505,6 +505,7 @@ A list of all technologies and software and online resources used to create the 
 - [Colour converter](https://www.w3schools.com/colors/colors_converter.asp) which was used convert colours from hex to rgb, hsl etc.  
 - [Accessibility bookmarklets](https://accessibility-bookmarklets.org/install.html) used as a checking tool for accessibility testing.  
 - [GitHub markdown spec](https://github.github.com/gfm/#hard-line-breaks) used as a guide when creating the markdown files.  
+- [Black formatter documentation](https://black.readthedocs.io/en/stable/getting_started.html#try-it-out-online) used as a guide to understand how Black worked.  
 
 ## Deployments  
 Please find below the steps on how to Deploy, Fork and Clone.  
