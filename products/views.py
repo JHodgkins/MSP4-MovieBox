@@ -43,9 +43,9 @@ def all_products(request):
                 messages.error(request, "You did not enter a search criteria")
                 return redirect(reverse('products'))
 
-            queries = Q(name__icontains=search) and Q(
-                description__icontains=search) and Q(
-                    actors__icontains=search) and Q(
+            queries = Q(name__icontains=search) | Q(
+                description__icontains=search) | Q(
+                    actors__icontains=search) | Q(
                         directed_by__icontains=search)
             products = products.filter(queries)
 
