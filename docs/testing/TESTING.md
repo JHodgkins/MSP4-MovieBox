@@ -14,6 +14,7 @@ Tests were carried out throughout development in an intergrated way, the tests w
     4.1 [HTML validation](#html-validation)  
     4.2 [CSS validation](#css-validation)  
     4.3 [JS validation](#js-validation)  
+    4.4 [PEP8 validation](#pep8-validation)  
 5. [Database and application testing stages](#database-and-application-testing-stages)  
 6. [Stripe Webhook api test](#stripe-webhook-api-test)  
 7. [Manual testing](#manual-testing)  
@@ -281,6 +282,11 @@ As the site uses one CSS style sheet, the style sheet was validated by pasing in
 ### JS validation  
 ![JShint Validator result](/docs/testing/validator_testing_images/test_validator_js_hint_js_scripts.png)  
 JS hint was used and no errors were detected, Stripe variable is mentioned because the JSHint does not have access to the installed python package Stripe.  
+
+### PEP8 validation  
+Pylint, Flake8 were used in the CI institute template to endure complience and online tools such as [Python checker](https://www.pythonchecker.com/) and [Black formatter](https://black.vercel.app/?version=stable&state=_Td6WFoAAATm1rRGAgAhARYAAAB0L-Wj4ARsAnNdAD2IimZxl1N_WlkPinBFoXIfdFTaTVkGVeHShArYj9yPlDvwBA7LhGo8BvRQqDilPtgsfdKl-ha7EFp0Ma6lY_06IceKiVsJ3BpoICJM9wU1VJLD7l3qd5xTmo78LqThf9uibGWcWCD16LBOn0JK8rhhx_Gf2ClySDJtvm7zQJ1Z-Ipmv9D7I_zhjztfi2UTVsJp7917XToHBm2EoNZqyE8homtGskFIiif5EZthHQvvOj8S2gJx8_t_UpWp1ScpIsD_Xq83LX-B956I_EBIeNoGwZZPFC5zAIoMeiaC1jU-sdOHVucLJM_x-jkzMvK8Utdfvp9MMvKyTfb_BZoe0-FAc2ZVlXEpwYgJVAGdCXv3lQT4bpTXyBwDrDVrUeJDivSSwOvT8tlnuMrXoD1Sk2NZB5SHyNmZsfyAEqLALbUnhkX8hbt5U2yNQRDf1LQhuUIOii6k6H9wnDNRnBiQHUfzKfW1CLiThnuVFjlCxQhJ60u67n3EK38XxHkQdOocJXpBNO51E4-f9z2hj0EDTu_ScuqOiC9cI8qJ4grSZIOnnQLv9WPvmCzx5zib3JacesIxMVvZNQiljq_gL7udm1yeXQjENOrBWbfBEkv1P4izWeAysoJgZUhtZFwKFdoCGt2TXe3xQ-wVZFS5KoMPhGFDZGPKzpK15caQOnWobOHLKaL8eFA-qI44qZrMQ7sSLn04bYeenNR2Vxz7hvK0lJhkgKrpVfUnZrtF-e-ubeeUCThWus4jZbKlFBe2Kroz90Elij_UZBMFCcFo0CfIx5mGlrINrTJLhERszRMMDd39XsBDzpZIYV4TcG7HoMS_IF8aMAAAxI-5uTWXbUQAAY8F7QgAAP01Vc6xxGf7AgAAAAAEWVo=) [Black formatter docmentation](https://black.readthedocs.io/en/stable/getting_started.html#try-it-out-online) were used also.  
+Between these tools PEP8 style guide were met, a screenshot below shows an example.  
+![Python checker image](/docs/testing/validator_testing_images/test_python_checker_validation.png)  
 
 ## Database and application testing stages
 - Construct and render Django application to browser:  
